@@ -1,0 +1,209 @@
+body {
+    background-color: #008080;
+    background-image: radial-gradient(#007070 2px, transparent 2px);
+    background-size: 8px 8px;
+    font-family: "MS Sans Serif", sans-serif;
+    color: black;
+    margin: 0;
+    padding: 0;
+}
+
+a {
+    color: #0000ee;
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+.window {
+    width: 800px;
+    margin: 50px auto;
+    background-color: #c0c0c0;
+    border: 2px solid #808080;
+    position: relative;
+    padding: 0;
+    box-shadow: 3px 3px 0px #000, -3px -3px 0px #fff;
+}
+
+.title-bar {
+    background-color: #000080;
+    color: white;
+    padding: 5px;
+    font-size: 16px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 2px solid #808080;
+}
+
+.title-bar span {
+    font-weight: bold;
+}
+
+.title-bar-buttons {
+    display: flex;
+}
+
+.title-bar-buttons div {
+    width: 16px;
+    height: 16px;
+    background-color: #c0c0c0;
+    margin-left: 4px;
+    text-align: center;
+    line-height: 16px;
+    border: 1px solid #808080;
+    cursor: pointer;
+    box-shadow: inset 1px 1px 0px #fff, inset -1px -1px 0px #000;
+    color: black;
+}
+
+.title-bar-buttons div:hover {
+    background-color: #fff;
+}
+
+.content {
+    padding: 15px;
+    background-color: #e0e0e0;
+    border: 2px solid #808080;
+    margin: 10px;
+    box-shadow: inset 1px 1px 0px #fff, inset -1px -1px 0px #000;
+    min-height: 300px;
+}
+
+.article-list {
+    margin-top: 15px;
+}
+
+.article-list a {
+    color: black;
+    display: block;
+    background-color: #f0f0f0;
+    border: 2px solid #808080;
+    padding: 10px;
+    margin-bottom: 10px;
+    box-shadow: inset 1px 1px 0px #fff, inset -1px -1px 0px #000;
+}
+
+.logo {
+    display: inline-block;
+    margin: 0 auto 20px;
+    max-width: 100px;
+    align-items: center;
+}
+
+.logo-container {
+    display: inline-block;
+    background-color: #c0c0c0;
+    border: 2px solid #808080;
+    box-shadow: 3px 3px 0px #000, -3px -3px 0px #fff;
+    text-align: center;
+    padding: 0;
+}
+
+h2, h3 {
+    font-family: "MS Sans Serif", sans-serif;
+    margin-bottom: 15px;
+    line-height: 1.5;
+}
+
+h2 {
+    font-size: 22px;
+    font-weight: bold;
+    color: #000080;
+}
+
+h3 {
+    font-size: 18px;
+    color: #000080;
+}
+
+p {
+    font-size: 15px;
+    color: #000000;
+    line-height: 1.5;
+}
+
+.article-list a:hover {
+    background-color: #c0c0c0;
+}
+
+.blog-post {
+    margin-bottom: 20px;
+}
+
+.blog-post h2 {
+    color: #000;
+}
+
+.blog-post img {
+    max-width: 25%;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    border: 2px solid #808080;
+    box-shadow: inset 1px 1px 0px #fff, inset -1px -1px 0px #000;
+}
+
+.blog-post {
+    margin-bottom: 20px;
+    position: relative;
+    padding-bottom: 40px;
+}
+
+.blog-post .button-container {
+    text-align: center;
+    margin-top: 20px;
+}
+
+.blog-post .blog-button {
+    background-color: #e0e0e0;
+    border: 2px solid #808080;
+    padding: 5px 10px;
+    margin: 10px 0;
+    cursor: pointer;
+    color: black;
+    box-shadow: inset 1px 1px 0px #fff, inset -1px -1px 0px #000;
+}
+
+.blog-post .blog-button:active {
+    border-style: inset;
+}
+
+.blog-post pre {
+    background-color: #f0f0f0;
+    border: 2px solid #808080;
+    padding: 10px;
+    margin: 10px 0;
+    white-space: pre-wrap;
+    box-shadow: inset 1px 1px 0px #fff, inset -1px -1px 0px #000;
+}
+
+.footer {
+    display: flex;
+    justify-content: flex-end;
+    padding: 10px;
+    background-color: #c0c0c0;
+    border-top: 2px solid #808080;
+}
+
+.footer button {
+    background-color: #e0e0e0;
+    border: 2px solid #808080;
+    padding: 5px 10px;
+    margin-left: 10px;
+    cursor: pointer;
+    color: black;
+    box-shadow: inset 1px 1px 0px #fff, inset -1px -1px 0px #000;
+}
+
+.footer button:hover {
+    background-color: #c0c0c0;
+}
+
+.highlight {
+    background-color: #000080;
+    color: white;
+    padding: 0 2px;
+}
