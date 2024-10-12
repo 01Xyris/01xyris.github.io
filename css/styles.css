@@ -207,3 +207,111 @@ p {
     color: white;
     padding: 0 2px;
 }
+
+@media (max-width: 600px) {
+    body {
+        background-size: 6px 6px;
+        padding: 10px;
+        font-size: 14px;
+    }
+
+    .window {
+        width: 95%;
+        margin: 15px auto;
+        background-color: #c0c0c0;
+        border: 2px solid #808080;
+        box-shadow: 2px 2px 0px #000, -2px -2px 0px #fff;
+    }
+
+    .title-bar {
+        background-color: #000080;
+        color: white;
+        font-size: 14px;
+        padding: 5px 8px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        border-bottom: 2px solid #808080;
+    }
+
+    .title-bar-buttons div {
+        width: 14px;
+        height: 14px;
+        line-height: 14px;
+        margin-left: 4px;
+    }
+
+    .content {
+        padding: 10px;
+        background-color: #e0e0e0;
+        border: 2px solid #808080;
+        margin: 10px 0;
+        box-shadow: inset 1px 1px 0px #fff, inset -1px -1px 0px #000;
+        font-size: 13px;
+        min-height: 200px;
+    }
+
+    .article-list a {
+        display: block;
+        background-color: #f0f0f0;
+        padding: 10px;
+        margin-bottom: 8px;
+        font-size: 14px;
+        border: 2px solid #808080;
+        box-shadow: inset 1px 1px 0px #fff, inset -1px -1px 0px #000;
+    }
+
+    .article-list a:hover {
+        background-color: #c0c0c0;
+    }
+
+    .blog-post img {
+        max-width: 80%;
+        display: block;
+        margin: 10px auto;
+        border: 2px solid #808080;
+        box-shadow: inset 1px 1px 0px #fff, inset -1px -1px 0px #000;
+    }
+
+    .blog-post .blog-button {
+        background-color: #e0e0e0;
+        border: 2px solid #808080;
+        padding: 6px 10px;
+        font-size: 12px;
+        cursor: pointer;
+        box-shadow: inset 1px 1px 0px #fff, inset -1px -1px 0px #000;
+    }
+
+    .blog-post pre {
+        background-color: #f0f0f0;
+        border: 2px solid #808080;
+        padding: 10px;
+        margin: 10px 0;
+        white-space: pre-wrap;
+        font-size: 12px;
+        box-shadow: inset 1px 1px 0px #fff, inset -1px -1px 0px #000;
+    }
+
+    .footer {
+        display: flex;
+        justify-content: center;
+        padding: 10px;
+        background-color: #c0c0c0;
+        border-top: 2px solid #808080;
+        flex-wrap: wrap;
+    }
+
+    .footer button {
+        background-color: #e0e0e0;
+        border: 2px solid #808080;
+        padding: 6px 10px;
+        font-size: 12px;
+        margin: 5px;
+        cursor: pointer;
+        box-shadow: inset 1px 1px 0px #fff, inset -1px -1px 0px #000;
+    }
+
+    .footer button:hover {
+        background-color: #c0c0c0;
+    }
+}
