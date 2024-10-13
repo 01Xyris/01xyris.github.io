@@ -137,19 +137,31 @@ p {
     color: #000;
 }
 
+/* Container to manage overflow and hover effects */
 .blog-post img {
-    max-width: 25%;
+    max-width: 80%;
     display: block;
     margin-left: auto;
     margin-right: auto;
     border: 2px solid #808080;
     box-shadow: inset 1px 1px 0px #fff, inset -1px -1px 0px #000;
+    transition: transform 0.3s ease, box-shadow 0.3s ease; /* Smooth transition for hover effect */
+    cursor: zoom-in; /* Indicate that the image can be hovered */
 }
+
+.blog-post img:hover {
+    transform: scale(1.7); /* Scale up the image on hover (you can adjust the scale value) */
+    z-index: 10; /* Make sure the hovered image appears above other content */
+    box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.8); /* Optional: Add a shadow to make the enlarged image stand out */
+}
+
+
 
 .blog-post {
     margin-bottom: 20px;
     position: relative;
     padding-bottom: 40px;
+ 
 }
 
 .blog-post .button-container {
