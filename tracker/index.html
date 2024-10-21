@@ -69,7 +69,7 @@
 
     async function loadTableData() {
         try {
-            const response = await fetch('dump.json');
+            const response = await fetch('clean.json');
             const jsonData = await response.json();
             const tableBody = document.getElementById('table-body');
            
