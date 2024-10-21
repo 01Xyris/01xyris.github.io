@@ -218,6 +218,15 @@
             "file_hash": "acb81935777f91e4954f8ef5649aced35678021cd3571509463a78445c4a284d"
         }
     ],
+    "28": [
+        {
+            "result": "suspicion\tHEUR:Trojan-PSW.MSIL.Stealer.gen",
+            "scan_time": "2024-10-21",
+            "file_size": "119296",
+            "file_name": "Edefepy.exe",
+            "file_hash": "71ade48d7e76852fac3c399753081f11353a4acb34e71102af9fc8b8c777a409"
+        }
+    ],
     "36": [
         {
             "result": "a variant of MSIL/ShellcodeRunner.GI trojan",
@@ -287,6 +296,15 @@
             "file_size": "3319808",
             "file_name": "skuld3.exe",
             "file_hash": "a4a66b5826dbc95ed463bf1daaa417ae99ea8b1b27ddbacdceba94657babbafc"
+        }
+    ],
+    "72": [
+        {
+            "result": "VBS:Electryon.308 (B)",
+            "scan_time": "2024-10-21",
+            "file_size": "128654",
+            "file_name": "NOware.exe",
+            "file_hash": "cd3aa230a9dc3d26e019792d178c234a275cfc003f7e7313370cfb2b3100aed4"
         }
     ]
 }
