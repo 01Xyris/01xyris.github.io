@@ -29,48 +29,68 @@
             </table>
         </div>
     </div>
-    <script>
+   <script>
+    function createTextCell(text) {
+        const cell = document.createElement('td');
+        cell.textContent = text;
+        return cell;
+    }
+
     async function loadTableData() {
         try {
             const response = await fetch('dump.json');
             const jsonData = await response.json();
             const tableBody = document.getElementById('table-body');
            
+            // Clear existing content
+            while (tableBody.firstChild) {
+                tableBody.removeChild(tableBody.firstChild);
+            }
+
+            const uniqueResults = new Map();
+
             for (const results of Object.values(jsonData)) {
                 results.forEach((result) => {
-                    const row = document.createElement('tr');
-                   
-                    const sizeCell = document.createElement('td');
-                    const sizeInKB = Math.round(result.file_size / 1024 * 100) / 100; // Convert to KB and round to 2 decimal places
-                    sizeCell.textContent = `${sizeInKB} KB`;
-
-                    const nameCell = document.createElement('td');
-                    nameCell.textContent = result.file_name;
-
-                    const hashCell = document.createElement('td');
-                    hashCell.textContent = result.file_hash;
-
-                    const timeCell = document.createElement('td');
-                    timeCell.textContent = result.scan_time;
-
-                    const resultCell = document.createElement('td');
-                    resultCell.textContent = result.result;
-                   
-                    row.appendChild(sizeCell);
-                    row.appendChild(nameCell);
-                    row.appendChild(hashCell);
-                    row.appendChild(timeCell);
-                    row.appendChild(resultCell);
-                   
-                    tableBody.appendChild(row);
+                    const existingResult = uniqueResults.get(result.file_hash);
+                    if (!existingResult || new Date(result.scan_time) > new Date(existingResult.scan_time)) {
+                        uniqueResults.set(result.file_hash, result);
+                    }
                 });
+            }
+
+            uniqueResults.forEach((result) => {
+                const row = document.createElement('tr');
+               
+                const sizeInKB = Math.round(result.file_size / 1024 * 100) / 100;
+                row.appendChild(createTextCell(`${sizeInKB} KB`));
+                row.appendChild(createTextCell(result.file_name));
+                row.appendChild(createTextCell(result.file_hash));
+                row.appendChild(createTextCell(result.scan_time));
+                row.appendChild(createTextCell(result.result));
+               
+                tableBody.appendChild(row);
+            });
+
+            if (tableBody.children.length === 0) {
+                const row = document.createElement('tr');
+                const cell = document.createElement('td');
+                cell.textContent = 'No data found.';
+                cell.colSpan = 5;
+                row.appendChild(cell);
+                tableBody.appendChild(row);
             }
         } catch (error) {
             console.error('Error loading table data:', error);
             const tableBody = document.getElementById('table-body');
-            tableBody.innerHTML = '<tr><td colspan="5">Error loading data. Please check the console for details.</td></tr>';
+            const row = document.createElement('tr');
+            const cell = document.createElement('td');
+            cell.textContent = 'Error loading data. Please check the console for details.';
+            cell.colSpan = 5;
+            row.appendChild(cell);
+            tableBody.appendChild(row);
         }
     }
+
     document.addEventListener('DOMContentLoaded', loadTableData);
     </script>
 </body>
