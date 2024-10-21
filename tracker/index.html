@@ -33,54 +33,72 @@
     </div>
 
     <script>
-    async function loadTableData() {
-        try {
-            const response = await fetch('dump.json');
-            const jsonData = await response.json();
+  async function loadTableData() {
+    try {
+        const response = await fetch('dump.json');
+        const jsonData = await response.json();
 
-            const tableBody = document.getElementById('table-body');
-            
-    
-            for (const [id, results] of Object.entries(jsonData)) {
+        const tableBody = document.getElementById('table-body');
+        
+        // Clear existing content
+        tableBody.innerHTML = '';
+
+        // Process and populate table rows with JSON data
+        for (const [userId, results] of Object.entries(jsonData)) {
+            if (Array.isArray(results)) {
                 results.forEach((result, index) => {
-                    const row = document.createElement('tr');
-                    
-                    const idCell = document.createElement('td');
-                    idCell.textContent = `${id}-${index + 1}`;
-
-                    const sizeCell = document.createElement('td');
-                    sizeCell.textContent = result.file_size;
-
-                    const nameCell = document.createElement('td');
-                    nameCell.textContent = result.file_name;
-
-                    const hashCell = document.createElement('td');
-                    hashCell.textContent = result.file_hash;
-
-                    const timeCell = document.createElement('td');
-                    timeCell.textContent = result.scan_time;
-
-                    const resultCell = document.createElement('td');
-                    resultCell.textContent = result.result;
-                    
-                    row.appendChild(idCell);
-                    row.appendChild(sizeCell);
-                    row.appendChild(nameCell);
-                    row.appendChild(hashCell);
-                    row.appendChild(timeCell);
-                    row.appendChild(resultCell);
-                    
-                    tableBody.appendChild(row);
+                    addRowToTable(tableBody, userId, index, result);
                 });
+            } else if (typeof results === 'object' && results !== null) {
+                addRowToTable(tableBody, userId, 0, results);
+            } else {
+                console.warn(`Unexpected data structure for user ${userId}`);
             }
-        } catch (error) {
-            console.error('Error loading table data:', error);
-            const tableBody = document.getElementById('table-body');
-          
         }
-    }
 
-    document.addEventListener('DOMContentLoaded', loadTableData);
+        if (tableBody.children.length === 0) {
+            tableBody.innerHTML = '<tr><td colspan="6">No valid data found.</td></tr>';
+        }
+    } catch (error) {
+        console.error('Error loading table data:', error);
+        const tableBody = document.getElementById('table-body');
+        tableBody.innerHTML = '<tr><td colspan="6">Error loading data. Please check the console for details.</td></tr>';
+    }
+}
+
+function addRowToTable(tableBody, userId, index, result) {
+    const row = document.createElement('tr');
+    
+    const idCell = document.createElement('td');
+    idCell.textContent = `${userId}-${index + 1}`;
+
+    const sizeCell = document.createElement('td');
+    sizeCell.textContent = result.file_size || 'N/A';
+
+    const nameCell = document.createElement('td');
+    nameCell.textContent = result.file_name || 'N/A';
+
+    const hashCell = document.createElement('td');
+    hashCell.textContent = result.file_hash || 'N/A';
+
+    const timeCell = document.createElement('td');
+    timeCell.textContent = result.scan_time || 'N/A';
+
+    const resultCell = document.createElement('td');
+    resultCell.textContent = result.result || 'N/A';
+    
+    row.appendChild(idCell);
+    row.appendChild(sizeCell);
+    row.appendChild(nameCell);
+    row.appendChild(hashCell);
+    row.appendChild(timeCell);
+    row.appendChild(resultCell);
+    
+    tableBody.appendChild(row);
+}
+
+// Call loadTableData when the page loads
+document.addEventListener('DOMContentLoaded', loadTableData);
     </script>
 </body>
 </html>
