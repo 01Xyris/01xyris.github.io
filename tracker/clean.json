@@ -1,6 +1,13 @@
 {
     "25": [
         {
+            "result": "Win.Trojan.Remcos-9841897-0",
+            "scan_time": "2024-10-21",
+            "file_size": "471040",
+            "file_name": "Project1.exe",
+            "file_hash": "2878fb7b7c4582ef5869dbd01d9f1fae016dbb16d5b379702fd9014ad999d7bc"
+        },
+        {
             "result": "Dump:Generic.Dacic.A9349469.A.BA9412D4 (B)",
             "scan_time": "2024-10-21",
             "file_size": "440320",
