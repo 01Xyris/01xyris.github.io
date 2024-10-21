@@ -176,13 +176,6 @@
             "file_hash": "d192987b04b138b29f8c08c5ca6a6b80a39286eec84c38010ea7789b6d1ac102"
         },
         {
-            "result": "suspicion\tVHO:Backdoor.Win32.Convagent.gen",
-            "scan_time": "2024-10-21",
-            "file_size": "1558600",
-            "file_name": "ff.exe",
-            "file_hash": "d192987b04b138b29f8c08c5ca6a6b80a39286eec84c38010ea7789b6d1ac102"
-        },
-        {
             "result": "Dump:Generic.Dacic.A9349469.A.6B04AEC6 (B)",
             "scan_time": "2024-10-21",
             "file_size": "440320",
