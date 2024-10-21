@@ -115,13 +115,6 @@
             "file_hash": "302e4f4a24cbf26a203885e16ddb6b9ff470034ec49345d620296e91b67336c3"
         },
         {
-            "result": "HEUR/APC",
-            "scan_time": "2024-10-21",
-            "file_size": "20480",
-            "file_name": "Project1.exe",
-            "file_hash": "302e4f4a24cbf26a203885e16ddb6b9ff470034ec49345d620296e91b67336c3"
-        },
-        {
             "result": "Dump:Generic.Dacic.A9349469.A.BA9412D4 (B)",
             "scan_time": "2024-10-21",
             "file_size": "440320",
@@ -304,16 +297,21 @@
             "file_hash": "acb81935777f91e4954f8ef5649aced35678021cd3571509463a78445c4a284d"
         }
     ],
-    "28": [
-        {
-            "result": "suspicion\tHEUR:Trojan-PSW.MSIL.Stealer.gen",
-            "scan_time": "2024-10-21",
-            "file_size": "119296",
-            "file_name": "Edefepy.exe",
-            "file_hash": "71ade48d7e76852fac3c399753081f11353a4acb34e71102af9fc8b8c777a409"
-        }
-    ],
     "36": [
+        {
+            "result": "Generic.ShellCode.Donut.Marte.4.4ED0EC90 (B)",
+            "scan_time": "2024-10-21",
+            "file_size": "65643",
+            "file_name": "outputfile.bin",
+            "file_hash": "0b905f81822235c73d864358164dfb43084ddf6d771f0b92fba2ad6d3f1abcb1"
+        },
+        {
+            "result": "Generic.ShellCode.Donut.Marte.4.2FE3F65F (B)",
+            "scan_time": "2024-10-21",
+            "file_size": "65643",
+            "file_name": "outputfile.bin",
+            "file_hash": "16a9bfe4827ad49c14c545245409ddaddae18748cc207adefa84f1d3111b0436"
+        },
         {
             "result": "N/A",
             "scan_time": "2024-10-21",
