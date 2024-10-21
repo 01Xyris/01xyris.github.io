@@ -1,4 +1,264 @@
 {
+    "25": [
+        {
+            "result": "Dump:Generic.Dacic.A9349469.A.BA9412D4 (B)",
+            "scan_time": "2024-10-21",
+            "file_size": "440320",
+            "file_name": "1.exe",
+            "file_hash": "7b7afd28c170af2cafb4bc68430ebba69e42849cfd8f590a9b9310e55cc887bc"
+        },
+        {
+            "result": "HEUR/APC",
+            "scan_time": "2024-10-21",
+            "file_size": "20480",
+            "file_name": "Project1.exe",
+            "file_hash": "302e4f4a24cbf26a203885e16ddb6b9ff470034ec49345d620296e91b67336c3"
+        },
+        {
+            "result": "Dump:Generic.Dacic.A9349469.A.BA9412D4 (B)",
+            "scan_time": "2024-10-21",
+            "file_size": "440320",
+            "file_name": "remcos_a.exe",
+            "file_hash": "7b7afd28c170af2cafb4bc68430ebba69e42849cfd8f590a9b9310e55cc887bc"
+        },
+        {
+            "result": "HEUR/APC",
+            "scan_time": "2024-10-21",
+            "file_size": "20480",
+            "file_name": "Project1.exe",
+            "file_hash": "302e4f4a24cbf26a203885e16ddb6b9ff470034ec49345d620296e91b67336c3"
+        },
+        {
+            "result": "HEUR/APC",
+            "scan_time": "2024-10-21",
+            "file_size": "20480",
+            "file_name": "Project1.exe",
+            "file_hash": "302e4f4a24cbf26a203885e16ddb6b9ff470034ec49345d620296e91b67336c3"
+        },
+        {
+            "result": "HEUR/APC",
+            "scan_time": "2024-10-21",
+            "file_size": "20480",
+            "file_name": "Project1.exe",
+            "file_hash": "302e4f4a24cbf26a203885e16ddb6b9ff470034ec49345d620296e91b67336c3"
+        },
+        {
+            "result": "HEUR/APC",
+            "scan_time": "2024-10-21",
+            "file_size": "20480",
+            "file_name": "Project1.exe",
+            "file_hash": "302e4f4a24cbf26a203885e16ddb6b9ff470034ec49345d620296e91b67336c3"
+        },
+        {
+            "result": "HEUR/APC",
+            "scan_time": "2024-10-21",
+            "file_size": "20480",
+            "file_name": "Project1.exe",
+            "file_hash": "302e4f4a24cbf26a203885e16ddb6b9ff470034ec49345d620296e91b67336c3"
+        },
+        {
+            "result": "HEUR/APC",
+            "scan_time": "2024-10-21",
+            "file_size": "20480",
+            "file_name": "Project1.exe",
+            "file_hash": "302e4f4a24cbf26a203885e16ddb6b9ff470034ec49345d620296e91b67336c3"
+        },
+        {
+            "result": "HEUR/APC",
+            "scan_time": "2024-10-21",
+            "file_size": "20480",
+            "file_name": "Project1.exe",
+            "file_hash": "302e4f4a24cbf26a203885e16ddb6b9ff470034ec49345d620296e91b67336c3"
+        },
+        {
+            "result": "Dump:Generic.Dacic.A9349469.A.BA9412D4 (B)",
+            "scan_time": "2024-10-21",
+            "file_size": "440320",
+            "file_name": "remcos_a.exe",
+            "file_hash": "7b7afd28c170af2cafb4bc68430ebba69e42849cfd8f590a9b9310e55cc887bc"
+        },
+        {
+            "result": "HEUR/APC",
+            "scan_time": "2024-10-21",
+            "file_size": "20480",
+            "file_name": "Project1.exe",
+            "file_hash": "302e4f4a24cbf26a203885e16ddb6b9ff470034ec49345d620296e91b67336c3"
+        },
+        {
+            "result": "Dump:Generic.Dacic.A9349469.A.BA9412D4 (B)",
+            "scan_time": "2024-10-21",
+            "file_size": "440320",
+            "file_name": "remcos_a.exe",
+            "file_hash": "7b7afd28c170af2cafb4bc68430ebba69e42849cfd8f590a9b9310e55cc887bc"
+        },
+        {
+            "result": "HEUR/APC",
+            "scan_time": "2024-10-21",
+            "file_size": "20480",
+            "file_name": "Project1.exe",
+            "file_hash": "302e4f4a24cbf26a203885e16ddb6b9ff470034ec49345d620296e91b67336c3"
+        },
+        {
+            "result": "HEUR/APC",
+            "scan_time": "2024-10-21",
+            "file_size": "20480",
+            "file_name": "Project1.exe",
+            "file_hash": "302e4f4a24cbf26a203885e16ddb6b9ff470034ec49345d620296e91b67336c3"
+        },
+        {
+            "result": "HEUR/APC",
+            "scan_time": "2024-10-21",
+            "file_size": "20480",
+            "file_name": "Project1.exe",
+            "file_hash": "302e4f4a24cbf26a203885e16ddb6b9ff470034ec49345d620296e91b67336c3"
+        },
+        {
+            "result": "HEUR/APC",
+            "scan_time": "2024-10-21",
+            "file_size": "20480",
+            "file_name": "Project1.exe",
+            "file_hash": "302e4f4a24cbf26a203885e16ddb6b9ff470034ec49345d620296e91b67336c3"
+        },
+        {
+            "result": "HEUR/APC",
+            "scan_time": "2024-10-21",
+            "file_size": "20480",
+            "file_name": "Project1.exe",
+            "file_hash": "302e4f4a24cbf26a203885e16ddb6b9ff470034ec49345d620296e91b67336c3"
+        },
+        {
+            "result": "HEUR/APC",
+            "scan_time": "2024-10-21",
+            "file_size": "20480",
+            "file_name": "Project1.exe",
+            "file_hash": "302e4f4a24cbf26a203885e16ddb6b9ff470034ec49345d620296e91b67336c3"
+        },
+        {
+            "result": "TR/Dropper.VB.Gen",
+            "scan_time": "2024-10-21",
+            "file_size": "32768",
+            "file_name": "Project1.exe",
+            "file_hash": "8615425940565c0e3e7107368f0a8c46bebce957cd380200557466750f88671e"
+        },
+        {
+            "result": "a variant of Win32/Injector.CXSL trojan",
+            "scan_time": "2024-10-21",
+            "file_size": "98304",
+            "file_name": "Project1.exe",
+            "file_hash": "652ba73acc7c059bbe9f5b792c1668229b92f7c78ce8b9f0493e36d75e428fd0"
+        },
+        {
+            "result": "Trojan.TR/Dropper.Gen",
+            "scan_time": "2024-10-21",
+            "file_size": "1558600",
+            "file_name": "okidoki.exe",
+            "file_hash": "81aeb8c7a6700b8ea30b3c388052a89c254ebda575caa603cca3c8bb8af23398"
+        },
+        {
+            "result": "suspicion\tVHO:Backdoor.Win32.Convagent.gen",
+            "scan_time": "2024-10-21",
+            "file_size": "1558600",
+            "file_name": "KOMODO.exe",
+            "file_hash": "e541c93aab5dcb87acd428399300dd3613b8f79112a8a8b31aa038c7bb14381b"
+        },
+        {
+            "result": "suspicion\tVHO:Backdoor.Win32.Convagent.gen",
+            "scan_time": "2024-10-21",
+            "file_size": "1558600",
+            "file_name": "ff.exe",
+            "file_hash": "d192987b04b138b29f8c08c5ca6a6b80a39286eec84c38010ea7789b6d1ac102"
+        },
+        {
+            "result": "suspicion\tVHO:Backdoor.Win32.Convagent.gen",
+            "scan_time": "2024-10-21",
+            "file_size": "1558600",
+            "file_name": "ff.exe",
+            "file_hash": "d192987b04b138b29f8c08c5ca6a6b80a39286eec84c38010ea7789b6d1ac102"
+        },
+        {
+            "result": "Dump:Generic.Dacic.A9349469.A.6B04AEC6 (B)",
+            "scan_time": "2024-10-21",
+            "file_size": "440320",
+            "file_name": "remcos_a.exe",
+            "file_hash": "acb81935777f91e4954f8ef5649aced35678021cd3571509463a78445c4a284d"
+        },
+        {
+            "result": "Dump:Generic.Dacic.A9349469.A.6B04AEC6 (B)",
+            "scan_time": "2024-10-21",
+            "file_size": "440320",
+            "file_name": "remcos_a.exe",
+            "file_hash": "acb81935777f91e4954f8ef5649aced35678021cd3571509463a78445c4a284d"
+        },
+        {
+            "result": "Dump:Generic.Dacic.A9349469.A.6B04AEC6 (B)",
+            "scan_time": "2024-10-21",
+            "file_size": "440320",
+            "file_name": "remcos_a.exe",
+            "file_hash": "acb81935777f91e4954f8ef5649aced35678021cd3571509463a78445c4a284d"
+        },
+        {
+            "result": "Dump:Generic.Dacic.A9349469.A.6B04AEC6 (B)",
+            "scan_time": "2024-10-21",
+            "file_size": "440320",
+            "file_name": "remcos_a.exe",
+            "file_hash": "acb81935777f91e4954f8ef5649aced35678021cd3571509463a78445c4a284d"
+        }
+    ],
+    "36": [
+        {
+            "result": "a variant of MSIL/ShellcodeRunner.GI trojan",
+            "scan_time": "2024-10-21",
+            "file_size": "32768",
+            "file_name": "Chilee.exe",
+            "file_hash": "0e0f999766786800f2f0237a046aadaa4b46a55e4559932b61f03f0123a7da5d"
+        },
+        {
+            "result": "suspicion\tHEUR:Trojan.MSIL.HTA.gen",
+            "scan_time": "2024-10-21",
+            "file_size": "55024",
+            "file_name": "Chilee.exe",
+            "file_hash": "563b1b711c925c09cdd8e6b2328868ded3aaec97506b9303084e1a675ca0e31b"
+        },
+        {
+            "result": "Generic.ShellCode.Donut.Marte.4.DBE6AE64 (B)",
+            "scan_time": "2024-10-21",
+            "file_size": "305771",
+            "file_name": "Tloader1.bin",
+            "file_hash": "3601de47f301b1a150f9f8bba2b70d61932c50ee8fa49c3d05ea71d85a0ae7ec"
+        },
+        {
+            "result": "Generic.ShellCode.Donut.Marte.4.8FAA3580 (B)",
+            "scan_time": "2024-10-21",
+            "file_size": "305771",
+            "file_name": "Tloader.bin",
+            "file_hash": "a8cf0c49ce1a48a27c7a9f787df0545231da7096cfa3ca6811c4fd4adca610e5"
+        }
+    ],
+    "57": [
+        {
+            "result": "a variant of MSIL/TrojanDropper.Agent.AIX trojan",
+            "scan_time": "2024-10-21",
+            "file_size": "18474924",
+            "file_name": "Loader.exe",
+            "file_hash": "6aeaaea9eff744db393c13e4ab8518f105704ddf0f35710bb7f5d6d3b4b276d0"
+        }
+    ],
+    "67": [
+        {
+            "result": "Heur.BZC.MTN.Boxter.1062.52FAD55C (B)",
+            "scan_time": "2024-10-21",
+            "file_size": "1666",
+            "file_name": "passphrase.bat",
+            "file_hash": "b5621ca85d9b087c70ad158d5562efffce00612e79ede02439314225d2b0cb70"
+        },
+        {
+            "result": "Heur.BZC.MTN.Boxter.1062.52FAD55C (B)",
+            "scan_time": "2024-10-21",
+            "file_size": "1648",
+            "file_name": "passphrase.bat",
+            "file_hash": "c59afc0935bacb1044ad5831cafaee2eb66bc6059d76e8439354329b901a06b0"
+        }
+    ],
     "69": [
         {
             "result": "suspicion\tHEUR:Backdoor.MSIL.XWorm.gen",
