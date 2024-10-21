@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="..\css\tracker.css">
+    <title>XyrisTracker</title>
+
+</head>
+<body>
+    <div class="window">
+        <div class="title-bar">
+            <span>Scan Results</span>
+        </div>
+        <div class="content">
+            <h2>XyrisTracker</h2>
+            <table>
+                <thead>
+                    <tr>
+                        <th>ID</th>
+                        <th>File Size</th>
+                        <th>File Name</th>
+                        <th>File Hash</th>
+                        <th>Scan Date</th>
+                        <th>Result</th>
+                    </tr>
+                </thead>
+                <tbody id="table-body">
+             
+                </tbody>
+            </table>
+        </div>
+    </div>
+
+    <script>
+    async function loadTableData() {
+        try {
+            const response = await fetch('dump.json');
+            const jsonData = await response.json();
+
+            const tableBody = document.getElementById('table-body');
+            
+    
+            for (const [id, results] of Object.entries(jsonData)) {
+                results.forEach((result, index) => {
+                    const row = document.createElement('tr');
+                    
+                    const idCell = document.createElement('td');
+                    idCell.textContent = `${id}-${index + 1}`;
+
+                    const sizeCell = document.createElement('td');
+                    sizeCell.textContent = result.file_size;
+
+                    const nameCell = document.createElement('td');
+                    nameCell.textContent = result.file_name;
+
+                    const hashCell = document.createElement('td');
+                    hashCell.textContent = result.file_hash;
+
+                    const timeCell = document.createElement('td');
+                    timeCell.textContent = result.scan_time;
+
+                    const resultCell = document.createElement('td');
+                    resultCell.textContent = result.result;
+                    
+                    row.appendChild(idCell);
+                    row.appendChild(sizeCell);
+                    row.appendChild(nameCell);
+                    row.appendChild(hashCell);
+                    row.appendChild(timeCell);
+                    row.appendChild(resultCell);
+                    
+                    tableBody.appendChild(row);
+                });
+            }
+        } catch (error) {
+            console.error('Error loading table data:', error);
+            const tableBody = document.getElementById('table-body');
+          
+        }
+    }
+
+    document.addEventListener('DOMContentLoaded', loadTableData);
+    </script>
+</body>
+</html>

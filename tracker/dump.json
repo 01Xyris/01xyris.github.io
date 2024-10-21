@@ -1,0 +1,1844 @@
+{
+    "16": {
+        "scan_history": [
+            {
+                "session_id": "9ba3ee96-f65a-4e95-93d4-6a6f162076ec",
+                "scan_time": "2024-10-21T09:42:38.386Z",
+                "file_size": "372912",
+                "file_name": "Firefox Installer.exe",
+                "file_hash": "8426666067f53f5f314eb4b8d29df3d79a8920e6608366540b24b8e84875b559"
+            }
+        ],
+        "scan_results": {
+            "9ba3ee96-f65a-4e95-93d4-6a6f162076ec": [
+                {
+                    "session_id": "9ba3ee96-f65a-4e95-93d4-6a6f162076ec",
+                    "antivirus": "avast",
+                    "result": "Clean",
+                    "scan_time": "2024-10-21T09:42:21.382Z",
+                    "file_size": "372912",
+                    "file_name": "Firefox Installer.exe",
+                    "file_hash": "8426666067f53f5f314eb4b8d29df3d79a8920e6608366540b24b8e84875b559"
+                },
+                {
+                    "session_id": "9ba3ee96-f65a-4e95-93d4-6a6f162076ec",
+                    "antivirus": "avg",
+                    "result": "Clean",
+                    "scan_time": "2024-10-21T09:42:19.806Z",
+                    "file_size": "372912",
+                    "file_name": "Firefox Installer.exe",
+                    "file_hash": "8426666067f53f5f314eb4b8d29df3d79a8920e6608366540b24b8e84875b559"
+                },
+                {
+                    "session_id": "9ba3ee96-f65a-4e95-93d4-6a6f162076ec",
+                    "antivirus": "clamav",
+                    "result": "Clean",
+                    "scan_time": "2024-10-21T09:42:20.407Z",
+                    "file_size": "372912",
+                    "file_name": "Firefox Installer.exe",
+                    "file_hash": "8426666067f53f5f314eb4b8d29df3d79a8920e6608366540b24b8e84875b559"
+                },
+                {
+                    "session_id": "9ba3ee96-f65a-4e95-93d4-6a6f162076ec",
+                    "antivirus": "comodo",
+                    "result": "Clean",
+                    "scan_time": "2024-10-21T09:42:17.767Z",
+                    "file_size": "372912",
+                    "file_name": "Firefox Installer.exe",
+                    "file_hash": "8426666067f53f5f314eb4b8d29df3d79a8920e6608366540b24b8e84875b559"
+                },
+                {
+                    "session_id": "9ba3ee96-f65a-4e95-93d4-6a6f162076ec",
+                    "antivirus": "emisoft",
+                    "result": "Clean",
+                    "scan_time": "2024-10-21T09:42:20.037Z",
+                    "file_size": "372912",
+                    "file_name": "Firefox Installer.exe",
+                    "file_hash": "8426666067f53f5f314eb4b8d29df3d79a8920e6608366540b24b8e84875b559"
+                },
+                {
+                    "session_id": "9ba3ee96-f65a-4e95-93d4-6a6f162076ec",
+                    "antivirus": "fsecure",
+                    "result": "Clean",
+                    "scan_time": "2024-10-21T09:42:18.003Z",
+                    "file_size": "372912",
+                    "file_name": "Firefox Installer.exe",
+                    "file_hash": "8426666067f53f5f314eb4b8d29df3d79a8920e6608366540b24b8e84875b559"
+                },
+                {
+                    "session_id": "9ba3ee96-f65a-4e95-93d4-6a6f162076ec",
+                    "antivirus": "kaspersky",
+                    "result": "Clean",
+                    "scan_time": "2024-10-21T09:42:24.577Z",
+                    "file_size": "372912",
+                    "file_name": "Firefox Installer.exe",
+                    "file_hash": "8426666067f53f5f314eb4b8d29df3d79a8920e6608366540b24b8e84875b559"
+                },
+                {
+                    "session_id": "9ba3ee96-f65a-4e95-93d4-6a6f162076ec",
+                    "antivirus": "mcafee",
+                    "result": "timeout",
+                    "scan_time": "2024-10-21T09:42:36.886Z",
+                    "file_size": "372912",
+                    "file_name": "Firefox Installer.exe",
+                    "file_hash": "8426666067f53f5f314eb4b8d29df3d79a8920e6608366540b24b8e84875b559"
+                },
+                {
+                    "session_id": "9ba3ee96-f65a-4e95-93d4-6a6f162076ec",
+                    "antivirus": "mcafee",
+                    "result": "error",
+                    "scan_time": "2024-10-21T09:42:38.386Z",
+                    "file_size": "372912",
+                    "file_name": "Firefox Installer.exe",
+                    "file_hash": "8426666067f53f5f314eb4b8d29df3d79a8920e6608366540b24b8e84875b559"
+                },
+                {
+                    "session_id": "9ba3ee96-f65a-4e95-93d4-6a6f162076ec",
+                    "antivirus": "nod32",
+                    "result": "Clean",
+                    "scan_time": "2024-10-21T09:42:19.733Z",
+                    "file_size": "372912",
+                    "file_name": "Firefox Installer.exe",
+                    "file_hash": "8426666067f53f5f314eb4b8d29df3d79a8920e6608366540b24b8e84875b559"
+                },
+                {
+                    "session_id": "9ba3ee96-f65a-4e95-93d4-6a6f162076ec",
+                    "antivirus": "windows_defender",
+                    "result": "Clean",
+                    "scan_time": "2024-10-21T09:42:17.787Z",
+                    "file_size": "372912",
+                    "file_name": "Firefox Installer.exe",
+                    "file_hash": "8426666067f53f5f314eb4b8d29df3d79a8920e6608366540b24b8e84875b559"
+                }
+            ]
+        }
+    },
+    "25": {
+        "scan_history": [
+            {
+                "session_id": "d37fe67f-4e0b-43c4-a7cd-1e6f70c12205",
+                "scan_time": "2024-10-21T11:47:28.966Z",
+                "file_size": "1663264",
+                "file_name": "putty.exe",
+                "file_hash": "e61b8f44ab92cf0f9cb1101347967d31e1839979142a4114a7dd02aa237ba021"
+            },
+            {
+                "session_id": "17212acb-f6ea-483f-b9d6-e84c5898be34",
+                "scan_time": "2024-10-21T11:39:16.751Z",
+                "file_size": "32768",
+                "file_name": "Licenses.exe",
+                "file_hash": "fdddc74cfb770abd6fc423e9567817c2076c5ed1a36442caf99aaadf183b2a80"
+            },
+            {
+                "session_id": "98e9e4aa-12fd-4189-9a6c-13922cc5be28",
+                "scan_time": "2024-10-21T11:36:59.685Z",
+                "file_size": "1663264",
+                "file_name": "putty.exe",
+                "file_hash": "e61b8f44ab92cf0f9cb1101347967d31e1839979142a4114a7dd02aa237ba021"
+            },
+            {
+                "session_id": "6cddd4aa-5e3a-4b81-a7bf-9175a391ef04",
+                "scan_time": "2024-10-21T11:33:02.625Z",
+                "file_size": "1663264",
+                "file_name": "putty.exe",
+                "file_hash": "e61b8f44ab92cf0f9cb1101347967d31e1839979142a4114a7dd02aa237ba021"
+            },
+            {
+                "session_id": "94d718d0-42e3-4c10-b318-30a2a1ee19b7",
+                "scan_time": "2024-10-21T08:21:37.952Z",
+                "file_size": "440320",
+                "file_name": "remcos_a.exe",
+                "file_hash": "acb81935777f91e4954f8ef5649aced35678021cd3571509463a78445c4a284d"
+            },
+            {
+                "session_id": "b544fcec-7299-4b60-a06e-026e5466edd4",
+                "scan_time": "2024-10-21T08:20:59.484Z",
+                "file_size": "440320",
+                "file_name": "remcos_a.exe",
+                "file_hash": "acb81935777f91e4954f8ef5649aced35678021cd3571509463a78445c4a284d"
+            },
+            {
+                "session_id": "17e59496-d829-4076-b658-7e66e2e743ec",
+                "scan_time": "2024-10-21T08:18:46.068Z",
+                "file_size": "1251220",
+                "file_name": "Hex.exe",
+                "file_hash": "5b20fa27f51253e981ba83f3eb6d922fa46be167590d4d9b673d031d59459e3b"
+            },
+            {
+                "session_id": "3d959c51-eab4-4ade-89b9-cd4002bb25fb",
+                "scan_time": "2024-10-21T08:17:59.926Z",
+                "file_size": "440320",
+                "file_name": "remcos_a.exe",
+                "file_hash": "acb81935777f91e4954f8ef5649aced35678021cd3571509463a78445c4a284d"
+            },
+            {
+                "session_id": "275837a1-f4c4-41f4-8d7e-745b1c092986",
+                "scan_time": "2024-10-21T08:15:46.975Z",
+                "file_size": "440320",
+                "file_name": "remcos_a.exe",
+                "file_hash": "acb81935777f91e4954f8ef5649aced35678021cd3571509463a78445c4a284d"
+            }
+        ],
+        "scan_results": {
+            "d37fe67f-4e0b-43c4-a7cd-1e6f70c12205": [
+                {
+                    "session_id": "d37fe67f-4e0b-43c4-a7cd-1e6f70c12205",
+                    "antivirus": "avast",
+                    "result": "Clean",
+                    "scan_time": "2024-10-21T11:47:03.343Z",
+                    "file_size": "1663264",
+                    "file_name": "putty.exe",
+                    "file_hash": "e61b8f44ab92cf0f9cb1101347967d31e1839979142a4114a7dd02aa237ba021"
+                },
+                {
+                    "session_id": "d37fe67f-4e0b-43c4-a7cd-1e6f70c12205",
+                    "antivirus": "avg",
+                    "result": "Clean",
+                    "scan_time": "2024-10-21T11:47:02.595Z",
+                    "file_size": "1663264",
+                    "file_name": "putty.exe",
+                    "file_hash": "e61b8f44ab92cf0f9cb1101347967d31e1839979142a4114a7dd02aa237ba021"
+                },
+                {
+                    "session_id": "d37fe67f-4e0b-43c4-a7cd-1e6f70c12205",
+                    "antivirus": "clamav",
+                    "result": "Clean",
+                    "scan_time": "2024-10-21T11:47:01.958Z",
+                    "file_size": "1663264",
+                    "file_name": "putty.exe",
+                    "file_hash": "e61b8f44ab92cf0f9cb1101347967d31e1839979142a4114a7dd02aa237ba021"
+                },
+                {
+                    "session_id": "d37fe67f-4e0b-43c4-a7cd-1e6f70c12205",
+                    "antivirus": "comodo",
+                    "result": "Clean",
+                    "scan_time": "2024-10-21T11:47:02.327Z",
+                    "file_size": "1663264",
+                    "file_name": "putty.exe",
+                    "file_hash": "e61b8f44ab92cf0f9cb1101347967d31e1839979142a4114a7dd02aa237ba021"
+                },
+                {
+                    "session_id": "d37fe67f-4e0b-43c4-a7cd-1e6f70c12205",
+                    "antivirus": "emisoft",
+                    "result": "Clean",
+                    "scan_time": "2024-10-21T11:47:04.025Z",
+                    "file_size": "1663264",
+                    "file_name": "putty.exe",
+                    "file_hash": "e61b8f44ab92cf0f9cb1101347967d31e1839979142a4114a7dd02aa237ba021"
+                },
+                {
+                    "session_id": "d37fe67f-4e0b-43c4-a7cd-1e6f70c12205",
+                    "antivirus": "fsecure",
+                    "result": "Clean",
+                    "scan_time": "2024-10-21T11:47:02.706Z",
+                    "file_size": "1663264",
+                    "file_name": "putty.exe",
+                    "file_hash": "e61b8f44ab92cf0f9cb1101347967d31e1839979142a4114a7dd02aa237ba021"
+                },
+                {
+                    "session_id": "d37fe67f-4e0b-43c4-a7cd-1e6f70c12205",
+                    "antivirus": "kaspersky",
+                    "result": "Clean",
+                    "scan_time": "2024-10-21T11:47:03.588Z",
+                    "file_size": "1663264",
+                    "file_name": "putty.exe",
+                    "file_hash": "e61b8f44ab92cf0f9cb1101347967d31e1839979142a4114a7dd02aa237ba021"
+                },
+                {
+                    "session_id": "d37fe67f-4e0b-43c4-a7cd-1e6f70c12205",
+                    "antivirus": "mcafee",
+                    "result": "timeout",
+                    "scan_time": "2024-10-21T11:47:17.784Z",
+                    "file_size": "1663264",
+                    "file_name": "putty.exe",
+                    "file_hash": "e61b8f44ab92cf0f9cb1101347967d31e1839979142a4114a7dd02aa237ba021"
+                },
+                {
+                    "session_id": "d37fe67f-4e0b-43c4-a7cd-1e6f70c12205",
+                    "antivirus": "mcafee",
+                    "result": "error",
+                    "scan_time": "2024-10-21T11:47:28.966Z",
+                    "file_size": "1663264",
+                    "file_name": "putty.exe",
+                    "file_hash": "e61b8f44ab92cf0f9cb1101347967d31e1839979142a4114a7dd02aa237ba021"
+                },
+                {
+                    "session_id": "d37fe67f-4e0b-43c4-a7cd-1e6f70c12205",
+                    "antivirus": "nod32",
+                    "result": "Clean",
+                    "scan_time": "2024-10-21T11:47:04.473Z",
+                    "file_size": "1663264",
+                    "file_name": "putty.exe",
+                    "file_hash": "e61b8f44ab92cf0f9cb1101347967d31e1839979142a4114a7dd02aa237ba021"
+                },
+                {
+                    "session_id": "d37fe67f-4e0b-43c4-a7cd-1e6f70c12205",
+                    "antivirus": "windows_defender",
+                    "result": "Clean",
+                    "scan_time": "2024-10-21T11:47:04.369Z",
+                    "file_size": "1663264",
+                    "file_name": "putty.exe",
+                    "file_hash": "e61b8f44ab92cf0f9cb1101347967d31e1839979142a4114a7dd02aa237ba021"
+                }
+            ],
+            "17212acb-f6ea-483f-b9d6-e84c5898be34": [
+                {
+                    "session_id": "17212acb-f6ea-483f-b9d6-e84c5898be34",
+                    "antivirus": "avast",
+                    "result": "Clean",
+                    "scan_time": "2024-10-21T11:38:48.026Z",
+                    "file_size": "32768",
+                    "file_name": "Licenses.exe",
+                    "file_hash": "fdddc74cfb770abd6fc423e9567817c2076c5ed1a36442caf99aaadf183b2a80"
+                },
+                {
+                    "session_id": "17212acb-f6ea-483f-b9d6-e84c5898be34",
+                    "antivirus": "avg",
+                    "result": "Clean",
+                    "scan_time": "2024-10-21T11:38:46.000Z",
+                    "file_size": "32768",
+                    "file_name": "Licenses.exe",
+                    "file_hash": "fdddc74cfb770abd6fc423e9567817c2076c5ed1a36442caf99aaadf183b2a80"
+                },
+                {
+                    "session_id": "17212acb-f6ea-483f-b9d6-e84c5898be34",
+                    "antivirus": "clamav",
+                    "result": "Clean",
+                    "scan_time": "2024-10-21T11:38:45.765Z",
+                    "file_size": "32768",
+                    "file_name": "Licenses.exe",
+                    "file_hash": "fdddc74cfb770abd6fc423e9567817c2076c5ed1a36442caf99aaadf183b2a80"
+                },
+                {
+                    "session_id": "17212acb-f6ea-483f-b9d6-e84c5898be34",
+                    "antivirus": "comodo",
+                    "result": "Clean",
+                    "scan_time": "2024-10-21T11:38:44.320Z",
+                    "file_size": "32768",
+                    "file_name": "Licenses.exe",
+                    "file_hash": "fdddc74cfb770abd6fc423e9567817c2076c5ed1a36442caf99aaadf183b2a80"
+                },
+                {
+                    "session_id": "17212acb-f6ea-483f-b9d6-e84c5898be34",
+                    "antivirus": "emisoft",
+                    "result": "Clean",
+                    "scan_time": "2024-10-21T11:38:44.547Z",
+                    "file_size": "32768",
+                    "file_name": "Licenses.exe",
+                    "file_hash": "fdddc74cfb770abd6fc423e9567817c2076c5ed1a36442caf99aaadf183b2a80"
+                },
+                {
+                    "session_id": "17212acb-f6ea-483f-b9d6-e84c5898be34",
+                    "antivirus": "fsecure",
+                    "result": "Clean",
+                    "scan_time": "2024-10-21T11:39:16.751Z",
+                    "file_size": "32768",
+                    "file_name": "Licenses.exe",
+                    "file_hash": "fdddc74cfb770abd6fc423e9567817c2076c5ed1a36442caf99aaadf183b2a80"
+                },
+                {
+                    "session_id": "17212acb-f6ea-483f-b9d6-e84c5898be34",
+                    "antivirus": "fsecure",
+                    "result": "timeout",
+                    "scan_time": "2024-10-21T11:39:04.011Z",
+                    "file_size": "32768",
+                    "file_name": "Licenses.exe",
+                    "file_hash": "fdddc74cfb770abd6fc423e9567817c2076c5ed1a36442caf99aaadf183b2a80"
+                },
+                {
+                    "session_id": "17212acb-f6ea-483f-b9d6-e84c5898be34",
+                    "antivirus": "kaspersky",
+                    "result": "Clean",
+                    "scan_time": "2024-10-21T11:38:47.352Z",
+                    "file_size": "32768",
+                    "file_name": "Licenses.exe",
+                    "file_hash": "fdddc74cfb770abd6fc423e9567817c2076c5ed1a36442caf99aaadf183b2a80"
+                },
+                {
+                    "session_id": "17212acb-f6ea-483f-b9d6-e84c5898be34",
+                    "antivirus": "mcafee",
+                    "result": "timeout",
+                    "scan_time": "2024-10-21T11:39:04.012Z",
+                    "file_size": "32768",
+                    "file_name": "Licenses.exe",
+                    "file_hash": "fdddc74cfb770abd6fc423e9567817c2076c5ed1a36442caf99aaadf183b2a80"
+                },
+                {
+                    "session_id": "17212acb-f6ea-483f-b9d6-e84c5898be34",
+                    "antivirus": "mcafee",
+                    "result": "error",
+                    "scan_time": "2024-10-21T11:39:05.047Z",
+                    "file_size": "32768",
+                    "file_name": "Licenses.exe",
+                    "file_hash": "fdddc74cfb770abd6fc423e9567817c2076c5ed1a36442caf99aaadf183b2a80"
+                },
+                {
+                    "session_id": "17212acb-f6ea-483f-b9d6-e84c5898be34",
+                    "antivirus": "nod32",
+                    "result": "Clean",
+                    "scan_time": "2024-10-21T11:38:44.642Z",
+                    "file_size": "32768",
+                    "file_name": "Licenses.exe",
+                    "file_hash": "fdddc74cfb770abd6fc423e9567817c2076c5ed1a36442caf99aaadf183b2a80"
+                },
+                {
+                    "session_id": "17212acb-f6ea-483f-b9d6-e84c5898be34",
+                    "antivirus": "windows_defender",
+                    "result": "Clean",
+                    "scan_time": "2024-10-21T11:38:44.605Z",
+                    "file_size": "32768",
+                    "file_name": "Licenses.exe",
+                    "file_hash": "fdddc74cfb770abd6fc423e9567817c2076c5ed1a36442caf99aaadf183b2a80"
+                }
+            ],
+            "98e9e4aa-12fd-4189-9a6c-13922cc5be28": [
+                {
+                    "session_id": "98e9e4aa-12fd-4189-9a6c-13922cc5be28",
+                    "antivirus": "avast",
+                    "result": "Clean",
+                    "scan_time": "2024-10-21T11:36:33.637Z",
+                    "file_size": "1663264",
+                    "file_name": "putty.exe",
+                    "file_hash": "e61b8f44ab92cf0f9cb1101347967d31e1839979142a4114a7dd02aa237ba021"
+                },
+                {
+                    "session_id": "98e9e4aa-12fd-4189-9a6c-13922cc5be28",
+                    "antivirus": "avg",
+                    "result": "Clean",
+                    "scan_time": "2024-10-21T11:36:35.095Z",
+                    "file_size": "1663264",
+                    "file_name": "putty.exe",
+                    "file_hash": "e61b8f44ab92cf0f9cb1101347967d31e1839979142a4114a7dd02aa237ba021"
+                },
+                {
+                    "session_id": "98e9e4aa-12fd-4189-9a6c-13922cc5be28",
+                    "antivirus": "clamav",
+                    "result": "Clean",
+                    "scan_time": "2024-10-21T11:36:32.551Z",
+                    "file_size": "1663264",
+                    "file_name": "putty.exe",
+                    "file_hash": "e61b8f44ab92cf0f9cb1101347967d31e1839979142a4114a7dd02aa237ba021"
+                },
+                {
+                    "session_id": "98e9e4aa-12fd-4189-9a6c-13922cc5be28",
+                    "antivirus": "comodo",
+                    "result": "Clean",
+                    "scan_time": "2024-10-21T11:36:32.838Z",
+                    "file_size": "1663264",
+                    "file_name": "putty.exe",
+                    "file_hash": "e61b8f44ab92cf0f9cb1101347967d31e1839979142a4114a7dd02aa237ba021"
+                },
+                {
+                    "session_id": "98e9e4aa-12fd-4189-9a6c-13922cc5be28",
+                    "antivirus": "emisoft",
+                    "result": "Clean",
+                    "scan_time": "2024-10-21T11:36:34.649Z",
+                    "file_size": "1663264",
+                    "file_name": "putty.exe",
+                    "file_hash": "e61b8f44ab92cf0f9cb1101347967d31e1839979142a4114a7dd02aa237ba021"
+                },
+                {
+                    "session_id": "98e9e4aa-12fd-4189-9a6c-13922cc5be28",
+                    "antivirus": "fsecure",
+                    "result": "Clean",
+                    "scan_time": "2024-10-21T11:36:33.426Z",
+                    "file_size": "1663264",
+                    "file_name": "putty.exe",
+                    "file_hash": "e61b8f44ab92cf0f9cb1101347967d31e1839979142a4114a7dd02aa237ba021"
+                },
+                {
+                    "session_id": "98e9e4aa-12fd-4189-9a6c-13922cc5be28",
+                    "antivirus": "kaspersky",
+                    "result": "Clean",
+                    "scan_time": "2024-10-21T11:36:34.463Z",
+                    "file_size": "1663264",
+                    "file_name": "putty.exe",
+                    "file_hash": "e61b8f44ab92cf0f9cb1101347967d31e1839979142a4114a7dd02aa237ba021"
+                },
+                {
+                    "session_id": "98e9e4aa-12fd-4189-9a6c-13922cc5be28",
+                    "antivirus": "mcafee",
+                    "result": "timeout",
+                    "scan_time": "2024-10-21T11:36:47.398Z",
+                    "file_size": "1663264",
+                    "file_name": "putty.exe",
+                    "file_hash": "e61b8f44ab92cf0f9cb1101347967d31e1839979142a4114a7dd02aa237ba021"
+                },
+                {
+                    "session_id": "98e9e4aa-12fd-4189-9a6c-13922cc5be28",
+                    "antivirus": "mcafee",
+                    "result": "error",
+                    "scan_time": "2024-10-21T11:36:59.685Z",
+                    "file_size": "1663264",
+                    "file_name": "putty.exe",
+                    "file_hash": "e61b8f44ab92cf0f9cb1101347967d31e1839979142a4114a7dd02aa237ba021"
+                },
+                {
+                    "session_id": "98e9e4aa-12fd-4189-9a6c-13922cc5be28",
+                    "antivirus": "nod32",
+                    "result": "Clean",
+                    "scan_time": "2024-10-21T11:36:35.209Z",
+                    "file_size": "1663264",
+                    "file_name": "putty.exe",
+                    "file_hash": "e61b8f44ab92cf0f9cb1101347967d31e1839979142a4114a7dd02aa237ba021"
+                },
+                {
+                    "session_id": "98e9e4aa-12fd-4189-9a6c-13922cc5be28",
+                    "antivirus": "windows_defender",
+                    "result": "Clean",
+                    "scan_time": "2024-10-21T11:36:34.799Z",
+                    "file_size": "1663264",
+                    "file_name": "putty.exe",
+                    "file_hash": "e61b8f44ab92cf0f9cb1101347967d31e1839979142a4114a7dd02aa237ba021"
+                }
+            ],
+            "6cddd4aa-5e3a-4b81-a7bf-9175a391ef04": [
+                {
+                    "session_id": "6cddd4aa-5e3a-4b81-a7bf-9175a391ef04",
+                    "antivirus": "avast",
+                    "result": "Clean",
+                    "scan_time": "2024-10-21T11:32:36.474Z",
+                    "file_size": "1663264",
+                    "file_name": "putty.exe",
+                    "file_hash": "e61b8f44ab92cf0f9cb1101347967d31e1839979142a4114a7dd02aa237ba021"
+                },
+                {
+                    "session_id": "6cddd4aa-5e3a-4b81-a7bf-9175a391ef04",
+                    "antivirus": "avg",
+                    "result": "Clean",
+                    "scan_time": "2024-10-21T11:32:36.808Z",
+                    "file_size": "1663264",
+                    "file_name": "putty.exe",
+                    "file_hash": "e61b8f44ab92cf0f9cb1101347967d31e1839979142a4114a7dd02aa237ba021"
+                },
+                {
+                    "session_id": "6cddd4aa-5e3a-4b81-a7bf-9175a391ef04",
+                    "antivirus": "clamav",
+                    "result": "Clean",
+                    "scan_time": "2024-10-21T11:32:35.355Z",
+                    "file_size": "1663264",
+                    "file_name": "putty.exe",
+                    "file_hash": "e61b8f44ab92cf0f9cb1101347967d31e1839979142a4114a7dd02aa237ba021"
+                },
+                {
+                    "session_id": "6cddd4aa-5e3a-4b81-a7bf-9175a391ef04",
+                    "antivirus": "comodo",
+                    "result": "Clean",
+                    "scan_time": "2024-10-21T11:32:35.620Z",
+                    "file_size": "1663264",
+                    "file_name": "putty.exe",
+                    "file_hash": "e61b8f44ab92cf0f9cb1101347967d31e1839979142a4114a7dd02aa237ba021"
+                },
+                {
+                    "session_id": "6cddd4aa-5e3a-4b81-a7bf-9175a391ef04",
+                    "antivirus": "emisoft",
+                    "result": "Clean",
+                    "scan_time": "2024-10-21T11:32:37.764Z",
+                    "file_size": "1663264",
+                    "file_name": "putty.exe",
+                    "file_hash": "e61b8f44ab92cf0f9cb1101347967d31e1839979142a4114a7dd02aa237ba021"
+                },
+                {
+                    "session_id": "6cddd4aa-5e3a-4b81-a7bf-9175a391ef04",
+                    "antivirus": "fsecure",
+                    "result": "Clean",
+                    "scan_time": "2024-10-21T11:32:36.246Z",
+                    "file_size": "1663264",
+                    "file_name": "putty.exe",
+                    "file_hash": "e61b8f44ab92cf0f9cb1101347967d31e1839979142a4114a7dd02aa237ba021"
+                },
+                {
+                    "session_id": "6cddd4aa-5e3a-4b81-a7bf-9175a391ef04",
+                    "antivirus": "kaspersky",
+                    "result": "Clean",
+                    "scan_time": "2024-10-21T11:32:37.304Z",
+                    "file_size": "1663264",
+                    "file_name": "putty.exe",
+                    "file_hash": "e61b8f44ab92cf0f9cb1101347967d31e1839979142a4114a7dd02aa237ba021"
+                },
+                {
+                    "session_id": "6cddd4aa-5e3a-4b81-a7bf-9175a391ef04",
+                    "antivirus": "mcafee",
+                    "result": "timeout",
+                    "scan_time": "2024-10-21T11:32:51.206Z",
+                    "file_size": "1663264",
+                    "file_name": "putty.exe",
+                    "file_hash": "e61b8f44ab92cf0f9cb1101347967d31e1839979142a4114a7dd02aa237ba021"
+                },
+                {
+                    "session_id": "6cddd4aa-5e3a-4b81-a7bf-9175a391ef04",
+                    "antivirus": "mcafee",
+                    "result": "error",
+                    "scan_time": "2024-10-21T11:33:02.625Z",
+                    "file_size": "1663264",
+                    "file_name": "putty.exe",
+                    "file_hash": "e61b8f44ab92cf0f9cb1101347967d31e1839979142a4114a7dd02aa237ba021"
+                },
+                {
+                    "session_id": "6cddd4aa-5e3a-4b81-a7bf-9175a391ef04",
+                    "antivirus": "nod32",
+                    "result": "Clean",
+                    "scan_time": "2024-10-21T11:32:38.252Z",
+                    "file_size": "1663264",
+                    "file_name": "putty.exe",
+                    "file_hash": "e61b8f44ab92cf0f9cb1101347967d31e1839979142a4114a7dd02aa237ba021"
+                },
+                {
+                    "session_id": "6cddd4aa-5e3a-4b81-a7bf-9175a391ef04",
+                    "antivirus": "windows_defender",
+                    "result": "Clean",
+                    "scan_time": "2024-10-21T11:32:37.688Z",
+                    "file_size": "1663264",
+                    "file_name": "putty.exe",
+                    "file_hash": "e61b8f44ab92cf0f9cb1101347967d31e1839979142a4114a7dd02aa237ba021"
+                }
+            ],
+            "94d718d0-42e3-4c10-b318-30a2a1ee19b7": [
+                {
+                    "session_id": "94d718d0-42e3-4c10-b318-30a2a1ee19b7",
+                    "antivirus": "avast",
+                    "result": "Win32:Evo-gen [Trj]",
+                    "scan_time": "2024-10-21T08:21:34.357Z",
+                    "file_size": "440320",
+                    "file_name": "remcos_a.exe",
+                    "file_hash": "acb81935777f91e4954f8ef5649aced35678021cd3571509463a78445c4a284d"
+                },
+                {
+                    "session_id": "94d718d0-42e3-4c10-b318-30a2a1ee19b7",
+                    "antivirus": "avg",
+                    "result": "Win32:Evo-gen [Trj]",
+                    "scan_time": "2024-10-21T08:21:33.519Z",
+                    "file_size": "440320",
+                    "file_name": "remcos_a.exe",
+                    "file_hash": "acb81935777f91e4954f8ef5649aced35678021cd3571509463a78445c4a284d"
+                },
+                {
+                    "session_id": "94d718d0-42e3-4c10-b318-30a2a1ee19b7",
+                    "antivirus": "clamav",
+                    "result": "Win.Trojan.Remcos-9841897-0",
+                    "scan_time": "2024-10-21T08:21:37.088Z",
+                    "file_size": "440320",
+                    "file_name": "remcos_a.exe",
+                    "file_hash": "acb81935777f91e4954f8ef5649aced35678021cd3571509463a78445c4a284d"
+                },
+                {
+                    "session_id": "94d718d0-42e3-4c10-b318-30a2a1ee19b7",
+                    "antivirus": "comodo",
+                    "result": "Clean",
+                    "scan_time": "2024-10-21T08:21:33.129Z",
+                    "file_size": "440320",
+                    "file_name": "remcos_a.exe",
+                    "file_hash": "acb81935777f91e4954f8ef5649aced35678021cd3571509463a78445c4a284d"
+                },
+                {
+                    "session_id": "94d718d0-42e3-4c10-b318-30a2a1ee19b7",
+                    "antivirus": "emisoft",
+                    "result": "Dump:Generic.Dacic.A9349469.A.6B04AEC6 (B)",
+                    "scan_time": "2024-10-21T08:21:33.434Z",
+                    "file_size": "440320",
+                    "file_name": "remcos_a.exe",
+                    "file_hash": "acb81935777f91e4954f8ef5649aced35678021cd3571509463a78445c4a284d"
+                },
+                {
+                    "session_id": "94d718d0-42e3-4c10-b318-30a2a1ee19b7",
+                    "antivirus": "fsecure",
+                    "result": "Backdoor.BDS/Backdoor.Gen",
+                    "scan_time": "2024-10-21T08:21:33.130Z",
+                    "file_size": "440320",
+                    "file_name": "remcos_a.exe",
+                    "file_hash": "acb81935777f91e4954f8ef5649aced35678021cd3571509463a78445c4a284d"
+                },
+                {
+                    "session_id": "94d718d0-42e3-4c10-b318-30a2a1ee19b7",
+                    "antivirus": "kaspersky",
+                    "result": "suspicion\tHEUR:Backdoor.Win32.Remcos.gen",
+                    "scan_time": "2024-10-21T08:21:34.458Z",
+                    "file_size": "440320",
+                    "file_name": "remcos_a.exe",
+                    "file_hash": "acb81935777f91e4954f8ef5649aced35678021cd3571509463a78445c4a284d"
+                },
+                {
+                    "session_id": "94d718d0-42e3-4c10-b318-30a2a1ee19b7",
+                    "antivirus": "mcafee",
+                    "result": "GenericRXSQ-HG!3BE4A863CD53",
+                    "scan_time": "2024-10-21T08:21:37.952Z",
+                    "file_size": "440320",
+                    "file_name": "remcos_a.exe",
+                    "file_hash": "acb81935777f91e4954f8ef5649aced35678021cd3571509463a78445c4a284d"
+                },
+                {
+                    "session_id": "94d718d0-42e3-4c10-b318-30a2a1ee19b7",
+                    "antivirus": "nod32",
+                    "result": "a variant of Win32/Rescoms.N trojan",
+                    "scan_time": "2024-10-21T08:21:33.958Z",
+                    "file_size": "440320",
+                    "file_name": "remcos_a.exe",
+                    "file_hash": "acb81935777f91e4954f8ef5649aced35678021cd3571509463a78445c4a284d"
+                },
+                {
+                    "session_id": "94d718d0-42e3-4c10-b318-30a2a1ee19b7",
+                    "antivirus": "windows_defender",
+                    "result": "Trojan:Win32/Remcos!MTB",
+                    "scan_time": "2024-10-21T08:21:34.766Z",
+                    "file_size": "440320",
+                    "file_name": "remcos_a.exe",
+                    "file_hash": "acb81935777f91e4954f8ef5649aced35678021cd3571509463a78445c4a284d"
+                }
+            ],
+            "b544fcec-7299-4b60-a06e-026e5466edd4": [
+                {
+                    "session_id": "b544fcec-7299-4b60-a06e-026e5466edd4",
+                    "antivirus": "avast",
+                    "result": "Win32:Evo-gen [Trj]",
+                    "scan_time": "2024-10-21T08:20:51.456Z",
+                    "file_size": "440320",
+                    "file_name": "remcos_a.exe",
+                    "file_hash": "acb81935777f91e4954f8ef5649aced35678021cd3571509463a78445c4a284d"
+                },
+                {
+                    "session_id": "b544fcec-7299-4b60-a06e-026e5466edd4",
+                    "antivirus": "avg",
+                    "result": "Win32:Evo-gen [Trj]",
+                    "scan_time": "2024-10-21T08:20:52.183Z",
+                    "file_size": "440320",
+                    "file_name": "remcos_a.exe",
+                    "file_hash": "acb81935777f91e4954f8ef5649aced35678021cd3571509463a78445c4a284d"
+                },
+                {
+                    "session_id": "b544fcec-7299-4b60-a06e-026e5466edd4",
+                    "antivirus": "clamav",
+                    "result": "Win.Trojan.Remcos-9841897-0",
+                    "scan_time": "2024-10-21T08:20:54.302Z",
+                    "file_size": "440320",
+                    "file_name": "remcos_a.exe",
+                    "file_hash": "acb81935777f91e4954f8ef5649aced35678021cd3571509463a78445c4a284d"
+                },
+                {
+                    "session_id": "b544fcec-7299-4b60-a06e-026e5466edd4",
+                    "antivirus": "comodo",
+                    "result": "Clean",
+                    "scan_time": "2024-10-21T08:20:50.165Z",
+                    "file_size": "440320",
+                    "file_name": "remcos_a.exe",
+                    "file_hash": "acb81935777f91e4954f8ef5649aced35678021cd3571509463a78445c4a284d"
+                },
+                {
+                    "session_id": "b544fcec-7299-4b60-a06e-026e5466edd4",
+                    "antivirus": "emisoft",
+                    "result": "Dump:Generic.Dacic.A9349469.A.6B04AEC6 (B)",
+                    "scan_time": "2024-10-21T08:20:50.630Z",
+                    "file_size": "440320",
+                    "file_name": "remcos_a.exe",
+                    "file_hash": "acb81935777f91e4954f8ef5649aced35678021cd3571509463a78445c4a284d"
+                },
+                {
+                    "session_id": "b544fcec-7299-4b60-a06e-026e5466edd4",
+                    "antivirus": "fsecure",
+                    "result": "Backdoor.BDS/Backdoor.Gen",
+                    "scan_time": "2024-10-21T08:20:53.161Z",
+                    "file_size": "440320",
+                    "file_name": "remcos_a.exe",
+                    "file_hash": "acb81935777f91e4954f8ef5649aced35678021cd3571509463a78445c4a284d"
+                },
+                {
+                    "session_id": "b544fcec-7299-4b60-a06e-026e5466edd4",
+                    "antivirus": "kaspersky",
+                    "result": "suspicion\tHEUR:Backdoor.Win32.Remcos.gen",
+                    "scan_time": "2024-10-21T08:20:59.484Z",
+                    "file_size": "440320",
+                    "file_name": "remcos_a.exe",
+                    "file_hash": "acb81935777f91e4954f8ef5649aced35678021cd3571509463a78445c4a284d"
+                },
+                {
+                    "session_id": "b544fcec-7299-4b60-a06e-026e5466edd4",
+                    "antivirus": "mcafee",
+                    "result": "GenericRXSQ-HG!3BE4A863CD53",
+                    "scan_time": "2024-10-21T08:20:54.947Z",
+                    "file_size": "440320",
+                    "file_name": "remcos_a.exe",
+                    "file_hash": "acb81935777f91e4954f8ef5649aced35678021cd3571509463a78445c4a284d"
+                },
+                {
+                    "session_id": "b544fcec-7299-4b60-a06e-026e5466edd4",
+                    "antivirus": "nod32",
+                    "result": "a variant of Win32/Rescoms.N trojan",
+                    "scan_time": "2024-10-21T08:20:51.233Z",
+                    "file_size": "440320",
+                    "file_name": "remcos_a.exe",
+                    "file_hash": "acb81935777f91e4954f8ef5649aced35678021cd3571509463a78445c4a284d"
+                },
+                {
+                    "session_id": "b544fcec-7299-4b60-a06e-026e5466edd4",
+                    "antivirus": "windows_defender",
+                    "result": "Trojan:Win32/Remcos!MTB",
+                    "scan_time": "2024-10-21T08:20:51.805Z",
+                    "file_size": "440320",
+                    "file_name": "remcos_a.exe",
+                    "file_hash": "acb81935777f91e4954f8ef5649aced35678021cd3571509463a78445c4a284d"
+                }
+            ],
+            "17e59496-d829-4076-b658-7e66e2e743ec": [
+                {
+                    "session_id": "17e59496-d829-4076-b658-7e66e2e743ec",
+                    "antivirus": "avast",
+                    "result": "Clean",
+                    "scan_time": "2024-10-21T08:18:37.575Z",
+                    "file_size": "1251220",
+                    "file_name": "Hex.exe",
+                    "file_hash": "5b20fa27f51253e981ba83f3eb6d922fa46be167590d4d9b673d031d59459e3b"
+                },
+                {
+                    "session_id": "17e59496-d829-4076-b658-7e66e2e743ec",
+                    "antivirus": "avg",
+                    "result": "Clean",
+                    "scan_time": "2024-10-21T08:18:35.763Z",
+                    "file_size": "1251220",
+                    "file_name": "Hex.exe",
+                    "file_hash": "5b20fa27f51253e981ba83f3eb6d922fa46be167590d4d9b673d031d59459e3b"
+                },
+                {
+                    "session_id": "17e59496-d829-4076-b658-7e66e2e743ec",
+                    "antivirus": "clamav",
+                    "result": "Clean",
+                    "scan_time": "2024-10-21T08:18:34.905Z",
+                    "file_size": "1251220",
+                    "file_name": "Hex.exe",
+                    "file_hash": "5b20fa27f51253e981ba83f3eb6d922fa46be167590d4d9b673d031d59459e3b"
+                },
+                {
+                    "session_id": "17e59496-d829-4076-b658-7e66e2e743ec",
+                    "antivirus": "comodo",
+                    "result": "Clean",
+                    "scan_time": "2024-10-21T08:18:35.118Z",
+                    "file_size": "1251220",
+                    "file_name": "Hex.exe",
+                    "file_hash": "5b20fa27f51253e981ba83f3eb6d922fa46be167590d4d9b673d031d59459e3b"
+                },
+                {
+                    "session_id": "17e59496-d829-4076-b658-7e66e2e743ec",
+                    "antivirus": "emisoft",
+                    "result": "Clean",
+                    "scan_time": "2024-10-21T08:18:40.067Z",
+                    "file_size": "1251220",
+                    "file_name": "Hex.exe",
+                    "file_hash": "5b20fa27f51253e981ba83f3eb6d922fa46be167590d4d9b673d031d59459e3b"
+                },
+                {
+                    "session_id": "17e59496-d829-4076-b658-7e66e2e743ec",
+                    "antivirus": "fsecure",
+                    "result": "Clean",
+                    "scan_time": "2024-10-21T08:18:37.366Z",
+                    "file_size": "1251220",
+                    "file_name": "Hex.exe",
+                    "file_hash": "5b20fa27f51253e981ba83f3eb6d922fa46be167590d4d9b673d031d59459e3b"
+                },
+                {
+                    "session_id": "17e59496-d829-4076-b658-7e66e2e743ec",
+                    "antivirus": "kaspersky",
+                    "result": "Clean",
+                    "scan_time": "2024-10-21T08:18:46.068Z",
+                    "file_size": "1251220",
+                    "file_name": "Hex.exe",
+                    "file_hash": "5b20fa27f51253e981ba83f3eb6d922fa46be167590d4d9b673d031d59459e3b"
+                },
+                {
+                    "session_id": "17e59496-d829-4076-b658-7e66e2e743ec",
+                    "antivirus": "mcafee",
+                    "result": "Clean",
+                    "scan_time": "2024-10-21T08:18:40.709Z",
+                    "file_size": "1251220",
+                    "file_name": "Hex.exe",
+                    "file_hash": "5b20fa27f51253e981ba83f3eb6d922fa46be167590d4d9b673d031d59459e3b"
+                },
+                {
+                    "session_id": "17e59496-d829-4076-b658-7e66e2e743ec",
+                    "antivirus": "nod32",
+                    "result": "Clean",
+                    "scan_time": "2024-10-21T08:18:38.306Z",
+                    "file_size": "1251220",
+                    "file_name": "Hex.exe",
+                    "file_hash": "5b20fa27f51253e981ba83f3eb6d922fa46be167590d4d9b673d031d59459e3b"
+                },
+                {
+                    "session_id": "17e59496-d829-4076-b658-7e66e2e743ec",
+                    "antivirus": "windows_defender",
+                    "result": "Clean",
+                    "scan_time": "2024-10-21T08:18:40.511Z",
+                    "file_size": "1251220",
+                    "file_name": "Hex.exe",
+                    "file_hash": "5b20fa27f51253e981ba83f3eb6d922fa46be167590d4d9b673d031d59459e3b"
+                }
+            ],
+            "3d959c51-eab4-4ade-89b9-cd4002bb25fb": [
+                {
+                    "session_id": "3d959c51-eab4-4ade-89b9-cd4002bb25fb",
+                    "antivirus": "avast",
+                    "result": "Win32:Evo-gen [Trj]",
+                    "scan_time": "2024-10-21T08:17:53.512Z",
+                    "file_size": "440320",
+                    "file_name": "remcos_a.exe",
+                    "file_hash": "acb81935777f91e4954f8ef5649aced35678021cd3571509463a78445c4a284d"
+                },
+                {
+                    "session_id": "3d959c51-eab4-4ade-89b9-cd4002bb25fb",
+                    "antivirus": "avg",
+                    "result": "Win32:Evo-gen [Trj]",
+                    "scan_time": "2024-10-21T08:17:53.538Z",
+                    "file_size": "440320",
+                    "file_name": "remcos_a.exe",
+                    "file_hash": "acb81935777f91e4954f8ef5649aced35678021cd3571509463a78445c4a284d"
+                },
+                {
+                    "session_id": "3d959c51-eab4-4ade-89b9-cd4002bb25fb",
+                    "antivirus": "clamav",
+                    "result": "Win.Trojan.Remcos-9841897-0",
+                    "scan_time": "2024-10-21T08:17:55.116Z",
+                    "file_size": "440320",
+                    "file_name": "remcos_a.exe",
+                    "file_hash": "acb81935777f91e4954f8ef5649aced35678021cd3571509463a78445c4a284d"
+                },
+                {
+                    "session_id": "3d959c51-eab4-4ade-89b9-cd4002bb25fb",
+                    "antivirus": "comodo",
+                    "result": "Clean",
+                    "scan_time": "2024-10-21T08:17:50.347Z",
+                    "file_size": "440320",
+                    "file_name": "remcos_a.exe",
+                    "file_hash": "acb81935777f91e4954f8ef5649aced35678021cd3571509463a78445c4a284d"
+                },
+                {
+                    "session_id": "3d959c51-eab4-4ade-89b9-cd4002bb25fb",
+                    "antivirus": "emisoft",
+                    "result": "Dump:Generic.Dacic.A9349469.A.6B04AEC6 (B)",
+                    "scan_time": "2024-10-21T08:17:50.914Z",
+                    "file_size": "440320",
+                    "file_name": "remcos_a.exe",
+                    "file_hash": "acb81935777f91e4954f8ef5649aced35678021cd3571509463a78445c4a284d"
+                },
+                {
+                    "session_id": "3d959c51-eab4-4ade-89b9-cd4002bb25fb",
+                    "antivirus": "fsecure",
+                    "result": "Clean",
+                    "scan_time": "2024-10-21T08:17:51.654Z",
+                    "file_size": "440320",
+                    "file_name": "remcos_a.exe",
+                    "file_hash": "acb81935777f91e4954f8ef5649aced35678021cd3571509463a78445c4a284d"
+                },
+                {
+                    "session_id": "3d959c51-eab4-4ade-89b9-cd4002bb25fb",
+                    "antivirus": "kaspersky",
+                    "result": "suspicion\tHEUR:Backdoor.Win32.Remcos.gen",
+                    "scan_time": "2024-10-21T08:17:59.926Z",
+                    "file_size": "440320",
+                    "file_name": "remcos_a.exe",
+                    "file_hash": "acb81935777f91e4954f8ef5649aced35678021cd3571509463a78445c4a284d"
+                },
+                {
+                    "session_id": "3d959c51-eab4-4ade-89b9-cd4002bb25fb",
+                    "antivirus": "mcafee",
+                    "result": "GenericRXSQ-HG!3BE4A863CD53",
+                    "scan_time": "2024-10-21T08:17:55.508Z",
+                    "file_size": "440320",
+                    "file_name": "remcos_a.exe",
+                    "file_hash": "acb81935777f91e4954f8ef5649aced35678021cd3571509463a78445c4a284d"
+                },
+                {
+                    "session_id": "3d959c51-eab4-4ade-89b9-cd4002bb25fb",
+                    "antivirus": "nod32",
+                    "result": "a variant of Win32/Rescoms.N trojan",
+                    "scan_time": "2024-10-21T08:17:51.520Z",
+                    "file_size": "440320",
+                    "file_name": "remcos_a.exe",
+                    "file_hash": "acb81935777f91e4954f8ef5649aced35678021cd3571509463a78445c4a284d"
+                },
+                {
+                    "session_id": "3d959c51-eab4-4ade-89b9-cd4002bb25fb",
+                    "antivirus": "windows_defender",
+                    "result": "Trojan:Win32/Remcos!MTB",
+                    "scan_time": "2024-10-21T08:17:52.234Z",
+                    "file_size": "440320",
+                    "file_name": "remcos_a.exe",
+                    "file_hash": "acb81935777f91e4954f8ef5649aced35678021cd3571509463a78445c4a284d"
+                }
+            ],
+            "275837a1-f4c4-41f4-8d7e-745b1c092986": [
+                {
+                    "session_id": "275837a1-f4c4-41f4-8d7e-745b1c092986",
+                    "antivirus": "avast",
+                    "result": "Scan result timeout",
+                    "scan_time": "2024-10-21T08:15:40.233Z",
+                    "file_size": "440320",
+                    "file_name": "remcos_a.exe",
+                    "file_hash": "acb81935777f91e4954f8ef5649aced35678021cd3571509463a78445c4a284d"
+                },
+                {
+                    "session_id": "275837a1-f4c4-41f4-8d7e-745b1c092986",
+                    "antivirus": "avg",
+                    "result": "Win32:Evo-gen [Trj]",
+                    "scan_time": "2024-10-21T08:15:37.264Z",
+                    "file_size": "440320",
+                    "file_name": "remcos_a.exe",
+                    "file_hash": "acb81935777f91e4954f8ef5649aced35678021cd3571509463a78445c4a284d"
+                },
+                {
+                    "session_id": "275837a1-f4c4-41f4-8d7e-745b1c092986",
+                    "antivirus": "clamav",
+                    "result": "Win.Trojan.Remcos-9841897-0",
+                    "scan_time": "2024-10-21T08:15:41.601Z",
+                    "file_size": "440320",
+                    "file_name": "remcos_a.exe",
+                    "file_hash": "acb81935777f91e4954f8ef5649aced35678021cd3571509463a78445c4a284d"
+                },
+                {
+                    "session_id": "275837a1-f4c4-41f4-8d7e-745b1c092986",
+                    "antivirus": "comodo",
+                    "result": "Clean",
+                    "scan_time": "2024-10-21T08:15:36.201Z",
+                    "file_size": "440320",
+                    "file_name": "remcos_a.exe",
+                    "file_hash": "acb81935777f91e4954f8ef5649aced35678021cd3571509463a78445c4a284d"
+                },
+                {
+                    "session_id": "275837a1-f4c4-41f4-8d7e-745b1c092986",
+                    "antivirus": "emisoft",
+                    "result": "Dump:Generic.Dacic.A9349469.A.6B04AEC6 (B)",
+                    "scan_time": "2024-10-21T08:15:37.291Z",
+                    "file_size": "440320",
+                    "file_name": "remcos_a.exe",
+                    "file_hash": "acb81935777f91e4954f8ef5649aced35678021cd3571509463a78445c4a284d"
+                },
+                {
+                    "session_id": "275837a1-f4c4-41f4-8d7e-745b1c092986",
+                    "antivirus": "fsecure",
+                    "result": "Clean",
+                    "scan_time": "2024-10-21T08:15:37.983Z",
+                    "file_size": "440320",
+                    "file_name": "remcos_a.exe",
+                    "file_hash": "acb81935777f91e4954f8ef5649aced35678021cd3571509463a78445c4a284d"
+                },
+                {
+                    "session_id": "275837a1-f4c4-41f4-8d7e-745b1c092986",
+                    "antivirus": "kaspersky",
+                    "result": "suspicion\tHEUR:Backdoor.Win32.Remcos.gen",
+                    "scan_time": "2024-10-21T08:15:46.975Z",
+                    "file_size": "440320",
+                    "file_name": "remcos_a.exe",
+                    "file_hash": "acb81935777f91e4954f8ef5649aced35678021cd3571509463a78445c4a284d"
+                },
+                {
+                    "session_id": "275837a1-f4c4-41f4-8d7e-745b1c092986",
+                    "antivirus": "mcafee",
+                    "result": "GenericRXSQ-HG!3BE4A863CD53",
+                    "scan_time": "2024-10-21T08:15:42.069Z",
+                    "file_size": "440320",
+                    "file_name": "remcos_a.exe",
+                    "file_hash": "acb81935777f91e4954f8ef5649aced35678021cd3571509463a78445c4a284d"
+                },
+                {
+                    "session_id": "275837a1-f4c4-41f4-8d7e-745b1c092986",
+                    "antivirus": "nod32",
+                    "result": "a variant of Win32/Rescoms.N trojan",
+                    "scan_time": "2024-10-21T08:15:37.935Z",
+                    "file_size": "440320",
+                    "file_name": "remcos_a.exe",
+                    "file_hash": "acb81935777f91e4954f8ef5649aced35678021cd3571509463a78445c4a284d"
+                },
+                {
+                    "session_id": "275837a1-f4c4-41f4-8d7e-745b1c092986",
+                    "antivirus": "windows_defender",
+                    "result": "Trojan:Win32/Remcos!MTB",
+                    "scan_time": "2024-10-21T08:15:38.762Z",
+                    "file_size": "440320",
+                    "file_name": "remcos_a.exe",
+                    "file_hash": "acb81935777f91e4954f8ef5649aced35678021cd3571509463a78445c4a284d"
+                }
+            ]
+        }
+    },
+    "57": {
+        "scan_history": [
+            {
+                "session_id": "b39c6a40-02f8-48bc-bdbd-499ab3077364",
+                "scan_time": "2024-10-21T08:36:30.973Z",
+                "file_size": "18474924",
+                "file_name": "Loader.exe",
+                "file_hash": "6aeaaea9eff744db393c13e4ab8518f105704ddf0f35710bb7f5d6d3b4b276d0"
+            }
+        ],
+        "scan_results": {
+            "b39c6a40-02f8-48bc-bdbd-499ab3077364": [
+                {
+                    "session_id": "b39c6a40-02f8-48bc-bdbd-499ab3077364",
+                    "antivirus": "avast",
+                    "result": "timeout",
+                    "scan_time": "2024-10-21T08:34:51.167Z",
+                    "file_size": "18474924",
+                    "file_name": "Loader.exe",
+                    "file_hash": "6aeaaea9eff744db393c13e4ab8518f105704ddf0f35710bb7f5d6d3b4b276d0"
+                },
+                {
+                    "session_id": "b39c6a40-02f8-48bc-bdbd-499ab3077364",
+                    "antivirus": "avast",
+                    "result": "error",
+                    "scan_time": "2024-10-21T08:35:33.001Z",
+                    "file_size": "18474924",
+                    "file_name": "Loader.exe",
+                    "file_hash": "6aeaaea9eff744db393c13e4ab8518f105704ddf0f35710bb7f5d6d3b4b276d0"
+                },
+                {
+                    "session_id": "b39c6a40-02f8-48bc-bdbd-499ab3077364",
+                    "antivirus": "avg",
+                    "result": "timeout",
+                    "scan_time": "2024-10-21T08:34:51.196Z",
+                    "file_size": "18474924",
+                    "file_name": "Loader.exe",
+                    "file_hash": "6aeaaea9eff744db393c13e4ab8518f105704ddf0f35710bb7f5d6d3b4b276d0"
+                },
+                {
+                    "session_id": "b39c6a40-02f8-48bc-bdbd-499ab3077364",
+                    "antivirus": "avg",
+                    "result": "Clean",
+                    "scan_time": "2024-10-21T08:35:33.149Z",
+                    "file_size": "18474924",
+                    "file_name": "Loader.exe",
+                    "file_hash": "6aeaaea9eff744db393c13e4ab8518f105704ddf0f35710bb7f5d6d3b4b276d0"
+                },
+                {
+                    "session_id": "b39c6a40-02f8-48bc-bdbd-499ab3077364",
+                    "antivirus": "clamav",
+                    "result": "timeout",
+                    "scan_time": "2024-10-21T08:34:51.122Z",
+                    "file_size": "18474924",
+                    "file_name": "Loader.exe",
+                    "file_hash": "6aeaaea9eff744db393c13e4ab8518f105704ddf0f35710bb7f5d6d3b4b276d0"
+                },
+                {
+                    "session_id": "b39c6a40-02f8-48bc-bdbd-499ab3077364",
+                    "antivirus": "clamav",
+                    "result": "Clean",
+                    "scan_time": "2024-10-21T08:35:56.875Z",
+                    "file_size": "18474924",
+                    "file_name": "Loader.exe",
+                    "file_hash": "6aeaaea9eff744db393c13e4ab8518f105704ddf0f35710bb7f5d6d3b4b276d0"
+                },
+                {
+                    "session_id": "b39c6a40-02f8-48bc-bdbd-499ab3077364",
+                    "antivirus": "comodo",
+                    "result": "Clean",
+                    "scan_time": "2024-10-21T08:35:28.943Z",
+                    "file_size": "18474924",
+                    "file_name": "Loader.exe",
+                    "file_hash": "6aeaaea9eff744db393c13e4ab8518f105704ddf0f35710bb7f5d6d3b4b276d0"
+                },
+                {
+                    "session_id": "b39c6a40-02f8-48bc-bdbd-499ab3077364",
+                    "antivirus": "comodo",
+                    "result": "timeout",
+                    "scan_time": "2024-10-21T08:34:51.189Z",
+                    "file_size": "18474924",
+                    "file_name": "Loader.exe",
+                    "file_hash": "6aeaaea9eff744db393c13e4ab8518f105704ddf0f35710bb7f5d6d3b4b276d0"
+                },
+                {
+                    "session_id": "b39c6a40-02f8-48bc-bdbd-499ab3077364",
+                    "antivirus": "emisoft",
+                    "result": "timeout",
+                    "scan_time": "2024-10-21T08:34:51.190Z",
+                    "file_size": "18474924",
+                    "file_name": "Loader.exe",
+                    "file_hash": "6aeaaea9eff744db393c13e4ab8518f105704ddf0f35710bb7f5d6d3b4b276d0"
+                },
+                {
+                    "session_id": "b39c6a40-02f8-48bc-bdbd-499ab3077364",
+                    "antivirus": "emisoft",
+                    "result": "Clean",
+                    "scan_time": "2024-10-21T08:35:48.004Z",
+                    "file_size": "18474924",
+                    "file_name": "Loader.exe",
+                    "file_hash": "6aeaaea9eff744db393c13e4ab8518f105704ddf0f35710bb7f5d6d3b4b276d0"
+                },
+                {
+                    "session_id": "b39c6a40-02f8-48bc-bdbd-499ab3077364",
+                    "antivirus": "fsecure",
+                    "result": "Trojan.TR/Dropper.Gen",
+                    "scan_time": "2024-10-21T08:36:30.973Z",
+                    "file_size": "18474924",
+                    "file_name": "Loader.exe",
+                    "file_hash": "6aeaaea9eff744db393c13e4ab8518f105704ddf0f35710bb7f5d6d3b4b276d0"
+                },
+                {
+                    "session_id": "b39c6a40-02f8-48bc-bdbd-499ab3077364",
+                    "antivirus": "fsecure",
+                    "result": "timeout",
+                    "scan_time": "2024-10-21T08:34:51.182Z",
+                    "file_size": "18474924",
+                    "file_name": "Loader.exe",
+                    "file_hash": "6aeaaea9eff744db393c13e4ab8518f105704ddf0f35710bb7f5d6d3b4b276d0"
+                },
+                {
+                    "session_id": "b39c6a40-02f8-48bc-bdbd-499ab3077364",
+                    "antivirus": "kaspersky",
+                    "result": "timeout",
+                    "scan_time": "2024-10-21T08:34:51.194Z",
+                    "file_size": "18474924",
+                    "file_name": "Loader.exe",
+                    "file_hash": "6aeaaea9eff744db393c13e4ab8518f105704ddf0f35710bb7f5d6d3b4b276d0"
+                },
+                {
+                    "session_id": "b39c6a40-02f8-48bc-bdbd-499ab3077364",
+                    "antivirus": "kaspersky",
+                    "result": "suspicion\tHEUR:Backdoor.Win32.Generic",
+                    "scan_time": "2024-10-21T08:35:52.572Z",
+                    "file_size": "18474924",
+                    "file_name": "Loader.exe",
+                    "file_hash": "6aeaaea9eff744db393c13e4ab8518f105704ddf0f35710bb7f5d6d3b4b276d0"
+                },
+                {
+                    "session_id": "b39c6a40-02f8-48bc-bdbd-499ab3077364",
+                    "antivirus": "mcafee",
+                    "result": "timeout",
+                    "scan_time": "2024-10-21T08:34:51.148Z",
+                    "file_size": "18474924",
+                    "file_name": "Loader.exe",
+                    "file_hash": "6aeaaea9eff744db393c13e4ab8518f105704ddf0f35710bb7f5d6d3b4b276d0"
+                },
+                {
+                    "session_id": "b39c6a40-02f8-48bc-bdbd-499ab3077364",
+                    "antivirus": "mcafee",
+                    "result": "GenericRXQT-AV!4C59B28DB9E1",
+                    "scan_time": "2024-10-21T08:35:34.092Z",
+                    "file_size": "18474924",
+                    "file_name": "Loader.exe",
+                    "file_hash": "6aeaaea9eff744db393c13e4ab8518f105704ddf0f35710bb7f5d6d3b4b276d0"
+                },
+                {
+                    "session_id": "b39c6a40-02f8-48bc-bdbd-499ab3077364",
+                    "antivirus": "nod32",
+                    "result": "a variant of MSIL/TrojanDropper.Agent.AIX trojan",
+                    "scan_time": "2024-10-21T08:35:48.092Z",
+                    "file_size": "18474924",
+                    "file_name": "Loader.exe",
+                    "file_hash": "6aeaaea9eff744db393c13e4ab8518f105704ddf0f35710bb7f5d6d3b4b276d0"
+                },
+                {
+                    "session_id": "b39c6a40-02f8-48bc-bdbd-499ab3077364",
+                    "antivirus": "nod32",
+                    "result": "timeout",
+                    "scan_time": "2024-10-21T08:34:51.158Z",
+                    "file_size": "18474924",
+                    "file_name": "Loader.exe",
+                    "file_hash": "6aeaaea9eff744db393c13e4ab8518f105704ddf0f35710bb7f5d6d3b4b276d0"
+                },
+                {
+                    "session_id": "b39c6a40-02f8-48bc-bdbd-499ab3077364",
+                    "antivirus": "windows_defender",
+                    "result": "timeout",
+                    "scan_time": "2024-10-21T08:34:51.191Z",
+                    "file_size": "18474924",
+                    "file_name": "Loader.exe",
+                    "file_hash": "6aeaaea9eff744db393c13e4ab8518f105704ddf0f35710bb7f5d6d3b4b276d0"
+                },
+                {
+                    "session_id": "b39c6a40-02f8-48bc-bdbd-499ab3077364",
+                    "antivirus": "windows_defender",
+                    "result": "Clean",
+                    "scan_time": "2024-10-21T08:35:58.067Z",
+                    "file_size": "18474924",
+                    "file_name": "Loader.exe",
+                    "file_hash": "6aeaaea9eff744db393c13e4ab8518f105704ddf0f35710bb7f5d6d3b4b276d0"
+                }
+            ]
+        }
+    },
+    "66": {
+        "scan_history": [
+            {
+                "session_id": "b7bc1dc2-7941-4572-bc41-0d705c526083",
+                "scan_time": "2024-10-21T12:04:25.820Z",
+                "file_size": "1490208",
+                "file_name": "putty.exe",
+                "file_hash": "4a38db0744930e1f5bfc0a82f63c907f7dc94270b930a3950e6a0abbc903c47f"
+            }
+        ],
+        "scan_results": {
+            "b7bc1dc2-7941-4572-bc41-0d705c526083": [
+                {
+                    "session_id": "b7bc1dc2-7941-4572-bc41-0d705c526083",
+                    "antivirus": "avast",
+                    "result": "Clean",
+                    "scan_time": "2024-10-21T12:04:00.946Z",
+                    "file_size": "1490208",
+                    "file_name": "putty.exe",
+                    "file_hash": "4a38db0744930e1f5bfc0a82f63c907f7dc94270b930a3950e6a0abbc903c47f"
+                },
+                {
+                    "session_id": "b7bc1dc2-7941-4572-bc41-0d705c526083",
+                    "antivirus": "avg",
+                    "result": "Clean",
+                    "scan_time": "2024-10-21T12:03:59.601Z",
+                    "file_size": "1490208",
+                    "file_name": "putty.exe",
+                    "file_hash": "4a38db0744930e1f5bfc0a82f63c907f7dc94270b930a3950e6a0abbc903c47f"
+                },
+                {
+                    "session_id": "b7bc1dc2-7941-4572-bc41-0d705c526083",
+                    "antivirus": "clamav",
+                    "result": "Clean",
+                    "scan_time": "2024-10-21T12:03:58.885Z",
+                    "file_size": "1490208",
+                    "file_name": "putty.exe",
+                    "file_hash": "4a38db0744930e1f5bfc0a82f63c907f7dc94270b930a3950e6a0abbc903c47f"
+                },
+                {
+                    "session_id": "b7bc1dc2-7941-4572-bc41-0d705c526083",
+                    "antivirus": "comodo",
+                    "result": "Clean",
+                    "scan_time": "2024-10-21T12:04:01.169Z",
+                    "file_size": "1490208",
+                    "file_name": "putty.exe",
+                    "file_hash": "4a38db0744930e1f5bfc0a82f63c907f7dc94270b930a3950e6a0abbc903c47f"
+                },
+                {
+                    "session_id": "b7bc1dc2-7941-4572-bc41-0d705c526083",
+                    "antivirus": "emisoft",
+                    "result": "Clean",
+                    "scan_time": "2024-10-21T12:04:01.411Z",
+                    "file_size": "1490208",
+                    "file_name": "putty.exe",
+                    "file_hash": "4a38db0744930e1f5bfc0a82f63c907f7dc94270b930a3950e6a0abbc903c47f"
+                },
+                {
+                    "session_id": "b7bc1dc2-7941-4572-bc41-0d705c526083",
+                    "antivirus": "fsecure",
+                    "result": "Clean",
+                    "scan_time": "2024-10-21T12:04:00.159Z",
+                    "file_size": "1490208",
+                    "file_name": "putty.exe",
+                    "file_hash": "4a38db0744930e1f5bfc0a82f63c907f7dc94270b930a3950e6a0abbc903c47f"
+                },
+                {
+                    "session_id": "b7bc1dc2-7941-4572-bc41-0d705c526083",
+                    "antivirus": "kaspersky",
+                    "result": "Clean",
+                    "scan_time": "2024-10-21T12:04:00.311Z",
+                    "file_size": "1490208",
+                    "file_name": "putty.exe",
+                    "file_hash": "4a38db0744930e1f5bfc0a82f63c907f7dc94270b930a3950e6a0abbc903c47f"
+                },
+                {
+                    "session_id": "b7bc1dc2-7941-4572-bc41-0d705c526083",
+                    "antivirus": "mcafee",
+                    "result": "error",
+                    "scan_time": "2024-10-21T12:04:25.820Z",
+                    "file_size": "1490208",
+                    "file_name": "putty.exe",
+                    "file_hash": "4a38db0744930e1f5bfc0a82f63c907f7dc94270b930a3950e6a0abbc903c47f"
+                },
+                {
+                    "session_id": "b7bc1dc2-7941-4572-bc41-0d705c526083",
+                    "antivirus": "mcafee",
+                    "result": "timeout",
+                    "scan_time": "2024-10-21T12:04:11.769Z",
+                    "file_size": "1490208",
+                    "file_name": "putty.exe",
+                    "file_hash": "4a38db0744930e1f5bfc0a82f63c907f7dc94270b930a3950e6a0abbc903c47f"
+                },
+                {
+                    "session_id": "b7bc1dc2-7941-4572-bc41-0d705c526083",
+                    "antivirus": "nod32",
+                    "result": "Clean",
+                    "scan_time": "2024-10-21T12:04:01.140Z",
+                    "file_size": "1490208",
+                    "file_name": "putty.exe",
+                    "file_hash": "4a38db0744930e1f5bfc0a82f63c907f7dc94270b930a3950e6a0abbc903c47f"
+                },
+                {
+                    "session_id": "b7bc1dc2-7941-4572-bc41-0d705c526083",
+                    "antivirus": "windows_defender",
+                    "result": "Clean",
+                    "scan_time": "2024-10-21T12:04:01.390Z",
+                    "file_size": "1490208",
+                    "file_name": "putty.exe",
+                    "file_hash": "4a38db0744930e1f5bfc0a82f63c907f7dc94270b930a3950e6a0abbc903c47f"
+                }
+            ]
+        }
+    },
+    "69": {
+        "scan_history": [
+            {
+                "session_id": "c746c9e9-947b-47e1-89a2-52944a799efe",
+                "scan_time": "2024-10-21T14:54:04.813Z",
+                "file_size": "166912",
+                "file_name": "Updater.exe",
+                "file_hash": "4571751b2b7477fded0012f46aded7c86fb93194980897418c17ac917c4d4cc1"
+            },
+            {
+                "session_id": "000bfe5b-5efb-4af1-b94b-39d2243f989c",
+                "scan_time": "2024-10-21T14:21:56.773Z",
+                "file_size": "3319808",
+                "file_name": "skuld3.exe",
+                "file_hash": "a4a66b5826dbc95ed463bf1daaa417ae99ea8b1b27ddbacdceba94657babbafc"
+            }
+        ],
+        "scan_results": {
+            "c746c9e9-947b-47e1-89a2-52944a799efe": [
+                {
+                    "session_id": "c746c9e9-947b-47e1-89a2-52944a799efe",
+                    "antivirus": "avast",
+                    "result": "Win32:XWorm-C [Rat]",
+                    "scan_time": "2024-10-21T14:53:47.967Z",
+                    "file_size": "166912",
+                    "file_name": "Updater.exe",
+                    "file_hash": "4571751b2b7477fded0012f46aded7c86fb93194980897418c17ac917c4d4cc1"
+                },
+                {
+                    "session_id": "c746c9e9-947b-47e1-89a2-52944a799efe",
+                    "antivirus": "avg",
+                    "result": "Scan result timeout",
+                    "scan_time": "2024-10-21T14:53:49.079Z",
+                    "file_size": "166912",
+                    "file_name": "Updater.exe",
+                    "file_hash": "4571751b2b7477fded0012f46aded7c86fb93194980897418c17ac917c4d4cc1"
+                },
+                {
+                    "session_id": "c746c9e9-947b-47e1-89a2-52944a799efe",
+                    "antivirus": "clamav",
+                    "result": "Win.Packed.njRAT-10002074-1",
+                    "scan_time": "2024-10-21T14:53:46.199Z",
+                    "file_size": "166912",
+                    "file_name": "Updater.exe",
+                    "file_hash": "4571751b2b7477fded0012f46aded7c86fb93194980897418c17ac917c4d4cc1"
+                },
+                {
+                    "session_id": "c746c9e9-947b-47e1-89a2-52944a799efe",
+                    "antivirus": "comodo",
+                    "result": "Clean",
+                    "scan_time": "2024-10-21T14:53:44.309Z",
+                    "file_size": "166912",
+                    "file_name": "Updater.exe",
+                    "file_hash": "4571751b2b7477fded0012f46aded7c86fb93194980897418c17ac917c4d4cc1"
+                },
+                {
+                    "session_id": "c746c9e9-947b-47e1-89a2-52944a799efe",
+                    "antivirus": "emisoft",
+                    "result": "Gen:Variant.Jalapeno.3217 (B)",
+                    "scan_time": "2024-10-21T14:53:45.336Z",
+                    "file_size": "166912",
+                    "file_name": "Updater.exe",
+                    "file_hash": "4571751b2b7477fded0012f46aded7c86fb93194980897418c17ac917c4d4cc1"
+                },
+                {
+                    "session_id": "c746c9e9-947b-47e1-89a2-52944a799efe",
+                    "antivirus": "fsecure",
+                    "result": "Heuristic.HEUR/AGEN.1365975",
+                    "scan_time": "2024-10-21T14:53:46.124Z",
+                    "file_size": "166912",
+                    "file_name": "Updater.exe",
+                    "file_hash": "4571751b2b7477fded0012f46aded7c86fb93194980897418c17ac917c4d4cc1"
+                },
+                {
+                    "session_id": "c746c9e9-947b-47e1-89a2-52944a799efe",
+                    "antivirus": "kaspersky",
+                    "result": "suspicion\tHEUR:Backdoor.MSIL.XWorm.gen",
+                    "scan_time": "2024-10-21T14:53:56.776Z",
+                    "file_size": "166912",
+                    "file_name": "Updater.exe",
+                    "file_hash": "4571751b2b7477fded0012f46aded7c86fb93194980897418c17ac917c4d4cc1"
+                },
+                {
+                    "session_id": "c746c9e9-947b-47e1-89a2-52944a799efe",
+                    "antivirus": "mcafee",
+                    "result": "error",
+                    "scan_time": "2024-10-21T14:54:04.813Z",
+                    "file_size": "166912",
+                    "file_name": "Updater.exe",
+                    "file_hash": "4571751b2b7477fded0012f46aded7c86fb93194980897418c17ac917c4d4cc1"
+                },
+                {
+                    "session_id": "c746c9e9-947b-47e1-89a2-52944a799efe",
+                    "antivirus": "mcafee",
+                    "result": "timeout",
+                    "scan_time": "2024-10-21T14:54:03.419Z",
+                    "file_size": "166912",
+                    "file_name": "Updater.exe",
+                    "file_hash": "4571751b2b7477fded0012f46aded7c86fb93194980897418c17ac917c4d4cc1"
+                },
+                {
+                    "session_id": "c746c9e9-947b-47e1-89a2-52944a799efe",
+                    "antivirus": "nod32",
+                    "result": "a variant of MSIL/Agent.DWN trojan",
+                    "scan_time": "2024-10-21T14:53:46.195Z",
+                    "file_size": "166912",
+                    "file_name": "Updater.exe",
+                    "file_hash": "4571751b2b7477fded0012f46aded7c86fb93194980897418c17ac917c4d4cc1"
+                },
+                {
+                    "session_id": "c746c9e9-947b-47e1-89a2-52944a799efe",
+                    "antivirus": "windows_defender",
+                    "result": "Trojan:MSIL/XWorm!atmn",
+                    "scan_time": "2024-10-21T14:53:45.072Z",
+                    "file_size": "166912",
+                    "file_name": "Updater.exe",
+                    "file_hash": "4571751b2b7477fded0012f46aded7c86fb93194980897418c17ac917c4d4cc1"
+                }
+            ],
+            "000bfe5b-5efb-4af1-b94b-39d2243f989c": [
+                {
+                    "session_id": "000bfe5b-5efb-4af1-b94b-39d2243f989c",
+                    "antivirus": "avast",
+                    "result": "Clean",
+                    "scan_time": "2024-10-21T14:21:34.659Z",
+                    "file_size": "3319808",
+                    "file_name": "skuld3.exe",
+                    "file_hash": "a4a66b5826dbc95ed463bf1daaa417ae99ea8b1b27ddbacdceba94657babbafc"
+                },
+                {
+                    "session_id": "000bfe5b-5efb-4af1-b94b-39d2243f989c",
+                    "antivirus": "avg",
+                    "result": "Clean",
+                    "scan_time": "2024-10-21T14:21:36.425Z",
+                    "file_size": "3319808",
+                    "file_name": "skuld3.exe",
+                    "file_hash": "a4a66b5826dbc95ed463bf1daaa417ae99ea8b1b27ddbacdceba94657babbafc"
+                },
+                {
+                    "session_id": "000bfe5b-5efb-4af1-b94b-39d2243f989c",
+                    "antivirus": "clamav",
+                    "result": "Clean",
+                    "scan_time": "2024-10-21T14:21:43.502Z",
+                    "file_size": "3319808",
+                    "file_name": "skuld3.exe",
+                    "file_hash": "a4a66b5826dbc95ed463bf1daaa417ae99ea8b1b27ddbacdceba94657babbafc"
+                },
+                {
+                    "session_id": "000bfe5b-5efb-4af1-b94b-39d2243f989c",
+                    "antivirus": "comodo",
+                    "result": "Clean",
+                    "scan_time": "2024-10-21T14:21:34.980Z",
+                    "file_size": "3319808",
+                    "file_name": "skuld3.exe",
+                    "file_hash": "a4a66b5826dbc95ed463bf1daaa417ae99ea8b1b27ddbacdceba94657babbafc"
+                },
+                {
+                    "session_id": "000bfe5b-5efb-4af1-b94b-39d2243f989c",
+                    "antivirus": "emisoft",
+                    "result": "Generic.TMPNStealer.A.FE939CE9 (B)",
+                    "scan_time": "2024-10-21T14:21:43.586Z",
+                    "file_size": "3319808",
+                    "file_name": "skuld3.exe",
+                    "file_hash": "a4a66b5826dbc95ed463bf1daaa417ae99ea8b1b27ddbacdceba94657babbafc"
+                },
+                {
+                    "session_id": "000bfe5b-5efb-4af1-b94b-39d2243f989c",
+                    "antivirus": "fsecure",
+                    "result": "TR/Redcap.a4a66b",
+                    "scan_time": "2024-10-21T14:21:50.813Z",
+                    "file_size": "3319808",
+                    "file_name": "skuld3.exe",
+                    "file_hash": "a4a66b5826dbc95ed463bf1daaa417ae99ea8b1b27ddbacdceba94657babbafc"
+                },
+                {
+                    "session_id": "000bfe5b-5efb-4af1-b94b-39d2243f989c",
+                    "antivirus": "fsecure",
+                    "result": "timeout",
+                    "scan_time": "2024-10-21T14:21:49.026Z",
+                    "file_size": "3319808",
+                    "file_name": "skuld3.exe",
+                    "file_hash": "a4a66b5826dbc95ed463bf1daaa417ae99ea8b1b27ddbacdceba94657babbafc"
+                },
+                {
+                    "session_id": "000bfe5b-5efb-4af1-b94b-39d2243f989c",
+                    "antivirus": "kaspersky",
+                    "result": "Clean",
+                    "scan_time": "2024-10-21T14:21:49.474Z",
+                    "file_size": "3319808",
+                    "file_name": "skuld3.exe",
+                    "file_hash": "a4a66b5826dbc95ed463bf1daaa417ae99ea8b1b27ddbacdceba94657babbafc"
+                },
+                {
+                    "session_id": "000bfe5b-5efb-4af1-b94b-39d2243f989c",
+                    "antivirus": "kaspersky",
+                    "result": "timeout",
+                    "scan_time": "2024-10-21T14:21:49.092Z",
+                    "file_size": "3319808",
+                    "file_name": "skuld3.exe",
+                    "file_hash": "a4a66b5826dbc95ed463bf1daaa417ae99ea8b1b27ddbacdceba94657babbafc"
+                },
+                {
+                    "session_id": "000bfe5b-5efb-4af1-b94b-39d2243f989c",
+                    "antivirus": "mcafee",
+                    "result": "error",
+                    "scan_time": "2024-10-21T14:21:56.773Z",
+                    "file_size": "3319808",
+                    "file_name": "skuld3.exe",
+                    "file_hash": "a4a66b5826dbc95ed463bf1daaa417ae99ea8b1b27ddbacdceba94657babbafc"
+                },
+                {
+                    "session_id": "000bfe5b-5efb-4af1-b94b-39d2243f989c",
+                    "antivirus": "mcafee",
+                    "result": "timeout",
+                    "scan_time": "2024-10-21T14:21:49.029Z",
+                    "file_size": "3319808",
+                    "file_name": "skuld3.exe",
+                    "file_hash": "a4a66b5826dbc95ed463bf1daaa417ae99ea8b1b27ddbacdceba94657babbafc"
+                },
+                {
+                    "session_id": "000bfe5b-5efb-4af1-b94b-39d2243f989c",
+                    "antivirus": "nod32",
+                    "result": "a variant of WinGo/Spy.Agent.CO trojan",
+                    "scan_time": "2024-10-21T14:21:43.580Z",
+                    "file_size": "3319808",
+                    "file_name": "skuld3.exe",
+                    "file_hash": "a4a66b5826dbc95ed463bf1daaa417ae99ea8b1b27ddbacdceba94657babbafc"
+                },
+                {
+                    "session_id": "000bfe5b-5efb-4af1-b94b-39d2243f989c",
+                    "antivirus": "windows_defender",
+                    "result": "Clean",
+                    "scan_time": "2024-10-21T14:21:44.537Z",
+                    "file_size": "3319808",
+                    "file_name": "skuld3.exe",
+                    "file_hash": "a4a66b5826dbc95ed463bf1daaa417ae99ea8b1b27ddbacdceba94657babbafc"
+                }
+            ]
+        }
+    },
+    "70": {
+        "scan_history": [
+            {
+                "session_id": "2dced84f-d630-4e9f-8f55-d37c251742df",
+                "scan_time": "2024-10-21T12:19:24.485Z",
+                "file_size": "5",
+                "file_name": "test.exe",
+                "file_hash": "546d70ec0d02aec46c19c141479213a490fe943d69fcf18dc28b7c0743e25b35"
+            }
+        ],
+        "scan_results": {
+            "2dced84f-d630-4e9f-8f55-d37c251742df": [
+                {
+                    "session_id": "2dced84f-d630-4e9f-8f55-d37c251742df",
+                    "antivirus": "avast",
+                    "result": "Scan result timeout",
+                    "scan_time": "2024-10-21T12:19:08.686Z",
+                    "file_size": "5",
+                    "file_name": "test.exe",
+                    "file_hash": "546d70ec0d02aec46c19c141479213a490fe943d69fcf18dc28b7c0743e25b35"
+                },
+                {
+                    "session_id": "2dced84f-d630-4e9f-8f55-d37c251742df",
+                    "antivirus": "avg",
+                    "result": "Scan result timeout",
+                    "scan_time": "2024-10-21T12:19:08.748Z",
+                    "file_size": "5",
+                    "file_name": "test.exe",
+                    "file_hash": "546d70ec0d02aec46c19c141479213a490fe943d69fcf18dc28b7c0743e25b35"
+                },
+                {
+                    "session_id": "2dced84f-d630-4e9f-8f55-d37c251742df",
+                    "antivirus": "clamav",
+                    "result": "Clean",
+                    "scan_time": "2024-10-21T12:19:03.930Z",
+                    "file_size": "5",
+                    "file_name": "test.exe",
+                    "file_hash": "546d70ec0d02aec46c19c141479213a490fe943d69fcf18dc28b7c0743e25b35"
+                },
+                {
+                    "session_id": "2dced84f-d630-4e9f-8f55-d37c251742df",
+                    "antivirus": "comodo",
+                    "result": "Clean",
+                    "scan_time": "2024-10-21T12:19:04.125Z",
+                    "file_size": "5",
+                    "file_name": "test.exe",
+                    "file_hash": "546d70ec0d02aec46c19c141479213a490fe943d69fcf18dc28b7c0743e25b35"
+                },
+                {
+                    "session_id": "2dced84f-d630-4e9f-8f55-d37c251742df",
+                    "antivirus": "emisoft",
+                    "result": "Clean",
+                    "scan_time": "2024-10-21T12:19:04.175Z",
+                    "file_size": "5",
+                    "file_name": "test.exe",
+                    "file_hash": "546d70ec0d02aec46c19c141479213a490fe943d69fcf18dc28b7c0743e25b35"
+                },
+                {
+                    "session_id": "2dced84f-d630-4e9f-8f55-d37c251742df",
+                    "antivirus": "fsecure",
+                    "result": "Clean",
+                    "scan_time": "2024-10-21T12:19:04.276Z",
+                    "file_size": "5",
+                    "file_name": "test.exe",
+                    "file_hash": "546d70ec0d02aec46c19c141479213a490fe943d69fcf18dc28b7c0743e25b35"
+                },
+                {
+                    "session_id": "2dced84f-d630-4e9f-8f55-d37c251742df",
+                    "antivirus": "kaspersky",
+                    "result": "Clean",
+                    "scan_time": "2024-10-21T12:19:04.268Z",
+                    "file_size": "5",
+                    "file_name": "test.exe",
+                    "file_hash": "546d70ec0d02aec46c19c141479213a490fe943d69fcf18dc28b7c0743e25b35"
+                },
+                {
+                    "session_id": "2dced84f-d630-4e9f-8f55-d37c251742df",
+                    "antivirus": "mcafee",
+                    "result": "timeout",
+                    "scan_time": "2024-10-21T12:19:23.552Z",
+                    "file_size": "5",
+                    "file_name": "test.exe",
+                    "file_hash": "546d70ec0d02aec46c19c141479213a490fe943d69fcf18dc28b7c0743e25b35"
+                },
+                {
+                    "session_id": "2dced84f-d630-4e9f-8f55-d37c251742df",
+                    "antivirus": "mcafee",
+                    "result": "error",
+                    "scan_time": "2024-10-21T12:19:24.485Z",
+                    "file_size": "5",
+                    "file_name": "test.exe",
+                    "file_hash": "546d70ec0d02aec46c19c141479213a490fe943d69fcf18dc28b7c0743e25b35"
+                },
+                {
+                    "session_id": "2dced84f-d630-4e9f-8f55-d37c251742df",
+                    "antivirus": "nod32",
+                    "result": "Clean",
+                    "scan_time": "2024-10-21T12:19:05.201Z",
+                    "file_size": "5",
+                    "file_name": "test.exe",
+                    "file_hash": "546d70ec0d02aec46c19c141479213a490fe943d69fcf18dc28b7c0743e25b35"
+                },
+                {
+                    "session_id": "2dced84f-d630-4e9f-8f55-d37c251742df",
+                    "antivirus": "windows_defender",
+                    "result": "Clean",
+                    "scan_time": "2024-10-21T12:19:03.990Z",
+                    "file_size": "5",
+                    "file_name": "test.exe",
+                    "file_hash": "546d70ec0d02aec46c19c141479213a490fe943d69fcf18dc28b7c0743e25b35"
+                }
+            ]
+        }
+    },
+    "71": {
+        "scan_history": [
+            {
+                "session_id": "6b7584a5-a52b-4679-9869-468034eff896",
+                "scan_time": "2024-10-21T13:24:42.081Z",
+                "file_size": "178605",
+                "file_name": "21950021489.pdf",
+                "file_hash": "4672cb857a2e2aec3783f5582df898b74f850c9237974976c9797572908c8945"
+            }
+        ],
+        "scan_results": {
+            "6b7584a5-a52b-4679-9869-468034eff896": [
+                {
+                    "session_id": "6b7584a5-a52b-4679-9869-468034eff896",
+                    "antivirus": "avast",
+                    "result": "Clean",
+                    "scan_time": "2024-10-21T13:24:31.893Z",
+                    "file_size": "178605",
+                    "file_name": "21950021489.pdf",
+                    "file_hash": "4672cb857a2e2aec3783f5582df898b74f850c9237974976c9797572908c8945"
+                },
+                {
+                    "session_id": "6b7584a5-a52b-4679-9869-468034eff896",
+                    "antivirus": "avg",
+                    "result": "Clean",
+                    "scan_time": "2024-10-21T13:24:32.622Z",
+                    "file_size": "178605",
+                    "file_name": "21950021489.pdf",
+                    "file_hash": "4672cb857a2e2aec3783f5582df898b74f850c9237974976c9797572908c8945"
+                },
+                {
+                    "session_id": "6b7584a5-a52b-4679-9869-468034eff896",
+                    "antivirus": "clamav",
+                    "result": "Clean",
+                    "scan_time": "2024-10-21T13:24:31.907Z",
+                    "file_size": "178605",
+                    "file_name": "21950021489.pdf",
+                    "file_hash": "4672cb857a2e2aec3783f5582df898b74f850c9237974976c9797572908c8945"
+                },
+                {
+                    "session_id": "6b7584a5-a52b-4679-9869-468034eff896",
+                    "antivirus": "comodo",
+                    "result": "Clean",
+                    "scan_time": "2024-10-21T13:24:30.107Z",
+                    "file_size": "178605",
+                    "file_name": "21950021489.pdf",
+                    "file_hash": "4672cb857a2e2aec3783f5582df898b74f850c9237974976c9797572908c8945"
+                },
+                {
+                    "session_id": "6b7584a5-a52b-4679-9869-468034eff896",
+                    "antivirus": "emisoft",
+                    "result": "Clean",
+                    "scan_time": "2024-10-21T13:24:30.090Z",
+                    "file_size": "178605",
+                    "file_name": "21950021489.pdf",
+                    "file_hash": "4672cb857a2e2aec3783f5582df898b74f850c9237974976c9797572908c8945"
+                },
+                {
+                    "session_id": "6b7584a5-a52b-4679-9869-468034eff896",
+                    "antivirus": "fsecure",
+                    "result": "Clean",
+                    "scan_time": "2024-10-21T13:24:38.094Z",
+                    "file_size": "178605",
+                    "file_name": "21950021489.pdf",
+                    "file_hash": "4672cb857a2e2aec3783f5582df898b74f850c9237974976c9797572908c8945"
+                },
+                {
+                    "session_id": "6b7584a5-a52b-4679-9869-468034eff896",
+                    "antivirus": "fsecure",
+                    "result": "timeout",
+                    "scan_time": "2024-10-21T13:24:36.158Z",
+                    "file_size": "178605",
+                    "file_name": "21950021489.pdf",
+                    "file_hash": "4672cb857a2e2aec3783f5582df898b74f850c9237974976c9797572908c8945"
+                },
+                {
+                    "session_id": "6b7584a5-a52b-4679-9869-468034eff896",
+                    "antivirus": "kaspersky",
+                    "result": "Clean",
+                    "scan_time": "2024-10-21T13:24:42.081Z",
+                    "file_size": "178605",
+                    "file_name": "21950021489.pdf",
+                    "file_hash": "4672cb857a2e2aec3783f5582df898b74f850c9237974976c9797572908c8945"
+                },
+                {
+                    "session_id": "6b7584a5-a52b-4679-9869-468034eff896",
+                    "antivirus": "kaspersky",
+                    "result": "timeout",
+                    "scan_time": "2024-10-21T13:24:37.109Z",
+                    "file_size": "178605",
+                    "file_name": "21950021489.pdf",
+                    "file_hash": "4672cb857a2e2aec3783f5582df898b74f850c9237974976c9797572908c8945"
+                },
+                {
+                    "session_id": "6b7584a5-a52b-4679-9869-468034eff896",
+                    "antivirus": "mcafee",
+                    "result": "timeout",
+                    "scan_time": "2024-10-21T13:24:36.209Z",
+                    "file_size": "178605",
+                    "file_name": "21950021489.pdf",
+                    "file_hash": "4672cb857a2e2aec3783f5582df898b74f850c9237974976c9797572908c8945"
+                },
+                {
+                    "session_id": "6b7584a5-a52b-4679-9869-468034eff896",
+                    "antivirus": "nod32",
+                    "result": "Clean",
+                    "scan_time": "2024-10-21T13:24:41.897Z",
+                    "file_size": "178605",
+                    "file_name": "21950021489.pdf",
+                    "file_hash": "4672cb857a2e2aec3783f5582df898b74f850c9237974976c9797572908c8945"
+                },
+                {
+                    "session_id": "6b7584a5-a52b-4679-9869-468034eff896",
+                    "antivirus": "windows_defender",
+                    "result": "Clean",
+                    "scan_time": "2024-10-21T13:24:30.056Z",
+                    "file_size": "178605",
+                    "file_name": "21950021489.pdf",
+                    "file_hash": "4672cb857a2e2aec3783f5582df898b74f850c9237974976c9797572908c8945"
+                }
+            ]
+        }
+    }
+}
