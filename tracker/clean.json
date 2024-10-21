@@ -1,6 +1,13 @@
 {
     "25": [
         {
+            "result": "suspicion\tHEUR:Backdoor.Win32.Remcos.gen",
+            "scan_time": "2024-10-21",
+            "file_size": "479232",
+            "file_name": "Project1.exe",
+            "file_hash": "9066bf58ea7039063814b3ca622f185e08a95ea072c5a207a922e15550ae9f29"
+        },
+        {
             "result": "Win.Trojan.Remcos-9841897-0",
             "scan_time": "2024-10-21",
             "file_size": "471040",
@@ -167,6 +174,13 @@
             "file_size": "1558600",
             "file_name": "KOMODO.exe",
             "file_hash": "e541c93aab5dcb87acd428399300dd3613b8f79112a8a8b31aa038c7bb14381b"
+        },
+        {
+            "result": "suspicion\tVHO:Backdoor.Win32.Convagent.gen",
+            "scan_time": "2024-10-21",
+            "file_size": "1558600",
+            "file_name": "ff.exe",
+            "file_hash": "d192987b04b138b29f8c08c5ca6a6b80a39286eec84c38010ea7789b6d1ac102"
         },
         {
             "result": "suspicion\tVHO:Backdoor.Win32.Convagent.gen",
