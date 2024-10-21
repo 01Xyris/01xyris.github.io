@@ -8,28 +8,70 @@
             "file_hash": "302e4f4a24cbf26a203885e16ddb6b9ff470034ec49345d620296e91b67336c3"
         },
         {
-            "result": "Scan result timeout",
+            "result": "HEUR/APC",
             "scan_time": "2024-10-21",
             "file_size": "20480",
             "file_name": "Project1.exe",
             "file_hash": "302e4f4a24cbf26a203885e16ddb6b9ff470034ec49345d620296e91b67336c3"
         },
         {
-            "result": "Scan result timeout",
+            "result": "Dump:Generic.Dacic.A9349469.A.BA9412D4 (B)",
+            "scan_time": "2024-10-21",
+            "file_size": "440320",
+            "file_name": "remcos_a.exe",
+            "file_hash": "7b7afd28c170af2cafb4bc68430ebba69e42849cfd8f590a9b9310e55cc887bc"
+        },
+        {
+            "result": "HEUR/APC",
             "scan_time": "2024-10-21",
             "file_size": "20480",
             "file_name": "Project1.exe",
             "file_hash": "302e4f4a24cbf26a203885e16ddb6b9ff470034ec49345d620296e91b67336c3"
         },
         {
-            "result": "Scan result timeout",
+            "result": "Dump:Generic.Dacic.A9349469.A.BA9412D4 (B)",
+            "scan_time": "2024-10-21",
+            "file_size": "440320",
+            "file_name": "remcos_a.exe",
+            "file_hash": "7b7afd28c170af2cafb4bc68430ebba69e42849cfd8f590a9b9310e55cc887bc"
+        },
+        {
+            "result": "HEUR/APC",
             "scan_time": "2024-10-21",
             "file_size": "20480",
             "file_name": "Project1.exe",
             "file_hash": "302e4f4a24cbf26a203885e16ddb6b9ff470034ec49345d620296e91b67336c3"
         },
         {
-            "result": "Scan result timeout",
+            "result": "HEUR/APC",
+            "scan_time": "2024-10-21",
+            "file_size": "20480",
+            "file_name": "Project1.exe",
+            "file_hash": "302e4f4a24cbf26a203885e16ddb6b9ff470034ec49345d620296e91b67336c3"
+        },
+        {
+            "result": "HEUR/APC",
+            "scan_time": "2024-10-21",
+            "file_size": "20480",
+            "file_name": "Project1.exe",
+            "file_hash": "302e4f4a24cbf26a203885e16ddb6b9ff470034ec49345d620296e91b67336c3"
+        },
+        {
+            "result": "HEUR/APC",
+            "scan_time": "2024-10-21",
+            "file_size": "20480",
+            "file_name": "Project1.exe",
+            "file_hash": "302e4f4a24cbf26a203885e16ddb6b9ff470034ec49345d620296e91b67336c3"
+        },
+        {
+            "result": "HEUR/APC",
+            "scan_time": "2024-10-21",
+            "file_size": "20480",
+            "file_name": "Project1.exe",
+            "file_hash": "302e4f4a24cbf26a203885e16ddb6b9ff470034ec49345d620296e91b67336c3"
+        },
+        {
+            "result": "HEUR/APC",
             "scan_time": "2024-10-21",
             "file_size": "20480",
             "file_name": "Project1.exe",
@@ -108,13 +150,6 @@
     ],
     "36": [
         {
-            "result": "Scan result timeout",
-            "scan_time": "2024-10-21",
-            "file_size": "11776",
-            "file_name": "CHILIII2.exe",
-            "file_hash": "81a3e0433ae619da788ffc44f8a496482bddc421cbfa9edbb78b6de782adb259"
-        },
-        {
             "result": "a variant of MSIL/ShellcodeRunner.GI trojan",
             "scan_time": "2024-10-21",
             "file_size": "32768",
@@ -150,6 +185,22 @@
             "file_size": "18474924",
             "file_name": "Loader.exe",
             "file_hash": "6aeaaea9eff744db393c13e4ab8518f105704ddf0f35710bb7f5d6d3b4b276d0"
+        }
+    ],
+    "67": [
+        {
+            "result": "Heur.BZC.MTN.Boxter.1062.52FAD55C (B)",
+            "scan_time": "2024-10-21",
+            "file_size": "1666",
+            "file_name": "passphrase.bat",
+            "file_hash": "b5621ca85d9b087c70ad158d5562efffce00612e79ede02439314225d2b0cb70"
+        },
+        {
+            "result": "Heur.BZC.MTN.Boxter.1062.52FAD55C (B)",
+            "scan_time": "2024-10-21",
+            "file_size": "1648",
+            "file_name": "passphrase.bat",
+            "file_hash": "c59afc0935bacb1044ad5831cafaee2eb66bc6059d76e8439354329b901a06b0"
         }
     ],
     "69": [
