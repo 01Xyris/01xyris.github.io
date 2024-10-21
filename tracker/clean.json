@@ -1,0 +1,18 @@
+{
+    "69": [
+        {
+            "result": "suspicion\tHEUR:Backdoor.MSIL.XWorm.gen",
+            "scan_time": "2024-10-21",
+            "file_size": "166912",
+            "file_name": "Updater.exe",
+            "file_hash": "4571751b2b7477fded0012f46aded7c86fb93194980897418c17ac917c4d4cc1"
+        },
+        {
+            "result": "a variant of WinGo/Spy.Agent.CO trojan",
+            "scan_time": "2024-10-21",
+            "file_size": "3319808",
+            "file_name": "skuld3.exe",
+            "file_hash": "a4a66b5826dbc95ed463bf1daaa417ae99ea8b1b27ddbacdceba94657babbafc"
+        }
+    ]
+}
