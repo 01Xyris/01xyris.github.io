@@ -115,6 +115,13 @@
             "file_hash": "302e4f4a24cbf26a203885e16ddb6b9ff470034ec49345d620296e91b67336c3"
         },
         {
+            "result": "HEUR/APC",
+            "scan_time": "2024-10-21",
+            "file_size": "20480",
+            "file_name": "Project1.exe",
+            "file_hash": "302e4f4a24cbf26a203885e16ddb6b9ff470034ec49345d620296e91b67336c3"
+        },
+        {
             "result": "Dump:Generic.Dacic.A9349469.A.BA9412D4 (B)",
             "scan_time": "2024-10-21",
             "file_size": "440320",
@@ -297,6 +304,15 @@
             "file_hash": "acb81935777f91e4954f8ef5649aced35678021cd3571509463a78445c4a284d"
         }
     ],
+    "28": [
+        {
+            "result": "suspicion\tHEUR:Trojan-PSW.MSIL.Stealer.gen",
+            "scan_time": "2024-10-21",
+            "file_size": "119296",
+            "file_name": "Edefepy.exe",
+            "file_hash": "71ade48d7e76852fac3c399753081f11353a4acb34e71102af9fc8b8c777a409"
+        }
+    ],
     "36": [
         {
             "result": "Generic.ShellCode.Donut.Marte.4.4ED0EC90 (B)",
@@ -428,6 +444,52 @@
             "file_size": "128654",
             "file_name": "NOware.exe",
             "file_hash": "cd3aa230a9dc3d26e019792d178c234a275cfc003f7e7313370cfb2b3100aed4"
+        }
+    ],
+    "73": [
+        {
+            "result": "N/A",
+            "scan_time": "2024-10-22",
+            "file_size": "3236864",
+            "file_name": "KeePass.exe",
+            "file_hash": "b17de06fb7db378e139584cfa79fff1c4c57e160bfc3838a35dc2b9fadf33304"
+        },
+        {
+            "result": "N/A",
+            "scan_time": "2024-10-22",
+            "file_size": "1654048",
+            "file_name": "<img src=\"https://www.museumofplay.org/app/uploads/2021/08/Troll-figure-Dam-Things-The-Strong-Rochester-New-York.-1-249x300.jpg\">",
+            "file_hash": "e53c379d95e95706c5a2c4d6cd609857368a3bf14f28d7e67f6e3f8dfce6d486"
+        },
+        {
+            "result": "N/A",
+            "scan_time": "2024-10-22",
+            "file_size": "97160",
+            "file_name": "ShInstUtil.exe",
+            "file_hash": "9c61a071bbb3355c40fb9dc439bad7eb1ff8dc423507fc47e2e36620d7582715"
+        },
+        {
+            "result": "N/A",
+            "scan_time": "2024-10-22",
+            "file_size": "3236864",
+            "file_name": "KeePass.exe",
+            "file_hash": "b17de06fb7db378e139584cfa79fff1c4c57e160bfc3838a35dc2b9fadf33304"
+        }
+    ],
+    "74": [
+        {
+            "result": "N/A",
+            "scan_time": "2024-10-22",
+            "file_size": "3236864",
+            "file_name": "KeePass.exe",
+            "file_hash": "b17de06fb7db378e139584cfa79fff1c4c57e160bfc3838a35dc2b9fadf33304"
+        },
+        {
+            "result": "N/A",
+            "scan_time": "2024-10-22",
+            "file_size": "1654048",
+            "file_name": "<img src=\"https://www.museumofplay.org/app/uploads/2021/08/Troll-figure-Dam-Things-The-Strong-Rochester-New-York.-1-249x300.jpg\">",
+            "file_hash": "e53c379d95e95706c5a2c4d6cd609857368a3bf14f28d7e67f6e3f8dfce6d486"
         }
     ]
 }
