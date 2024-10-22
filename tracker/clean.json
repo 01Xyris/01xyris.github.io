@@ -480,6 +480,20 @@
         {
             "result": "N/A",
             "scan_time": "2024-10-22",
+            "file_size": "285219",
+            "file_name": "1_p002752.jpg",
+            "file_hash": "c761de6c27323f52f0b2903a533c13eaf29c90fbd73aeac7dc010c462c23b55d"
+        },
+        {
+            "result": "N/A",
+            "scan_time": "2024-10-22",
+            "file_size": "17174",
+            "file_name": "typeReferences.png",
+            "file_hash": "095f4382e2883c6ad6a1282874a77eb60b7ae958308e1f4c9fc47a05ea280c75"
+        },
+        {
+            "result": "N/A",
+            "scan_time": "2024-10-22",
             "file_size": "3236864",
             "file_name": "KeePass.exe",
             "file_hash": "b17de06fb7db378e139584cfa79fff1c4c57e160bfc3838a35dc2b9fadf33304"
@@ -490,6 +504,22 @@
             "file_size": "1654048",
             "file_name": "<img src=\"https://www.museumofplay.org/app/uploads/2021/08/Troll-figure-Dam-Things-The-Strong-Rochester-New-York.-1-249x300.jpg\">",
             "file_hash": "e53c379d95e95706c5a2c4d6cd609857368a3bf14f28d7e67f6e3f8dfce6d486"
+        }
+    ],
+    "76": [
+        {
+            "result": "N/A",
+            "scan_time": "2024-10-22",
+            "file_size": "12206733",
+            "file_name": "2.png",
+            "file_hash": "0dfa98d0ff1521ea4edb2c5d7fa42af7ca33ce24156f2bfcb52fc2cc9cbe0503"
+        },
+        {
+            "result": "N/A",
+            "scan_time": "2024-10-22",
+            "file_size": "3236864",
+            "file_name": "KeePass.exe",
+            "file_hash": "b17de06fb7db378e139584cfa79fff1c4c57e160bfc3838a35dc2b9fadf33304"
         }
     ]
 }
