@@ -490,6 +490,13 @@
     ],
     "36": [
         {
+            "result": "Trojan.TR/Rozena.Gen",
+            "scan_time": "2024-10-22 22:07:50",
+            "file_size": "4608",
+            "file_name": "finallstubmp3.exe",
+            "file_hash": "0f9e02f7c1a0af4416051796c9337444de3f41040ae1958b2eede91de18bfb67"
+        },
+        {
             "result": "Generic.ShellCode.Donut.Marte.4.4ED0EC90 (B)",
             "scan_time": "2024-10-21 22:29:01",
             "file_size": "65643",
