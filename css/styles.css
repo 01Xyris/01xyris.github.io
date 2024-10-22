@@ -5,7 +5,11 @@ body {
     font-family: "MS Sans Serif", sans-serif;
     color: black;
     margin: 0;
-    padding: 0;
+    padding: 10;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-top: 20px;
 }
 
 a {
@@ -17,6 +21,21 @@ a:hover {
     text-decoration: underline;
 }
 
+.ascii-container {
+    margin-bottom: 10px;
+    background-color: transparent;
+    padding: 10px;
+    display: inline-block;
+}
+.ascii-art {
+    font-family: monospace;
+    font-size: 8px;
+    line-height: 1;
+    color: white;
+    text-align: center;
+    white-space: pre;
+    margin: 0;
+}
 .window {
     width: 800px;
     margin: 50px auto;
