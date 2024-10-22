@@ -10,6 +10,118 @@
     ],
     "25": [
         {
+            "result": "Dump:Generic.Dacic.A9349469.A.6E98D037 (B)",
+            "scan_time": "2024-10-22 16:20:36",
+            "file_size": "458752",
+            "file_name": "ConsoleApp3.exe",
+            "file_hash": "a4d2a6b1225d8a15c7d6250c311c149e133eaf5a25fe27cb0003f84f8955709d"
+        },
+        {
+            "result": "Trojan.TR/Dropper.Gen",
+            "scan_time": "2024-10-22 16:15:17",
+            "file_size": "462848",
+            "file_name": "jhgjhg.exe",
+            "file_hash": "101de54d6d55ca1a6c97b994335bfcbe274a6649ebd1d81aed6de0533cf38d6d"
+        },
+        {
+            "result": "Gen:Variant.Nadrac.40 (B)",
+            "scan_time": "2024-10-22 16:05:57",
+            "file_size": "471040",
+            "file_name": "gdf.exe",
+            "file_hash": "c86afe5ddd87535f5f42b684ce782368fbe79af5a3f5ddb1cb86509b560a1e66"
+        },
+        {
+            "result": "Gen:Variant.Nadrac.40 (B)",
+            "scan_time": "2024-10-22 15:58:54",
+            "file_size": "471040",
+            "file_name": "Project1.exe",
+            "file_hash": "9add3e2293bd483f055dec2bac6a4f6293b21db787f7836b4a27a2dbc48eed35"
+        },
+        {
+            "result": "Dump:Generic.Dacic.A9349469.A.3A8C8877 (B)",
+            "scan_time": "2024-10-22 15:58:26",
+            "file_size": "440320",
+            "file_name": "1.exe",
+            "file_hash": "8726d098151deb7f3e7d3c23bbbe4fbacf6ab7a3c2a016044ac63c1215a54f19"
+        },
+        {
+            "result": "Gen:Variant.Nadrac.40 (B)",
+            "scan_time": "2024-10-22 15:57:38",
+            "file_size": "471040",
+            "file_name": "Project1.exe",
+            "file_hash": "9add3e2293bd483f055dec2bac6a4f6293b21db787f7836b4a27a2dbc48eed35"
+        },
+        {
+            "result": "Dump:Generic.Dacic.A9349469.A.3A8C8877 (B)",
+            "scan_time": "2024-10-22 15:56:54",
+            "file_size": "440320",
+            "file_name": "1.exe",
+            "file_hash": "8726d098151deb7f3e7d3c23bbbe4fbacf6ab7a3c2a016044ac63c1215a54f19"
+        },
+        {
+            "result": "N/A",
+            "scan_time": "2024-10-22 15:56:23",
+            "file_size": "440320",
+            "file_name": "10.exe",
+            "file_hash": "da3f70bd8982d57911b3fadc9956bec4a7ffe98fc4b430bac80f616d911ddc88"
+        },
+        {
+            "result": "Dump:Generic.Dacic.A9349469.A.3A8C8877 (B)",
+            "scan_time": "2024-10-22 15:54:36",
+            "file_size": "440320",
+            "file_name": "1.exe",
+            "file_hash": "8726d098151deb7f3e7d3c23bbbe4fbacf6ab7a3c2a016044ac63c1215a54f19"
+        },
+        {
+            "result": "Dump:Generic.Dacic.A9349469.A.3A8C8877 (B)",
+            "scan_time": "2024-10-22 15:53:47",
+            "file_size": "440320",
+            "file_name": "1.exe",
+            "file_hash": "8726d098151deb7f3e7d3c23bbbe4fbacf6ab7a3c2a016044ac63c1215a54f19"
+        },
+        {
+            "result": "N/A",
+            "scan_time": "2024-10-22 15:49:55",
+            "file_size": "1663264",
+            "file_name": "putty.exe",
+            "file_hash": "e61b8f44ab92cf0f9cb1101347967d31e1839979142a4114a7dd02aa237ba021"
+        },
+        {
+            "result": "Gen:Variant.Nadrac.40 (B)",
+            "scan_time": "2024-10-22 15:38:50",
+            "file_size": "471040",
+            "file_name": "Project1.exe",
+            "file_hash": "9add3e2293bd483f055dec2bac6a4f6293b21db787f7836b4a27a2dbc48eed35"
+        },
+        {
+            "result": "TrojanDownloader:Win32/DCRat.A!MTB",
+            "scan_time": "2024-10-22 15:34:58",
+            "file_size": "471040",
+            "file_name": "Project1.exe",
+            "file_hash": "a14216412335b4f808377425a42e4c1ca89693ac9eea6c6ca7f7f0c239afc1d2"
+        },
+        {
+            "result": "N/A",
+            "scan_time": "2024-10-22 15:23:34",
+            "file_size": "1663264",
+            "file_name": "putty.exe",
+            "file_hash": "e61b8f44ab92cf0f9cb1101347967d31e1839979142a4114a7dd02aa237ba021"
+        },
+        {
+            "result": "N/A",
+            "scan_time": "2024-10-22 15:23:14",
+            "file_size": "1251220",
+            "file_name": "Hex.exe",
+            "file_hash": "5b20fa27f51253e981ba83f3eb6d922fa46be167590d4d9b673d031d59459e3b"
+        },
+        {
+            "result": "N/A",
+            "scan_time": "2024-10-22 15:22:28",
+            "file_size": "1663264",
+            "file_name": "putty.exe",
+            "file_hash": "e61b8f44ab92cf0f9cb1101347967d31e1839979142a4114a7dd02aa237ba021"
+        },
+        {
             "result": "N/A",
             "scan_time": "2024-10-22 10:05:37",
             "file_size": "1663264",
