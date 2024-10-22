@@ -726,5 +726,14 @@
             "file_name": "Flutter2.exe",
             "file_hash": "b5b149849dbdd6961b9bae6fb6aae3154c7520c1205c06ac8426b48c17f49fae"
         }
+    ],
+    "79": [
+        {
+            "result": "N/A",
+            "scan_time": "2024-10-22 19:36:25",
+            "file_size": "2751",
+            "file_name": "script.txt",
+            "file_hash": "c206921b0ded9318669b6fd9ebb4b71b1c49b4021f38a5d6ca6e667d34667b4b"
+        }
     ]
 }
