@@ -1,363 +1,104 @@
-body {
-    background-color: #008080;
-    background-image: radial-gradient(#007070 2px, transparent 2px);
-    background-size: 8px 8px;
-    font-family: "MS Sans Serif", sans-serif;
-    color: black;
-    margin: 0;
-    padding: 10;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    padding-top: 20px;
-}
-.combined-blogs {
-    display: flex;
-    gap: 20px; /* Space between the articles */
-    padding: 10px;
-}
-
-.combined-blogs a {
-    flex: 1;
-    text-align: center;
-    border: 1px solid #ccc;
-    padding: 10px;
-    border-radius: 5px;
-    background-color: #f9f9f9;
-    text-decoration: none;
-    color: black;
-}
-a {
-    color: #0000ee;
-    text-decoration: none;
-}
-
-a:hover {
-    text-decoration: underline;
-}
-
-.ascii-container {
-    margin-bottom: 10px;
-    background-color: transparent;
-    padding: 10px;
-    display: inline-block;
-}
-.ascii-art {
-    font-family: monospace;
-    font-size: 8px;
-    line-height: 1;
-    color: white;
-    text-align: center;
-    white-space: pre;
-    margin: 0;
-}
-.window {
-    width: 800px;
-    margin: 50px auto;
-    background-color: #c0c0c0;
-    border: 2px solid #808080;
-    position: relative;
-    padding: 0;
-    box-shadow: 3px 3px 0px #000, -3px -3px 0px #fff;
-}
-
-.title-bar {
-    background-color: #000080;
-    color: white;
-    padding: 5px;
-    font-size: 16px;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    border-bottom: 2px solid #808080;
-}
-
-.title-bar span {
-    font-weight: bold;
-}
-
-.title-bar-buttons {
-    display: flex;
-}
-
-.title-bar-buttons div {
-    width: 16px;
-    height: 16px;
-    background-color: #c0c0c0;
-    margin-left: 4px;
-    text-align: center;
-    line-height: 16px;
-    border: 1px solid #808080;
-    cursor: pointer;
-    box-shadow: inset 1px 1px 0px #fff, inset -1px -1px 0px #000;
-    color: black;
-}
-
-.title-bar-buttons div:hover {
-    background-color: #fff;
-}
-
-.content {
-    padding: 15px;
-    background-color: #e0e0e0;
-    border: 2px solid #808080;
-    margin: 10px;
-    box-shadow: inset 1px 1px 0px #fff, inset -1px -1px 0px #000;
-    min-height: 300px;
-}
-
-.article-list {
-    margin-top: 15px;
-}
-
-.article-list a {
-    color: black;
-    display: block;
-    background-color: #f0f0f0;
-    border: 2px solid #808080;
-    padding: 10px;
-    margin-bottom: 10px;
-    box-shadow: inset 1px 1px 0px #fff, inset -1px -1px 0px #000;
-}
-
-.logo {
-    display: inline-block;
-    margin: 0 auto 20px;
-    max-width: 100px;
-    align-items: center;
-}
-
-.logo-container {
-    display: inline-block;
-    background-color: #c0c0c0;
-    border: 2px solid #808080;
-    box-shadow: 3px 3px 0px #000, -3px -3px 0px #fff;
-    text-align: center;
-    padding: 0;
-}
-
-h2, h3 {
-    font-family: "MS Sans Serif", sans-serif;
-    margin-bottom: 15px;
-    line-height: 1.5;
-}
-
-h2 {
-    font-size: 22px;
-    font-weight: bold;
-    color: #000080;
-}
-
-h3 {
-    font-size: 18px;
-    color: #000080;
-}
-
-p {
-    font-size: 15px;
-    color: #000000;
-    line-height: 1.5;
-}
-
-.article-list a:hover {
-    background-color: #c0c0c0;
-}
-
-.blog-post {
-    margin-bottom: 20px;
-}
-
-.blog-post h2 {
-    color: #000;
-}
-
-/* Container to manage overflow and hover effects */
-.blog-post img {
-    max-width: 80%;
-    display: block;
-    margin-left: auto;
-    margin-right: auto;
-    border: 2px solid #808080;
-    box-shadow: inset 1px 1px 0px #fff, inset -1px -1px 0px #000;
-    transition: transform 0.3s ease, box-shadow 0.3s ease; /* Smooth transition for hover effect */
-    cursor: zoom-in; /* Indicate that the image can be hovered */
-}
-
-.blog-post img:hover {
-    transform: scale(1.7); /* Scale up the image on hover (you can adjust the scale value) */
-    z-index: 10; /* Make sure the hovered image appears above other content */
-    box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.8); /* Optional: Add a shadow to make the enlarged image stand out */
-}
-
-
-
-.blog-post {
-    margin-bottom: 20px;
-    position: relative;
-    padding-bottom: 40px;
- 
-}
-
-.blog-post .button-container {
-    text-align: center;
-    margin-top: 20px;
-}
-
-.blog-post .blog-button {
-    background-color: #e0e0e0;
-    border: 2px solid #808080;
-    padding: 5px 10px;
-    margin: 10px 0;
-    cursor: pointer;
-    color: black;
-    box-shadow: inset 1px 1px 0px #fff, inset -1px -1px 0px #000;
-}
-
-.blog-post .blog-button:active {
-    border-style: inset;
-}
-
-.blog-post pre {
-    background-color: #f0f0f0;
-    border: 2px solid #808080;
-    padding: 10px;
-    margin: 10px 0;
-    white-space: pre-wrap;
-    box-shadow: inset 1px 1px 0px #fff, inset -1px -1px 0px #000;
-}
-
-.footer {
-    display: flex;
-    justify-content: flex-end;
-    padding: 10px;
-    background-color: #c0c0c0;
-    border-top: 2px solid #808080;
-}
-
-.footer button {
-    background-color: #e0e0e0;
-    border: 2px solid #808080;
-    padding: 5px 10px;
-    margin-left: 10px;
-    cursor: pointer;
-    color: black;
-    box-shadow: inset 1px 1px 0px #fff, inset -1px -1px 0px #000;
-}
-
-.footer button:hover {
-    background-color: #c0c0c0;
-}
-
-.highlight {
-    background-color: #000080;
-    color: white;
-    padding: 0 2px;
-}
-
-@media (max-width: 600px) {
     body {
-        background-size: 6px 6px;
-        padding: 10px;
-        font-size: 14px;
-    }
+            background-color: #008080;
+            background-image: radial-gradient(#007070 2px, transparent 2px);
+            background-size: 8px 8px;
+            font-family: "MS Sans Serif", sans-serif;
+            color: black;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            padding-top: 20px;
+        }
+        .button {
+            background-color: #e0e0e0;
+            border: 2px solid #808080;
+            padding: 5px 10px;
+            margin-left: 10px;
+            cursor: pointer;
+            color: black;
+            box-shadow: inset 1px 1px 0px #fff, inset -1px -1px 0px #000;
+        }
+        
+        .button:hover {
+            background-color: #c0c0c0;
+        }
+        .window {
+            width: 90%;
+            max-width: 1200px;
+            margin: 50px auto;
+            background-color: #c0c0c0;
+            border: 2px solid #808080;
+            position: relative;
+            padding: 0;
+            box-shadow: 3px 3px 0px #000, -3px -3px 0px #fff;
+            overflow: hidden;
+        }
+        .ascii-container {
+            margin-bottom: 10px;
+            background-color: transparent;
+            padding: 10px;
+            display: inline-block;
+        }
+        .ascii-art {
+            font-family: monospace;
+            font-size: 8px;
+            line-height: 1;
+            color: white;
+            text-align: center;
+            white-space: pre;
+            margin: 0;
+        }
+        .title-bar {
+            background-color: #000080;
+            color: white;
+            padding: 5px;
+            font-size: 16px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            border-bottom: 2px solid #808080;
+        }
 
-    .window {
-        width: 95%;
-        margin: 15px auto;
-        background-color: #c0c0c0;
-        border: 2px solid #808080;
-        box-shadow: 2px 2px 0px #000, -2px -2px 0px #fff;
-    }
+        .title-bar span {
+            font-weight: bold;
+        }
 
-    .title-bar {
-        background-color: #000080;
-        color: white;
-        font-size: 14px;
-        padding: 5px 8px;
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-        border-bottom: 2px solid #808080;
-    }
+        .content {
+            padding: 10px;
+            background-color: #e0e0e0;
+            border: 2px solid #808080;
+            margin: 10px;
+            box-shadow: inset 1px 1px 0px #fff, inset -1px -1px 0px #000;
+            overflow-x: auto;
+        }
 
-    .title-bar-buttons div {
-        width: 14px;
-        height: 14px;
-        line-height: 14px;
-        margin-left: 4px;
-    }
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            font-size: 12px;
+        }
 
-    .content {
-        padding: 10px;
-        background-color: #e0e0e0;
-        border: 2px solid #808080;
-        margin: 10px 0;
-        box-shadow: inset 1px 1px 0px #fff, inset -1px -1px 0px #000;
-        font-size: 13px;
-        min-height: 200px;
-    }
+        table, th, td {
+            border: 2px solid #808080;
+            box-shadow: inset 1px 1px 0px #fff, inset -1px -1px 0px #000;
+        }
 
-    .article-list a {
-        display: block;
-        background-color: #f0f0f0;
-        padding: 10px;
-        margin-bottom: 8px;
-        font-size: 14px;
-        border: 2px solid #808080;
-        box-shadow: inset 1px 1px 0px #fff, inset -1px -1px 0px #000;
-    }
+        th, td {
+            padding: 5px;
+            text-align: left;
+            background-color: #f0f0f0;
+            overflow: hidden;
+            text-overflow: ellipsis;
+            white-space: nowrap;
+        }
 
-    .article-list a:hover {
-        background-color: #c0c0c0;
-    }
+        th {
+            background-color: #c0c0c0;
+            color: black;
+        }
 
-    .blog-post img {
-        max-width: 80%;
-        display: block;
-        margin: 10px auto;
-        border: 2px solid #808080;
-        box-shadow: inset 1px 1px 0px #fff, inset -1px -1px 0px #000;
-    }
-
-    .blog-post .blog-button {
-        background-color: #e0e0e0;
-        border: 2px solid #808080;
-        padding: 6px 10px;
-        font-size: 12px;
-        cursor: pointer;
-        box-shadow: inset 1px 1px 0px #fff, inset -1px -1px 0px #000;
-    }
-
-    .blog-post pre {
-        background-color: #f0f0f0;
-        border: 2px solid #808080;
-        padding: 10px;
-        margin: 10px 0;
-        white-space: pre-wrap;
-        font-size: 12px;
-        box-shadow: inset 1px 1px 0px #fff, inset -1px -1px 0px #000;
-    }
-
-    .footer {
-        display: flex;
-        justify-content: center;
-        padding: 10px;
-        background-color: #c0c0c0;
-        border-top: 2px solid #808080;
-        flex-wrap: wrap;
-    }
-
-    .footer button {
-        background-color: #e0e0e0;
-        border: 2px solid #808080;
-        padding: 6px 10px;
-        font-size: 12px;
-        margin: 5px;
-        cursor: pointer;
-        box-shadow: inset 1px 1px 0px #fff, inset -1px -1px 0px #000;
-    }
-
-    .footer button:hover {
-        background-color: #c0c0c0;
-    }
-}
+        tr:hover td {
+            background-color: #c0c0c0;
+        }
