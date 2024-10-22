@@ -10,6 +10,69 @@
     ],
     "25": [
         {
+            "result": "N/A",
+            "scan_time": "2024-10-22",
+            "file_size": "1663264",
+            "file_name": "putty.exe",
+            "file_hash": "e61b8f44ab92cf0f9cb1101347967d31e1839979142a4114a7dd02aa237ba021"
+        },
+        {
+            "result": "Trojan.TR/Dropper.Gen",
+            "scan_time": "2024-10-22",
+            "file_size": "1558676",
+            "file_name": "buha.exe",
+            "file_hash": "d25976c6189da5fd146eb040607bea203d1e34d113b8f4ac761c3d4cd5e6383a"
+        },
+        {
+            "result": "Trojan.TR/Dropper.Gen",
+            "scan_time": "2024-10-22",
+            "file_size": "102400",
+            "file_name": "Project1.exe",
+            "file_hash": "233975b378d32d33137cacdab33be9d29a4b575f53c2d015624cf5659b42f2a7"
+        },
+        {
+            "result": "a variant of Win32/Injector.CXSL trojan",
+            "scan_time": "2024-10-22",
+            "file_size": "1558673",
+            "file_name": "boom.exe",
+            "file_hash": "e1aca5a104f6bda6ad6a3fad01a9d606c64d227c4cceefab8c33031d281bfc14"
+        },
+        {
+            "result": "a variant of Win32/GenKryptik.HBYV trojan",
+            "scan_time": "2024-10-22",
+            "file_size": "1558673",
+            "file_name": "LIJ.exe",
+            "file_hash": "832751fc88596a43cd51bcf17098c1d18e7f4eab6198ffded30175d6d74531ce"
+        },
+        {
+            "result": "a variant of Win32/Injector.CXSL trojan",
+            "scan_time": "2024-10-22",
+            "file_size": "1558673",
+            "file_name": ";KL;K.exe",
+            "file_hash": "e7edccd1baf363d2adabdaa9d2de6f3a6aaf6c7203d9eac56398fba0863ff54a"
+        },
+        {
+            "result": "a variant of Win32/Injector.CXSL trojan",
+            "scan_time": "2024-10-22",
+            "file_size": "1558673",
+            "file_name": "JKHKJHJH.exe",
+            "file_hash": "e486b9785ab9de257df49cbbcecbe3bddd49783a8f1a7f1975a77390bc023994"
+        },
+        {
+            "result": "suspicion\tHEUR:Trojan.Win32.Generic",
+            "scan_time": "2024-10-22",
+            "file_size": "1558673",
+            "file_name": "hgfhgf.exe",
+            "file_hash": "30b6dd4e3089c9d42297182e8d324bf30b089de7abd3d9076024afe714886727"
+        },
+        {
+            "result": "Gen:Trojan.Heur3.LPT.Vn3@aauL11eib (B)",
+            "scan_time": "2024-10-22",
+            "file_size": "1820820",
+            "file_name": "bursuk.exe",
+            "file_hash": "5d0db600c92794c2dc5363752761cc67e442d7aed4fda3d23a41a1eefe87d117"
+        },
+        {
             "result": "suspicion\tHEUR:Backdoor.Win32.Remcos.gen",
             "scan_time": "2024-10-21",
             "file_size": "479232",
@@ -506,20 +569,20 @@
             "file_hash": "e53c379d95e95706c5a2c4d6cd609857368a3bf14f28d7e67f6e3f8dfce6d486"
         }
     ],
-    "76": [
+    "77": [
         {
             "result": "N/A",
             "scan_time": "2024-10-22",
-            "file_size": "12206733",
-            "file_name": "2.png",
-            "file_hash": "0dfa98d0ff1521ea4edb2c5d7fa42af7ca33ce24156f2bfcb52fc2cc9cbe0503"
+            "file_size": "13852457",
+            "file_name": "stub.exe",
+            "file_hash": "72101b4787f0a0b751b922e130ac9b50e4d20b7cedb2129cac4d302429a3f59a"
         },
         {
-            "result": "N/A",
+            "result": "suspicion\tHEUR:Backdoor.Win32.Remcos.gen",
             "scan_time": "2024-10-22",
-            "file_size": "3236864",
-            "file_name": "KeePass.exe",
-            "file_hash": "b17de06fb7db378e139584cfa79fff1c4c57e160bfc3838a35dc2b9fadf33304"
+            "file_size": "494592",
+            "file_name": "Flutter2.exe",
+            "file_hash": "b5b149849dbdd6961b9bae6fb6aae3154c7520c1205c06ac8426b48c17f49fae"
         }
     ]
 }
