@@ -10,6 +10,20 @@
     ],
     "25": [
         {
+            "result": "N/A",
+            "scan_time": "2024-10-23 12:27:30",
+            "file_size": "32768",
+            "file_name": "Licenses.exe",
+            "file_hash": "fdddc74cfb770abd6fc423e9567817c2076c5ed1a36442caf99aaadf183b2a80"
+        },
+        {
+            "result": "Gen:Variant.Barys.431170 (B)",
+            "scan_time": "2024-10-23 06:41:18",
+            "file_size": "1118429",
+            "file_name": "huiiiiiiiiiiiii.exe",
+            "file_hash": "cbce5915d5b89d7b27d94277d0f75c3dd133e009ec2c00e2bd93e3f3bc6991dd"
+        },
+        {
             "result": "Dump:Generic.Dacic.A9349469.A.6E98D037 (B)",
             "scan_time": "2024-10-22 16:20:36",
             "file_size": "458752",
@@ -490,8 +504,92 @@
     ],
     "36": [
         {
+            "result": "Gen:Variant.MSILHeracles.66728 (B)",
+            "scan_time": "2024-10-23 02:37:42",
+            "file_size": "4096",
+            "file_name": "gf.exe",
+            "file_hash": "12845ed8796eaffc096e68e2a2f1f3ee3d3a633265b037a74809ad0d6cb71d68"
+        },
+        {
+            "result": "Win.Packed.Rozena-10029918-0",
+            "scan_time": "2024-10-23 02:32:08",
+            "file_size": "70144",
+            "file_name": "ewtryhgf.exe",
+            "file_hash": "e7754e9ae083c9482e2e9d4a2060996220ad4e74207ee3a6a51c969a61d940bc"
+        },
+        {
+            "result": "Dump:Generic.ShellCode.Donut.Marte.4.5F79FE14 (B)",
+            "scan_time": "2024-10-23 02:19:08",
+            "file_size": "82944",
+            "file_name": "fdav.exe",
+            "file_hash": "bb890efcb06f475cb3ec9feea8c84765c6c8a585824bf4108fe4bb9f5bebbc10"
+        },
+        {
+            "result": "a variant of MSIL/Rozena.FW trojan",
+            "scan_time": "2024-10-23 02:18:31",
+            "file_size": "70144",
+            "file_name": "fdav.exe",
+            "file_hash": "59f6b5b22abf9d7f5d325cbdce05efb6cc0f39b3dd7a4bc7f59acdab7940273c"
+        },
+        {
+            "result": "Gen:Variant.Adware.BrowseFox.64 (B)",
+            "scan_time": "2024-10-23 02:16:14",
+            "file_size": "93216",
+            "file_name": "CompiledExecutable.exe",
+            "file_hash": "1fa82da4a1a0014447f3158e58d6375f950e970c8f0e85e20bf0bedae2a5fc1d"
+        },
+        {
+            "result": "a variant of MSIL/Kryptik.RDZ trojan",
+            "scan_time": "2024-10-23 02:14:06",
+            "file_size": "82944",
+            "file_name": "CompiledExecutable.exe",
+            "file_hash": "b4f8e252112031b39b0916cb124da2484814f7d929f3a2c6bee8d31d12024956"
+        },
+        {
+            "result": "a variant of MSIL/Rozena.FW trojan",
+            "scan_time": "2024-10-23 02:08:31",
+            "file_size": "70144",
+            "file_name": "CompiledExecutable.exe",
+            "file_hash": "a328c95cde9f5a6158eb1bc85cf13baab4ea67a3664e21666fd62a14a5cfef83"
+        },
+        {
+            "result": "a variant of MSIL/Rozena.FW trojan",
+            "scan_time": "2024-10-23 01:47:12",
+            "file_size": "70144",
+            "file_name": "CompiledExecutable.exe",
+            "file_hash": "3f792625efb201ec47573c5d8906f7a3052de7332e1a60829118c90588b2e1b0"
+        },
+        {
+            "result": "Generic.ShellCode.Donut.Marte.4.FB888D1D (B)",
+            "scan_time": "2024-10-22 23:55:25",
+            "file_size": "70656",
+            "file_name": "rewen1.exe",
+            "file_hash": "4938873d0446a4f8c0b332d03f0e9cc8f8a755ce3485a6805b9a59d0620f3ab8"
+        },
+        {
+            "result": "a variant of MSIL/Rozena.FW trojan",
+            "scan_time": "2024-10-22 23:51:26",
+            "file_size": "81944",
+            "file_name": "wen.exe",
+            "file_hash": "04edd506d3bf777007ac03046df10c1340021e7804aa9630c2ab6d0628352a27"
+        },
+        {
+            "result": "Generic.ShellCode.Donut.Marte.4.A72442E9 (B)",
+            "scan_time": "2024-10-22 23:50:08",
+            "file_size": "70656",
+            "file_name": "nneeww.exe",
+            "file_hash": "9ca092059308e21f05ae57b9cc3434b8651d4449aa6aafd87441008868518983"
+        },
+        {
             "result": "Trojan.TR/Rozena.Gen",
-            "scan_time": "2024-10-22 22:07:50",
+            "scan_time": "2024-10-22 22:10:33",
+            "file_size": "27184",
+            "file_name": "mp3.exe",
+            "file_hash": "69c0ff126541200eab2cb451bced2b69a2a46015431b9139777c36a17cc0455e"
+        },
+        {
+            "result": "suspicion\tHEUR:Backdoor.MSIL.Agent.gen",
+            "scan_time": "2024-10-22 22:07:58",
             "file_size": "4608",
             "file_name": "finallstubmp3.exe",
             "file_hash": "0f9e02f7c1a0af4416051796c9337444de3f41040ae1958b2eede91de18bfb67"
@@ -607,6 +705,13 @@
     ],
     "72": [
         {
+            "result": "PowerShell/Kryptik.FW trojan",
+            "scan_time": "2024-10-22 22:48:13",
+            "file_size": "95440",
+            "file_name": "TEST.exe",
+            "file_hash": "7e12c04478cd08dc8254f58de308781f408f781920f83ff89de4b95d4e32de49"
+        },
+        {
             "result": "N/A",
             "scan_time": "2024-10-21 21:41:58",
             "file_size": "129270",
@@ -686,13 +791,6 @@
             "file_size": "17174",
             "file_name": "typeReferences.png",
             "file_hash": "095f4382e2883c6ad6a1282874a77eb60b7ae958308e1f4c9fc47a05ea280c75"
-        },
-        {
-            "result": "N/A",
-            "scan_time": "2024-10-22 00:31:02",
-            "file_size": "3236864",
-            "file_name": "KeePass.exe",
-            "file_hash": "b17de06fb7db378e139584cfa79fff1c4c57e160bfc3838a35dc2b9fadf33304"
         },
         {
             "result": "N/A",
