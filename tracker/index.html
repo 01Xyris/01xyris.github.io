@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../css/tracker.css">
+    <link rel="icon" href="../img/favicon.ico" type="image/x-icon">
+    <meta property="og:description" content="Track Malware" />
+    <title>XyrisTracker</title>
+   
+</head>
+<body>
+    <div class="ascii-container">
+        <pre class="ascii-art">
+
+
+                                                                                                    
+            ░░                                                         
+            ░    ░        ░░ ░       ░░░░ ░░    ░ ░ ░                            ░ ░░░░ ░          
+          ░  ░▒░░░░░ ░░ ░░░░░░░░░░ ░░░░░░░░ ░░░ ░░▒░░░░                      ░░░░░▒░ ░░▒░░         
+         ░░░░ ░░░░░░░░░ ░░░░▒░░░░░░░ ░ ░ ░░░░░░░░▒▒░░░░         ░ ▓█▒░░   ░░░░░░░▒▒░░░░  ░░░░░     
+░░░░░░░░ ░░▓███████▓░░██░░░░░░░░░░██▓░░░░░█░░░░░████▓░ ░████████░░█░░██░   ░░░░░█████████████░     
+░░░█░░░░░░░░░░░░░░░░░░▓█░░░░░░░█▓░░█░░░░░░░█░░░█▒░░░░░░███░░░░░░███░░░░░░█████▓░░░░█░░░░░░░░░░░█▓░░ 
+░█░░░░▒▓░░░░█░░░░░░░░▓░░░░░░░░░░██░░░░░░░░█░░█░░░░░░░░░░█░░░░░███░░░░░░█░░░░░░░░░░░░░░░░░░░░░░░▒█ ░
+░█░░░░░░░░░░░░░░▒████░░░░░░░░░░░░█░░░░░░░░███░░░░░▒█░░░██░░░░░██░░░░░▓░░░░░░░░░▓██░░░░████░░░░░██  
+▓█░░░░░██░░░░░████░░░░░████░░░░░█░░░░█░░░░██░░░░░███░░░█░░░░░█▒░░░░░██░░░░▓██████░░░░▒███░░░░░██░░░
+█████████░░░░░███▓░░░░██░░░░░░█▒░░░░██▒░░░█░░░░░██░█░░██░░░░▒░░░░░███░░░░░█▓░░░██░█░░█░░░░░░██▒ ░░░
+░░░░░ ░░█░░░░░░█░█░░░░░░░░░░████░░░░████░░░░░█░░░█▒░█████░█░░░░░░██░██░░▒░░░░░░░██░░░░░░░████░░░░░░░
+▒▒░░░░░ █░░░░░▓███░▓░░░░░░███░█░░░░░░░░░░░░░█░░░▒█░ ░█▓▓███░░█░░░░▓██░░░░░▓██████░░█░░░░░░░██░░▒▒░░ 
+░░░░▒▒░█▒░░▒░░███░░█░░█░░░░░▒█░░░░░░░░░░░░░░█░░░░█░░█░░░░░█░░██░░░░░█░░░░▒██░██████░░░██░░░░░░█░░░░░
+░░░░▒▒░█░▒▒░░▒███▒▒▒▒░███▒░░▒░▒█▒▒░█████▒▒▒▒░░▒▒░░░░░░▒▒▒█▒▒░███░▒▒▒▒█░▒▒▒░░░▒░░░░█▒▒░███░▒▒▒▒▒█▓░░░
+░░░ ░░█▒▒▒▒▒▒██░▒▒▒▒░█░██▒▒▒▒▒░█▒▓█░░▒█▒▒▒▒░█▒▒▒█▒▒▒▒▒▒█▒▒▒▒░█░█░▒▒▒▒░█▒▒▒▒▒▒▒▒▒░█▒▒░█░██░▒▒▒▒▒▒█░ 
+  ░░░██▒▒▒▒▒▒▓█░▒▒▒▒░█▓░██▒▒▒▒▒░███░░░█▒▒▒▒▒██▒▒▒▒▒▒▒███▒▒▒▒░█░░█░▒▒▒▒▒█▒▒▓██████▒▒▒▓█▓░██▒▒▒▒▒▒█░░
+   ░░█▒▒▒▒▒▒▒░█████████ ░██▓▒▒▒▒██░░░ ▓███████████████░███████░░░███▒▒▒▓████░░ ██████▓░░░████████▓░
+     ░█████████▓░░░░░ ░░  ░██████▓░░░░░░░░░░░ ░░░░░░░░░░▒░    ░  ░░██████░░░░░░▒░░ ░░ ░░░ ░        
+     ░ ░  ░    ░░░░░░▒░ ░░░░░░░█░░░░░░░░░░▒░░░░░░  ░░░░░░░░░░░        ░░  ░ ░░ ░░░░░░              
+              ░░░░▒░░ ░░░░░░ ░ ░░░░░░░░░░ ░ ░░░      ░░░░░░ ░               ░░░░░░░░               
+               ░░░░░░░░░░      ░░░░░░░  ░░░░░                                 ░░░░                 
+                  ░░░                                                                              
+                                                                                                   
+
+                                          
+        </pre>
+    </div>
+    <div class="window">
+        <div class="title-bar">
+            <span>.\tracker.exe</span>
+        </div>
+        <div class="content">
+  <!-- Refresh Button -->
+
+<div style="text-align: right; margin-bottom: 10px;">
+    <button id="refresh-button" class="button">Refresh</button>
+</div>
+
+<!-- Table Structure -->
+<table>
+    <thead>
+        <tr>
+            <th>File Size</th>
+            <th>File Name</th>
+            <th>File Hash</th>
+            <th>Scan Time</th>
+            <th>Result</th>
+        </tr>
+    </thead>
+    <tbody id="table-body">
+        <!-- Table data will be populated here -->
+    </tbody>
+</table>
+
+<script>
+    function createTextCell(text) {
+        const cell = document.createElement('td');
+        cell.textContent = text;
+        return cell;
+    }
+
+    async function loadTableData() {
+        const tableBody = document.getElementById('table-body');
+        tableBody.innerHTML = ''; 
+
+        try {
+            const response = await fetch('clean.json');
+            const jsonData = await response.json();
+
+            const uniqueResults = new Map();
+
+            for (const results of Object.values(jsonData)) {
+                results.forEach((result) => {
+                    const existingResult = uniqueResults.get(result.file_hash);
+                    if (!existingResult || new Date(result.scan_time) > new Date(existingResult.scan_time)) {
+                        uniqueResults.set(result.file_hash, result);
+                    }
+                });
+            }
+
+            const sortedResults = Array.from(uniqueResults.values()).sort((a, b) => {
+                return new Date(b.scan_time) - new Date(a.scan_time);
+            });
+
+            sortedResults.forEach((result) => {
+                const row = document.createElement('tr');
+                const sizeInKB = Math.round(result.file_size / 1024 * 100) / 100;
+                row.appendChild(createTextCell(`${sizeInKB} KB`));
+                row.appendChild(createTextCell(result.file_name));
+                row.appendChild(createTextCell(result.file_hash));
+                row.appendChild(createTextCell(result.scan_time));
+                row.appendChild(createTextCell(result.result));
+                tableBody.appendChild(row);
+            });
+
+            if (tableBody.children.length === 0) {
+                const row = document.createElement('tr');
+                const cell = document.createElement('td');
+                cell.textContent = 'No data found.';
+                cell.colSpan = 5;
+                row.appendChild(cell);
+                tableBody.appendChild(row);
+            }
+        } catch (error) {
+            console.error('Error loading table data:', error);
+            const row = document.createElement('tr');
+            const cell = document.createElement('td');
+            cell.textContent = 'Error loading data. Please check the console for details.';
+            cell.colSpan = 5;
+            row.appendChild(cell);
+            tableBody.appendChild(row);
+        }
+    }
+
+    function debounce(func, delay) {
+        let timeout;
+        return function (...args) {
+            clearTimeout(timeout);
+            timeout = setTimeout(() => func.apply(this, args), delay);
+        };
+    }
+
+    document.addEventListener('DOMContentLoaded', loadTableData);
+    document.getElementById('refresh-button').addEventListener('click', debounce(loadTableData, 300));
+</script>
+
+
+</body>
+</html>

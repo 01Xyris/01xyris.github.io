@@ -1,0 +1,155 @@
+
+    <!DOCTYPE html>
+    <html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta name="description" content="Analysis of Crypters and Tools, a malware packing service with poor security practices. Includes investigation of their database exposure and connection to malware campaigns.">
+        <meta name="keywords" content="malware analysis, crypters, packers, cybersecurity, Themida, Firebase, database security">
+        <meta name="author" content="01Xyris">
+        <meta name="robots" content="index, follow">
+        <title>CryptersAndTools Analysis</title>
+        <link rel="stylesheet" href="../css/styles.css">
+        <link rel="icon" href="../img/favicon.ico" type="image/x-icon">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.24.1/themes/prism.min.css">
+    </head>
+    <body>
+        <div class="window">
+            <div class="title-bar">
+                <span>CryptersAndToolsIsForFools.cs</span>
+                <div class="title-bar-buttons">
+                    <div>-</div>
+                    <div>X</div>
+                </div>
+            </div>
+            <div class="content">
+                <div class="blog-post">
+                    <h3>Finding the "Crypters and Tools" Channel</h3>
+                    <p>I was super bored and ended up searching for random YouTube viruses and free crypters (which usually have malware in them). That’s when I stumbled onto a channel called "Crypters and Tools."</p>
+                    
+                    <img src="../img/fools/yt_profile.png" alt="Crypters and Tools YouTube Channel">
+                    
+               
+                    <p>I took a look at their website, and the pricing was... ambitious, to say the least. Here's what they were offering:</p>
+    
+                    <div class="pricing">
+                        <p><strong>PUBLIC / PRIVATE .vbs/js</strong></p>
+                        <ul>
+                            <li>$100/Month</li>
+                        </ul>
+    
+                        <p><strong>PUBLIC / PRIVATE .bat</strong></p>
+                        <ul>
+                            <li>1 MONTH: $150/Month</li>
+                            <li>2 MONTHS: $250/Month</li>
+                            <li>3 MONTHS: $350/Month</li>
+                        </ul>
+    
+                        <p><strong>.exe</strong></p>
+                        <ul>
+                            <li>1 MONTH: $350/Month</li>
+                            <li>2 MONTHS: $500/Month</li>
+                            <li>3 MONTHS: $700/Month</li>
+                        </ul>
+                    </div>
+    
+                    <h3>Diving Into Their Videos</h3>
+                    <p>That got me really interested, so I went through all their videos, hoping to find some useful information. And holy shit, I actually did. Their last upload was just 3 days ago.</p>
+                    
+                    <img src="../img/fools/shitcryptergui1.png" alt="Crypter GUI Interface">
+    
+                    <h3>Investigating File.js</h3>
+                    <p>In the video, they uploaded some File.js to their server at <code>158.69.36.15/Files/Files.js</code>. I wanted to check if the file was still up there, to see if I could link it to some malware campaign. And yeah, the file was still there when I downloaded it.</p>
+                    
+                    <img src="../img/fools/filezilla.png" alt="FileZilla showing accessible files">
+    
+                    <h3>Exploring the Upload Folder</h3>
+                    <p>I'm looking through FileZilla in the video, and spot this "Upload" folder, so I’m like, "Let’s see what’s in there." I found a file called "Private Encryption Panel.exe." I downloaded it, and the icon looked familiar as hell. It turns out it’s the same packer from the video that you can see in the taskbar.</p>
+                    
+                    <img src="../img/fools/taskbar.png" alt="Taskbar showing packer icon">
+    
+                    <h3>Unpacking the Packer</h3>
+                    <p>I downloaded it and saw it was packed with Themida. I used <a href="https://github.com/ergrelet/unlicense" target="_blank">Unlicense</a> to unpack it, threw the unpacked version into ILSpy, fixed the missing dependencies, and exported it to .csproj.</p>
+
+      
+    
+                    <h3>Exposed Secrets</h3>
+                    <p>Lmao, look at this. They’ve got their Auth "Secret" key just sitting there hardcoded.</p>
+                    <img src="../img/fools/key.png" alt="Exposed authentication key">
+                    <h3>Accessing the Database</h3>
+                    <p>Check this out, here's where it connects to the database to check users and stuff:</p>
+    
+                    <pre><code class="language-csharp">if (string.IsNullOrWhiteSpace(TxtUsername.Text) && string.IsNullOrWhiteSpace(TxtPassword.Text))
+    {
+        MessageBox.Show("Verify your information and Try Again", "Crypters And Tools", MessageBoxButtons.OK, MessageBoxIcon.Hand);
+        return;
+    }
+    Users users = client.Get("Database/" + TxtUsername.Text).ResultAs<Users>();
+    if (users == null)
+    {
+        MessageBox.Show("User does not exist!", "Crypters And Tools", MessageBoxButtons.OK, MessageBoxIcon.Hand);
+        return;
+    }
+    string hardwareID = GetHardwareID();
+    if (Operators.CompareString(users.HadwareID, "0", TextCompare: false) == 0)
+    {
+        await SetHardwareID(TxtUsername.Text, hardwareID);
+    }
+    Users users2 = client.Get("Database/" + TxtUsername.Text).ResultAs<Users>();</code></pre>
+    
+                    <h3>Downloading the Entire Database</h3>
+                    <p>I was checking out the Firebase API docs, and realized I could literally just read their whole database. So, I dropped this code into frmLogin_Load:</p>
+    
+                    <pre><code class="language-csharp">{
+        client = new FirebaseClient((IFirebaseConfig)(object)fcon);
+        var allUsers = client.Get("Database").ResultAs<Dictionary<string, Users>>();
+    
+        using (StreamWriter writer = new StreamWriter("users.csv"))
+        {
+            bool headerWritten = false;
+    
+            foreach (var userEntry in allUsers)
+            {
+                var user = userEntry.Value;
+                var properties = user.GetType().GetProperties();
+    
+                if (!headerWritten)
+                {
+                    writer.WriteLine(string.Join(",", properties.Select(p => p.Name)));
+                    headerWritten = true;
+                }
+    
+                var values = properties.Select(p => p.GetValue(user, null)?.ToString() ?? string.Empty);
+                writer.WriteLine(string.Join(",", values));
+            }
+        }
+    }</code></pre>
+    
+                    <p>Ran it, and boom, got their whole database right there.</p>
+                    
+                    <img src="../img/fools/database.png" alt="Extracted database contents">
+    
+                    <h3>Finding Similarities With Older Binaries</h3>
+                    <p>I started testing the packer, and noticed it looks super similar to some binaries from 2-3 months ago:</p>
+                    <p><a href="https://x.com/01Xyris/status/1829166235730489586" target="_blank">https://x.com/01Xyris/status/1829166235730489586</a></p>
+                    <p><a href="https://x.com/vmray/status/1833180847551160381" target="_blank">https://x.com/vmray/status/1833180847551160381</a></p>
+    
+                    <img src="../img/fools/script.png" alt="Script">
+                    <p>They're using the exact same strings in their script, <code>$Codigo</code> and <code>$OwjuxD</code>.</p>
+                    <p>The junk code is pretty much identical too, but that's way too much to put in here.</p>
+    
+                    <h3>Final Thoughts</h3>
+                    <p>Kinda wild how much damage this garbage code/packer can do...</p>
+                    <p>Follow my Twitter, please. I only have bots following me >.> (<a href="https://x.com/01Xyris" target="_blank">https://x.com/01Xyris</a>)</p>
+                </div>
+            </div>
+            <div class="footer">
+                <a href="../index.html">
+                    <button>Back</button>
+                </a>
+            </div>
+        </div>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.24.1/components/prism-core.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.24.1/plugins/autoloader/prism-autoloader.min.js"></script>
+    </body>
+    </html>

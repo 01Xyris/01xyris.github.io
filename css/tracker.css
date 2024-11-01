@@ -1,0 +1,183 @@
+/* Base styles with mobile-first approach */
+body {
+    background-color: #008080;
+    background-image: radial-gradient(#007070 2px, transparent 2px);
+    background-size: 6px 6px; /* Smaller pattern for mobile */
+    font-family: "MS Sans Serif", sans-serif;
+    color: black;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-top: clamp(10px, 3vw, 20px);
+}
+
+.button {
+    background-color: #e0e0e0;
+    border: 2px solid #808080;
+    padding: clamp(4px, 1.5vw, 5px) clamp(8px, 2vw, 10px);
+    margin: clamp(5px, 1.5vw, 10px);
+    cursor: pointer;
+    color: black;
+    box-shadow: inset 1px 1px 0px #fff, inset -1px -1px 0px #000;
+    font-size: clamp(12px, 2vw, 14px);
+    min-height: 30px; /* Better touch target */
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.button:hover {
+    background-color: #c0c0c0;
+}
+
+.window {
+    width: 95%;
+    max-width: 1200px;
+    margin: clamp(20px, 5vw, 50px) auto;
+    background-color: #c0c0c0;
+    border: 2px solid #808080;
+    position: relative;
+    padding: 0;
+    box-shadow: 2px 2px 0px #000, -2px -2px 0px #fff;
+    overflow: hidden;
+}
+
+.ascii-container {
+    margin-bottom: clamp(5px, 2vw, 10px);
+    background-color: transparent;
+    padding: clamp(5px, 2vw, 10px);
+    display: inline-block;
+    width: 100%;
+    overflow-x: auto;
+}
+
+.ascii-art {
+    font-family: monospace;
+    font-size: clamp(3px, 1.5vw, 8px);
+    line-height: 1;
+    color: white;
+    text-align: center;
+    white-space: pre;
+    margin: 0;
+}
+
+.title-bar {
+    background-color: #000080;
+    color: white;
+    padding: clamp(4px, 1.5vw, 5px);
+    font-size: clamp(14px, 2.5vw, 16px);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 2px solid #808080;
+}
+
+.title-bar span {
+    font-weight: bold;
+}
+
+.content {
+    padding: clamp(5px, 2vw, 10px);
+    background-color: #e0e0e0;
+    border: 2px solid #808080;
+    margin: clamp(5px, 2vw, 10px);
+    box-shadow: inset 1px 1px 0px #fff, inset -1px -1px 0px #000;
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+}
+
+/* Table styles with mobile responsiveness */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    font-size: clamp(11px, 2vw, 12px);
+}
+
+table, th, td {
+    border: 2px solid #808080;
+    box-shadow: inset 1px 1px 0px #fff, inset -1px -1px 0px #000;
+}
+
+th, td {
+    padding: clamp(4px, 1.5vw, 5px);
+    text-align: left;
+    background-color: #f0f0f0;
+    min-width: 60px; /* Minimum width for touch targets */
+}
+
+/* Mobile-specific table adjustments */
+@media (max-width: 768px) {
+    table {
+        display: block;
+        overflow-x: auto;
+        white-space: nowrap;
+    }
+
+    th, td {
+        padding: 8px; /* Larger padding for touch targets */
+    }
+
+    /* Optional: Card view for very small screens */
+    @media (max-width: 480px) {
+        table, thead, tbody, th, td, tr {
+            display: block;
+        }
+
+        thead tr {
+            position: absolute;
+            top: -9999px;
+            left: -9999px;
+        }
+
+        tr {
+            margin-bottom: 15px;
+            border: 2px solid #808080;
+        }
+
+        td {
+            border: none;
+            border-bottom: 2px solid #808080;
+            position: relative;
+            padding-left: 50%;
+            white-space: normal;
+            text-align: left;
+        }
+
+        td:before {
+            position: absolute;
+            left: 6px;
+            width: 45%;
+            padding-right: 10px;
+            white-space: nowrap;
+            content: attr(data-label);
+            font-weight: bold;
+        }
+    }
+}
+
+/* High DPI screen optimizations */
+@media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi) {
+    .button,
+    .window,
+    table, th, td {
+        border-width: 1px;
+    }
+}
+
+/* Touch device optimizations */
+@media (hover: none) {
+    .button:hover {
+        background-color: #e0e0e0;
+    }
+
+    tr:hover td {
+        background-color: #f0f0f0;
+    }
+
+    .button:active {
+        background-color: #c0c0c0;
+        box-shadow: inset -1px -1px 0px #fff, inset 1px 1px 0px #000;
+    }
+}

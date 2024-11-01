@@ -1,0 +1,266 @@
+/* Base styles */
+body {
+    background-color: #008080;
+    background-image: radial-gradient(#007070 2px, transparent 2px);
+    background-size: 8px 8px;
+    font-family: "MS Sans Serif", sans-serif;
+    color: black;
+    margin: 0;
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+/* Windows 98 window styles */
+.window {
+    width: min(800px, 95%);
+    margin: 20px auto;
+    background-color: #c0c0c0;
+    border: 2px solid #808080;
+    position: relative;
+    padding: 0;
+    box-shadow: 3px 3px 0px #000, -3px -3px 0px #fff;
+}
+
+/* Title bar responsive adjustments */
+.title-bar {
+    background-color: #000080;
+    color: white;
+    padding: clamp(4px, 1.5vw, 8px);
+    font-size: clamp(14px, 2vw, 16px);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 2px solid #808080;
+}
+
+.title-bar span {
+    font-weight: bold;
+}
+
+/* Title bar buttons responsive sizing */
+.title-bar-buttons {
+    display: flex;
+    gap: 4px;
+}
+
+.title-bar-buttons div {
+    width: clamp(14px, 4vw, 16px);
+    height: clamp(14px, 4vw, 16px);
+    background-color: #c0c0c0;
+    text-align: center;
+    line-height: clamp(14px, 4vw, 16px);
+    border: 1px solid #808080;
+    cursor: pointer;
+    box-shadow: inset 1px 1px 0px #fff, inset -1px -1px 0px #000;
+    color: black;
+    font-size: clamp(10px, 2vw, 12px);
+}
+
+/* Content area responsive padding */
+.content {
+    padding: clamp(10px, 3vw, 15px);
+    background-color: #e0e0e0;
+    border: 2px solid #808080;
+    margin: clamp(5px, 2vw, 10px);
+    box-shadow: inset 1px 1px 0px #fff, inset -1px -1px 0px #000;
+    min-height: 200px;
+}
+
+/* Responsive typography */
+h2 {
+    font-size: clamp(18px, 4vw, 22px);
+    color: #000080;
+    margin-bottom: 15px;
+    line-height: 1.3;
+}
+
+h3 {
+    font-size: clamp(16px, 3.5vw, 18px);
+    color: #000080;
+    margin-bottom: 12px;
+    line-height: 1.3;
+}
+
+p {
+    font-size: clamp(14px, 2.5vw, 15px);
+    line-height: 1.5;
+}
+
+/* Blog elements responsive styling */
+.combined-blogs {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    padding: 10px;
+}
+
+@media (min-width: 768px) {
+    .combined-blogs {
+        flex-direction: row;
+    }
+}
+
+.combined-blogs a {
+    flex: 1;
+    text-align: center;
+    border: 1px solid #ccc;
+    padding: clamp(8px, 2vw, 10px);
+    border-radius: 5px;
+    background-color: #f9f9f9;
+    text-decoration: none;
+    color: black;
+}
+
+/* Article list responsive styling */
+.article-list {
+    margin-top: 15px;
+}
+
+.article-list a {
+    display: block;
+    background-color: #f0f0f0;
+    border: 2px solid #808080;
+    padding: clamp(8px, 2vw, 10px);
+    margin-bottom: clamp(6px, 2vw, 10px);
+    box-shadow: inset 1px 1px 0px #fff, inset -1px -1px 0px #000;
+    font-size: clamp(13px, 2.5vw, 15px);
+}
+
+/* Blog post images responsive handling */
+.blog-post img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+    margin: 15px auto;
+    border: 2px solid #808080;
+    box-shadow: inset 1px 1px 0px #fff, inset -1px -1px 0px #000;
+    transition: transform 0.3s ease;
+}
+
+/* Modify image hover behavior for touch devices */
+@media (hover: hover) {
+    .blog-post img:hover {
+        transform: scale(1.7);
+        z-index: 10;
+        box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.8);
+    }
+}
+
+/* Code blocks and pre elements */
+.blog-post pre {
+    background-color: #f0f0f0;
+    border: 2px solid #808080;
+    padding: clamp(8px, 2vw, 10px);
+    margin: 10px 0;
+    white-space: pre-wrap;
+    font-size: clamp(12px, 2vw, 14px);
+    overflow-x: auto;
+    box-shadow: inset 1px 1px 0px #fff, inset -1px -1px 0px #000;
+}
+
+/* Footer responsive styling */
+.footer {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 8px;
+    padding: clamp(8px, 2vw, 10px);
+    background-color: #c0c0c0;
+    border-top: 2px solid #808080;
+}
+
+.footer button {
+    background-color: #e0e0e0;
+    border: 2px solid #808080;
+    padding: clamp(4px, 1.5vw, 8px) clamp(8px, 2vw, 10px);
+    font-size: clamp(12px, 2vw, 14px);
+    cursor: pointer;
+    box-shadow: inset 1px 1px 0px #fff, inset -1px -1px 0px #000;
+    white-space: nowrap;
+}
+
+/* ASCII art container with improved scaling */
+.ascii-container {
+    width: 100%;
+    max-width: 100%;
+    margin: 10px auto;
+    background-color: transparent;
+    padding: 5px;
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+}
+
+.ascii-art {
+    font-family: 'Courier New', monospace;
+    white-space: pre;
+    display: inline-block;
+    text-align: center;
+    line-height: 1.2;
+    color: white;
+    transform-origin: center;
+    margin: 0;
+}
+
+/* Reduced scale values for all breakpoints */
+@media (max-width: 480px) {
+    .ascii-art {
+        font-size: 3px; /* Smaller base size */
+        transform: scale(1.2); /* Reduced scale */
+        margin: 10px 0;
+    }
+}
+
+@media (min-width: 481px) and (max-width: 768px) {
+    .ascii-art {
+        font-size: 4px;
+        transform: scale(1.1);
+        margin: 8px 0;
+    }
+}
+
+@media (min-width: 769px) {
+    .ascii-art {
+        font-size: 6px;
+        transform: scale(1);
+        margin: 5px 0;
+    }
+}
+
+/* Container adjustments for better fit */
+@media (max-width: 768px) {
+    .ascii-container {
+        padding: 0;
+        margin: 5px auto;
+        max-height: 200px; /* Prevent excessive vertical space */
+    }
+}
+
+/* Crisp rendering for high DPI screens */
+@media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi) {
+    .ascii-art {
+        -webkit-font-smoothing: none;
+        -moz-osx-font-smoothing: none;
+        font-smooth: never;
+    }
+}
+/* Logo responsive sizing */
+.logo-container {
+    display: inline-block;
+    background-color: #c0c0c0;
+    border: 2px solid #808080;
+    box-shadow: 3px 3px 0px #000, -3px -3px 0px #fff;
+    text-align: center;
+    padding: 0;
+    margin-bottom: clamp(15px, 4vw, 20px);
+}
+
+.logo {
+    max-width: clamp(60px, 15vw, 100px);
+    height: auto;
+}
