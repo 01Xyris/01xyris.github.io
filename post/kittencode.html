@@ -1,34 +1,42 @@
 <!DOCTYPE html>
 <html lang="en">
-   <head>
-      <meta charset="UTF-8">
-      <meta name="viewport" content="width=device-width, initial-scale=1.0">
-      <title>KittEncode: Cat-Themed Shellcode Encoder</title>
-      <link rel="stylesheet" href="../css/styles.css">
-      <link rel="icon" href="../img/favicon.ico" type="image/x-icon">
-      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.24.1/themes/prism.min.css">
-   </head>
-   <body>
-      <div class="window">
-         <div class="title-bar">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="KittEncode: A creative shellcode encoder that transforms binary code into cat-themed words for educational purposes">
+    <meta name="keywords" content="shellcode encoder, cybersecurity, cat themed, programming, binary encoding">
+    <meta name="author" content="01Xyris">
+    <title>KittEncode: Cat-Themed Shellcode Encoder</title>
+    <link rel="stylesheet" href="../css/styles.css">
+    <link rel="stylesheet" href="../css/blog.css">
+    <link rel="icon" href="../img/favicon.ico" type="image/x-icon">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.24.1/themes/prism.min.css">
+</head>
+<body>
+    <div class="window">
+        <div class="title-bar">
             <span>KittEncode.py</span>
             <div class="title-bar-buttons">
-               <div>-</div>
-               <div>X</div>
+                <div>-</div>
+                <div>X</div>
             </div>
-         </div>
-         <div class="content">
+        </div>
+        <div class="content">
             <div class="blog-post">
-               <h2>KittEncode: Cute Cat-Themed Shellcode Encoder</h2>
-               <h3>What's KittEncode?</h3>
-               <p>KittEncode turns shellcode</span> into cat-themed words.
-               <h3>Key Concepts</h3>
-               <ul>
-                  <li><span class="highlight">Shellcode</span> is a small piece of machine code that can be injected into a running program.</li>
-                  <li>A <span class="highlight">nibble</span> is half a byte, or 4 bits.</li>
-               </ul>
-               <h3>How It Works</h3>
-               <pre><code class="language-python">words = ["floof", "purrito", "meow", "blepp", "boop", "zoomies", "mlem", "loaf",
+                <h3>KittEncode: Cute Cat-Themed Shellcode Encoder</h3>
+                
+                <p class="blog-intro">
+                    KittEncode is a unique project that transforms shellcode into cat-themed words, making binary code more approachable and fun to understand.
+                </p>
+
+                <h3>Core Concepts</h3>
+                <ul class="concept-list">
+                    <li><strong>Shellcode:</strong> A small piece of machine code that can be injected into a running program</li>
+                    <li><strong>Nibble:</strong> Half a byte, or 4 bits - this is our basic unit of conversion</li>
+                </ul>
+
+                <h3>Implementation</h3>
+                <pre><code class="language-python">words = ["floof", "purrito", "meow", "blepp", "boop", "zoomies", "mlem", "loaf",
          "chonk", "nap", "catnip", "whisker", "paws", "tail", "mittens", "kitteh"]
 
 def encode_shellcode(shellcode):
@@ -38,18 +46,25 @@ def encode_shellcode(shellcode):
         low_nibble = byte & 0x0F          # Get last 4 bits
         encoded.append(f"{words[high_nibble]}-{words[low_nibble]}")
     return " ".join(encoded)</code></pre>
-               <p>The encoding process starts by defining 16 cat-themed words, one for each possible 4-bit value (0-15).
-                  <br> The encode_shellcode function takes raw shellcode as input and processes it byte by byte.
-                  <br> Each byte is split into two nibbles using bitwise operations.
-                  <br> These nibbles are then used as indices to select cat words from our list.
-                  <br> The words for each byte are paired with a hyphen, and all pairs are joined with spaces <br> to form the final encoded string.<br>
-               </p>
-               <h3>Example</h3>
-               <p>Original shellcode: \x90\x50\x90</p>
-               <p>Encoded: loaf-meow zoomies-floof loaf-meow</p>
-               <p>Each byte of the original shellcode is transformed into a pair of cat words, making the shellcode look harmless and cute.<br></p>
-               <h3>Decoding</h3>
-               <pre><code class="language-python">def decode_shellcode(encoded):
+
+                <h4>How the Encoding Works</h4>
+                <ul class="process-list">
+                    <li>Defines 16 cat-themed words (one for each 4-bit value 0-15)</li>
+                    <li>Processes shellcode byte by byte</li>
+                    <li>Splits each byte into two nibbles using bitwise operations</li>
+                    <li>Uses nibbles as indices to select cat words</li>
+                    <li>Joins word pairs with hyphens</li>
+                </ul>
+
+                <h3>Example Usage</h3>
+                <div class="code-example">
+                    <p><strong>Original shellcode:</strong> \x90\x50\x90</p>
+                    <p><strong>Encoded output:</strong> loaf-meow zoomies-floof loaf-meow</p>
+                    <p>Each byte is transformed into a pair of cat words, making the shellcode appear harmless and cute.</p>
+                </div>
+
+                <h3>Decoding Process</h3>
+                <pre><code class="language-python">def decode_shellcode(encoded):
     word_to_nibble = {word: i for i, word in enumerate(words)}
     decoded = bytearray()
     for pair in encoded.split():
@@ -57,24 +72,37 @@ def encode_shellcode(shellcode):
         byte = (word_to_nibble[high] << 4) | word_to_nibble[low]
         decoded.append(byte)
     return bytes(decoded)</code></pre>
-               <p>To decode, we first create a reverse lookup dictionary that maps each cat word back to its corresponding nibble value.<br> The encoded string is split into pairs, then into individual words.<br> Each word is converted back to its nibble value, and pairs of nibbles are combined to recreate the original bytes.<br> The result is the original shellcode, ready to be executed.<br></p>
-               <br>
-               <p>Thank you for reading my first post! Stay tuned for the upcoming ones, where I'll dive into creating shellcode.</p>
-               <img src="../img/cute_cat.jpg" alt="KittEncode Example Screenshot">
-               <div class="button-container">
-                  <a href="https://github.com/01Xyris/KittEncoder" target="_blank" rel="noopener noreferrer">
-                  <button class="blog-button">Github</button>
-                  </a>
-               </div>
+
+                <h4>Decoding Steps</h4>
+                <ul class="process-list">
+                    <li>Creates a reverse lookup dictionary for cat words</li>
+                    <li>Splits encoded string into word pairs</li>
+                    <li>Converts words back to nibble values</li>
+                    <li>Combines nibbles to reconstruct original bytes</li>
+                    <li>Returns the original shellcode ready for execution</li>
+                </ul>
+
+                <img src="../img/cute_cat.jpg" alt="KittEncode Example Screenshot" class="blog-image">
+
+                <p class="blog-footer">
+                    Thank you for reading my first post! Stay tuned for upcoming posts where I'll dive deeper into shellcode creation.
+                </p>
+
+                <div class="button-container">
+                    <a href="https://github.com/01Xyris/KittEncoder" target="_blank" rel="noopener noreferrer">
+                        <button class="blog-button">View on GitHub</button>
+                    </a>
+                </div>
             </div>
-         </div>
-         <div class="footer">
+        </div>
+        <div class="footer">
             <a href="../index.html">
-            <button>Back</button>
+                <button>Back</button>
             </a>
-         </div>
-      </div>
-      <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.24.1/components/prism-core.min.js"></script>
-      <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.24.1/plugins/autoloader/prism-autoloader.min.js"></script>
-   </body>
+        </div>
+    </div>
+    <script src="../js/dialog.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.24.1/components/prism-core.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.24.1/plugins/autoloader/prism-autoloader.min.js"></script>
+</body>
 </html>

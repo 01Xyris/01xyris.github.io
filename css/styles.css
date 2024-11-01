@@ -1,266 +1,327 @@
+/* Windows 2000 color variables */
+:root {
+    --win2k-blue: #0055e5;
+    --win2k-titlebar-grad-start: #0a246a;
+    --win2k-titlebar-grad-end: #a6caf0;
+    --win2k-gray: #d4d0c8;
+    --win2k-light: #ffffff;
+    --win2k-dark: #808080;
+    --win2k-shadow: #404040;
+}
+
 /* Base styles */
 body {
-    background-color: #008080;
-    background-image: radial-gradient(#007070 2px, transparent 2px);
-    background-size: 8px 8px;
-    font-family: "MS Sans Serif", sans-serif;
+    background-color: #3a6ea5;
+    background-image: linear-gradient(
+        45deg,
+        rgba(0, 0, 0, 0.05) 25%,
+        transparent 25%
+    ),
+    linear-gradient(
+        -45deg,
+        rgba(0, 0, 0, 0.05) 25%,
+        transparent 25%
+    ),
+    linear-gradient(
+        45deg,
+        transparent 75%,
+        rgba(0, 0, 0, 0.05) 75%
+    ),
+    linear-gradient(
+        -45deg,
+        transparent 75%,
+        rgba(0, 0, 0, 0.05) 75%
+    );
+    background-size: 20px 20px;
+    background-position: 0 0, 10px 0, 10px -10px, 0px 10px;
+    font-family: "Tahoma", sans-serif;
     color: black;
     margin: 0;
     padding: 10px;
     display: flex;
     flex-direction: column;
     align-items: center;
+    min-height: 100vh;
 }
 
-/* Windows 98 window styles */
-.window {
-    width: min(800px, 95%);
-    margin: 20px auto;
-    background-color: #c0c0c0;
-    border: 2px solid #808080;
-    position: relative;
-    padding: 0;
-    box-shadow: 3px 3px 0px #000, -3px -3px 0px #fff;
-}
-
-/* Title bar responsive adjustments */
-.title-bar {
-    background-color: #000080;
-    color: white;
-    padding: clamp(4px, 1.5vw, 8px);
-    font-size: clamp(14px, 2vw, 16px);
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    border-bottom: 2px solid #808080;
-}
-
-.title-bar span {
-    font-weight: bold;
-}
-
-/* Title bar buttons responsive sizing */
-.title-bar-buttons {
-    display: flex;
-    gap: 4px;
-}
-
-.title-bar-buttons div {
-    width: clamp(14px, 4vw, 16px);
-    height: clamp(14px, 4vw, 16px);
-    background-color: #c0c0c0;
-    text-align: center;
-    line-height: clamp(14px, 4vw, 16px);
-    border: 1px solid #808080;
-    cursor: pointer;
-    box-shadow: inset 1px 1px 0px #fff, inset -1px -1px 0px #000;
-    color: black;
-    font-size: clamp(10px, 2vw, 12px);
-}
-
-/* Content area responsive padding */
-.content {
-    padding: clamp(10px, 3vw, 15px);
-    background-color: #e0e0e0;
-    border: 2px solid #808080;
-    margin: clamp(5px, 2vw, 10px);
-    box-shadow: inset 1px 1px 0px #fff, inset -1px -1px 0px #000;
-    min-height: 200px;
-}
-
-/* Responsive typography */
-h2 {
-    font-size: clamp(18px, 4vw, 22px);
-    color: #000080;
-    margin-bottom: 15px;
-    line-height: 1.3;
-}
-
-h3 {
-    font-size: clamp(16px, 3.5vw, 18px);
-    color: #000080;
-    margin-bottom: 12px;
-    line-height: 1.3;
-}
-
-p {
-    font-size: clamp(14px, 2.5vw, 15px);
-    line-height: 1.5;
-}
-
-/* Blog elements responsive styling */
-.combined-blogs {
-    display: flex;
-    flex-direction: column;
-    gap: 15px;
-    padding: 10px;
-}
-
-@media (min-width: 768px) {
-    .combined-blogs {
-        flex-direction: row;
-    }
-}
-
-.combined-blogs a {
-    flex: 1;
-    text-align: center;
-    border: 1px solid #ccc;
-    padding: clamp(8px, 2vw, 10px);
-    border-radius: 5px;
-    background-color: #f9f9f9;
-    text-decoration: none;
-    color: black;
-}
-
-/* Article list responsive styling */
-.article-list {
-    margin-top: 15px;
-}
-
-.article-list a {
-    display: block;
-    background-color: #f0f0f0;
-    border: 2px solid #808080;
-    padding: clamp(8px, 2vw, 10px);
-    margin-bottom: clamp(6px, 2vw, 10px);
-    box-shadow: inset 1px 1px 0px #fff, inset -1px -1px 0px #000;
-    font-size: clamp(13px, 2.5vw, 15px);
-}
-
-/* Blog post images responsive handling */
-.blog-post img {
-    max-width: 100%;
-    height: auto;
-    display: block;
-    margin: 15px auto;
-    border: 2px solid #808080;
-    box-shadow: inset 1px 1px 0px #fff, inset -1px -1px 0px #000;
-    transition: transform 0.3s ease;
-}
-
-/* Modify image hover behavior for touch devices */
-@media (hover: hover) {
-    .blog-post img:hover {
-        transform: scale(1.7);
-        z-index: 10;
-        box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.8);
-    }
-}
-
-/* Code blocks and pre elements */
-.blog-post pre {
-    background-color: #f0f0f0;
-    border: 2px solid #808080;
-    padding: clamp(8px, 2vw, 10px);
-    margin: 10px 0;
-    white-space: pre-wrap;
-    font-size: clamp(12px, 2vw, 14px);
-    overflow-x: auto;
-    box-shadow: inset 1px 1px 0px #fff, inset -1px -1px 0px #000;
-}
-
-/* Footer responsive styling */
-.footer {
-    display: flex;
-    justify-content: center;
-    flex-wrap: wrap;
-    gap: 8px;
-    padding: clamp(8px, 2vw, 10px);
-    background-color: #c0c0c0;
-    border-top: 2px solid #808080;
-}
-
-.footer button {
-    background-color: #e0e0e0;
-    border: 2px solid #808080;
-    padding: clamp(4px, 1.5vw, 8px) clamp(8px, 2vw, 10px);
-    font-size: clamp(12px, 2vw, 14px);
-    cursor: pointer;
-    box-shadow: inset 1px 1px 0px #fff, inset -1px -1px 0px #000;
-    white-space: nowrap;
-}
-
-/* ASCII art container with improved scaling */
+/* ASCII Container */
 .ascii-container {
-    width: 100%;
-    max-width: 100%;
-    margin: 10px auto;
+    width: min(600px, 90%);
+    margin: 0 auto 16px auto;
     background-color: transparent;
-    padding: 5px;
-    overflow-x: auto;
-    -webkit-overflow-scrolling: touch;
-    display: flex;
-    justify-content: center;
-    align-items: center;
     position: relative;
+    overflow: hidden;
 }
 
+/* ASCII Art */
 .ascii-art {
     font-family: 'Courier New', monospace;
     white-space: pre;
-    display: inline-block;
     text-align: center;
-    line-height: 1.2;
-    color: white;
-    transform-origin: center;
+    line-height: 0.85;
+    color: #ffffff;
     margin: 0;
+    padding: 4px;
+    font-size: 10px;
+    letter-spacing: -1px;
 }
 
-/* Reduced scale values for all breakpoints */
+/* Responsive Design */
 @media (max-width: 480px) {
     .ascii-art {
-        font-size: 3px; /* Smaller base size */
-        transform: scale(1.2); /* Reduced scale */
-        margin: 10px 0;
+        font-size: 6px;
+        line-height: 0.8;
+        letter-spacing: -0.5px;
     }
 }
 
 @media (min-width: 481px) and (max-width: 768px) {
     .ascii-art {
-        font-size: 4px;
-        transform: scale(1.1);
-        margin: 8px 0;
+        font-size: 8px;
+        line-height: 0.82;
+        letter-spacing: -0.75px;
     }
 }
-
-@media (min-width: 769px) {
-    .ascii-art {
-        font-size: 6px;
-        transform: scale(1);
-        margin: 5px 0;
-    }
+/* Windows 2000 Window Styles */
+.window {
+    width: min(800px, 95%);
+    margin: 20px auto;
+    background-color: var(--win2k-gray);
+    border: 1px solid var(--win2k-shadow);
+    box-shadow: 2px 2px 5px rgba(0,0,0,0.2);
 }
 
-/* Container adjustments for better fit */
-@media (max-width: 768px) {
-    .ascii-container {
-        padding: 0;
-        margin: 5px auto;
-        max-height: 200px; /* Prevent excessive vertical space */
-    }
+/* Title Bar */
+.title-bar {
+    background: linear-gradient(to right, var(--win2k-titlebar-grad-start), var(--win2k-titlebar-grad-end));
+    color: white;
+    padding: 3px 5px;
+    font-size: 12px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
 }
 
-/* Crisp rendering for high DPI screens */
-@media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi) {
+.title-bar span {
+    font-weight: bold;
+    text-shadow: 1px 1px 1px rgba(0,0,0,0.5);
+}
+
+/* Error Dialog */
+.win2k-dialog {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background: var(--win2k-gray);
+    border: 1px solid var(--win2k-shadow);
+    box-shadow: 2px 2px 5px rgba(0,0,0,0.2);
+    min-width: 300px;
+    z-index: 9999;
+    display: none;
+}
+
+.win2k-dialog .title-bar {
+    background: linear-gradient(to right, var(--win2k-titlebar-grad-start), var(--win2k-titlebar-grad-end));
+    padding: 3px 5px;
+    color: white;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.win2k-dialog .title-bar span {
+    font-size: 12px;
+    font-weight: bold;
+}
+
+.win2k-dialog .content {
+    padding: 15px;
+    display: flex;
+    align-items: flex-start;
+    gap: 15px;
+}
+
+.win2k-dialog .error-icon {
+    width: 32px;
+    height: 32px;
+    background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32"><circle cx="16" cy="16" r="14" fill="red"/><rect x="14" y="7" width="4" height="13" fill="white" /><rect x="14" y="22" width="4" height="4" fill="white"/></svg>');
+}
+
+.win2k-dialog .message {
+    font-size: 12px;
+    margin-top: 5px;
+}
+
+.win2k-dialog .buttons {
+    padding: 15px;
+    display: flex;
+    justify-content: center;
+    gap: 5px;
+}
+
+.win2k-dialog button {
+    min-width: 75px;
+    padding: 4px 12px;
+    font-family: "Tahoma", sans-serif;
+    font-size: 11px;
+    background: linear-gradient(to bottom, #fff, #dfdfdf);
+    border: 1px solid var(--win2k-shadow);
+    cursor: pointer;
+}
+
+.win2k-dialog button:hover {
+    background: linear-gradient(to bottom, #fff, #f0f0f0);
+}
+
+.win2k-dialog button:active {
+    background: linear-gradient(to bottom, #dfdfdf, #fff);
+    padding-top: 5px;
+    padding-bottom: 3px;
+}
+
+/* Title Bar Buttons */
+.title-bar-buttons {
+    display: flex;
+    gap: 2px;
+}
+
+.title-bar-buttons div {
+    width: 18px;
+    height: 16px;
+    background: linear-gradient(to bottom, #fff, #dfdfdf);
+    text-align: center;
+    line-height: 16px;
+    border: 1px solid var(--win2k-shadow);
+    font-family: "Tahoma", sans-serif;
+    font-size: 10px;
+    color: black;
+    cursor: pointer;
+    user-select: none;
+}
+
+.title-bar-buttons div:hover {
+    background: linear-gradient(to bottom, #fff, #f0f0f0);
+}
+
+.title-bar-buttons div:active {
+    background: linear-gradient(to bottom, #dfdfdf, #fff);
+    padding-top: 1px;
+}
+
+/* Content Area */
+.content {
+    padding: 10px;
+    background-color: var(--win2k-gray);
+    border: 1px solid var(--win2k-dark);
+    margin: 2px;
+}
+
+/* Article List */
+.article-list {
+    margin-top: 10px;
+}
+
+.article-list a {
+    display: block;
+    background-color: var(--win2k-light);
+    border: 1px solid var(--win2k-dark);
+    padding: 8px;
+    margin-bottom: 8px;
+    text-decoration: none;
+    color: black;
+    transition: background-color 0.1s;
+}
+
+.article-list a:hover {
+    background-color: #f0f0f0;
+    border-color: var(--win2k-blue);
+}
+
+/* Combined Blogs */
+.combined-blogs {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+    gap: 8px;
+    margin-top: 8px;
+}
+
+.combined-blogs a {
+    background-color: var(--win2k-light);
+    border: 1px solid var(--win2k-dark);
+    padding: 8px;
+    text-decoration: none;
+    color: black;
+    text-align: center;
+    transition: background-color 0.1s;
+}
+
+.combined-blogs a:hover {
+    background-color: #f0f0f0;
+    border-color: var(--win2k-blue);
+}
+
+/* Typography */
+h3 {
+    color: var(--win2k-blue);
+    margin: 0 0 6px 0;
+    font-size: 13px;
+}
+
+h4 {
+    color: #444;
+    margin: 0 0 10px 0;
+    font-size: 12px;
+    font-weight: normal;
+}
+
+p {
+    margin: 0;
+    font-size: 12px;
+    line-height: 1.4;
+}
+
+/* Footer */
+.footer {
+    padding: 8px;
+    display: flex;
+    justify-content: center;
+    gap: 8px;
+    background-color: var(--win2k-gray);
+    border-top: 1px solid var(--win2k-dark);
+}
+
+.footer button {
+    min-width: 75px;
+    padding: 4px 12px;
+    font-family: "Tahoma", sans-serif;
+    font-size: 11px;
+    background: linear-gradient(to bottom, #fff, #dfdfdf);
+    border: 1px solid var(--win2k-shadow);
+    cursor: pointer;
+}
+
+.footer button:hover {
+    background: linear-gradient(to bottom, #fff, #f0f0f0);
+}
+
+.footer button:active {
+    background: linear-gradient(to bottom, #dfdfdf, #fff);
+    padding-top: 5px;
+    padding-bottom: 3px;
+}
+
+
+
+/* High DPI Screens */
+@media (min-resolution: 2dppx) {
+    .title-bar {
+        font-smoothing: never;
+    }
+    
     .ascii-art {
         -webkit-font-smoothing: none;
         -moz-osx-font-smoothing: none;
         font-smooth: never;
     }
-}
-/* Logo responsive sizing */
-.logo-container {
-    display: inline-block;
-    background-color: #c0c0c0;
-    border: 2px solid #808080;
-    box-shadow: 3px 3px 0px #000, -3px -3px 0px #fff;
-    text-align: center;
-    padding: 0;
-    margin-bottom: clamp(15px, 4vw, 20px);
-}
-
-.logo {
-    max-width: clamp(60px, 15vw, 100px);
-    height: auto;
 }

