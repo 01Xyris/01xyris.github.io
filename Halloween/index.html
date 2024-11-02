@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Halloween Wheel</title>
+    <link href="https://fonts.googleapis.com/css2?family=Creepster&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    
+    <div class="blood-container"></div>
+
+    <div class="app">
+        <nav class="nav">
+            <button id="playBtn" class="btn">Play</button>
+            <button id="settingsBtn" class="btn">Settings</button>
+        </nav>
+
+        <h1 class="title">HALLOWEEN</h1>
+
+        <div class="game-container">
+            <div class="wheel-container">
+                <div class="indicator"></div>
+                <svg class="wheel" viewBox="0 0 100 100">
+                    <!-- Wheel sections will be dynamically added here -->
+                </svg>
+            </div>
+
+            <div class="tasks-section">
+                <h2>LETZTE AUFGABEN</h2>
+                <div class="tasks-list"></div>
+            </div>
+        </div>
+<!-- Task Popup Modal -->
+<div id="taskPopup" class="modal">
+    <div class="modal-content">
+        <span id="closeTaskPopup" class="close">&times;</span>
+        <h2>Aufgabe für <span id="popupPlayerName"></span></h2>
+        <p id="popupTaskText"></p>
+    </div>
+</div>
+
+        <div id="settingsModal" class="modal">
+            <div class="modal-content">
+                <h2>Einstellungen</h2>
+                <div class="settings-tabs">
+                    <button class="tab-btn active" data-tab="players">Spieler</button>
+                    <button class="tab-btn" data-tab="tasks">Aufgaben</button>
+                </div>
+                
+                <div class="tab-content" id="playersTab">
+                    <div id="playerList" class="settings-list scrollable"></div>
+                    <button id="addPlayerBtn" class="btn-add">+ Spieler hinzufügen</button>
+                </div>
+                
+                <div class="tab-content hidden" id="tasksTab">
+                    <div id="taskList" class="settings-list scrollable"></div>
+                    <button id="addTaskBtn" class="btn-add">+ Aufgabe hinzufügen</button>
+                </div>
+
+                <div class="modal-buttons">
+             
+                    <button id="closeSettingsBtn" class="btn">Schließen</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+<!-- Firebase App (the core Firebase SDK) -->
+<script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-app.js"></script>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/howler/2.2.3/howler.min.js"></script>
+
+<!-- Firebase Database -->
+<script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-database.js"></script>
+
+<!-- Your script -->
+<script src="script.js"></script>
+</body>
+</html>
