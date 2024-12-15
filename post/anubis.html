@@ -62,11 +62,12 @@
 
                 <h3>Triggering the Exploit</h3>
                 <p>The next challenge was ensuring the threat actor clicked my malicious "bot." I flooded the botnet with 100 fake connections, which guaranteed their curiosity would lead them to click.</p>
-                <img src="../img/lite/xss2.png" alt="XSS Triggered">
-              
+                <img src="../img/lite/xss3.png" alt="XSS Triggered">
 
                 <h3>Gaining Control</h3>
                 <p>Using the stolen <code>PHPSESSID</code> from the XSS, I logged into the admin panel. Then, I wrote this Python script to create a new admin account directly:</p>
+                 <img src="../img/lite/xss2.png" alt="XSS Triggered">
+              
                 <pre><code class="language-python">import requests
 import argparse
 
