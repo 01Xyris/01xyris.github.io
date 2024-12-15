@@ -11,7 +11,7 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.24.1/themes/prism.min.css">
     <link rel="stylesheet" href="../css/styles.css">
     <link rel="stylesheet" href="../css/blog.css">
-    <link rel="icon" href="../img/lite/favicon.ico" type="image/x-icon">
+    <link rel="icon" href="../img/favicon.ico" type="image/x-icon">
 </head>
 <body>
     <div class="window">
@@ -51,8 +51,11 @@
                 <h4>Data Flow</h4>
                 <p>The bot sent data to <code>http://87.120.126.5/VmCetSC7/page.php</code>, including hardware ID, IP address, and other information.</p>
                 <p>LiteHTTP's GitHub repository provided details about <code>page.php</code>:</p>
-                <img src="../img/lite/lite.png" alt="LiteHTTP PHP Code">
+                <img src="../img/lite/inpat.png" alt="LiteHTTP PHP Code">
                 <p>The PHP code sanitized most inputs but left <code>$inpat</code> vulnerable to injection. This was my entry point for an XSS exploit.</p>
+                <div class="analysis-note">
+                    <p><strong>Note:</strong> Exploiting unsanitized inputs is common in legacy PHP applications, especially those relying on outdated sanitization methods.</p>
+                </div>
 
                 <h3>Testing the Exploit</h3>
                 <p>I set up LiteHTTP locally on VMware for testing. To exploit <code>installation_path</code>, I injected the payload:</p>
@@ -62,6 +65,9 @@
                 <h3>Triggering the Exploit</h3>
                 <p>The next challenge was ensuring the threat actor clicked my malicious "bot." I flooded the botnet with 100 fake connections, which guaranteed their curiosity would lead them to click.</p>
                 <img src="../img/lite/xss2.png" alt="XSS Triggered">
+                <div class="analysis-note">
+                    <p><strong>Tip:</strong> Creating numerous dummy entries increases the chances of triggering the exploit on poorly monitored panels.</p>
+                </div>
 
                 <h3>Gaining Control</h3>
                 <p>Using the stolen <code>PHPSESSID</code> from the XSS, I logged into the admin panel. Then, I wrote this Python script to create a new admin account directly:</p>
@@ -118,14 +124,11 @@ if __name__ == "__main__":
                 <img src="../img/lite/before.png" alt="Before Cleanup">
                 <img src="../img/lite/after.png" alt="After Cleanup">
                 <p>Another botnet down!</p>
-
-                <h3>Conclusion</h3>
-                <p>This was a satisfying exercise in ethical hacking and botnet takedown. Remember, always work within legal and ethical boundaries.</p>
-
-                <div class="disclaimer">
-                    <p><strong>Disclaimer:</strong> This blog post is for educational purposes only. Unauthorized access to systems is illegal.</p>
-                </div>
+              
             </div>
+        </div>
+        <div class="footer">
+            <button onclick="window.history.back()">Back</button>
         </div>
     </div>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.24.1/components/prism-core.min.js"></script>
