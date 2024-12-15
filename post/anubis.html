@@ -3,8 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="How I took down a small botnet exploiting vulnerabilities in AnubisHTTP, based on LiteHTTP.">
-    <meta name="keywords" content="AnubisHTTP, LiteHTTP, botnet, cybersecurity, malware analysis, ethical hacking, XSS exploitation">
+    <meta name="description" content="How I took down a small botnet XSSing vulnerabilities in AnubisHTTP, based on LiteHTTP.">
+    <meta name="keywords" content="AnubisHTTP, LiteHTTP, botnet, cybersecurity, malware analysis, ethical hacking, XSS XSSation">
     <meta name="author" content="01Xyris">
     <meta name="robots" content="index, follow">
     <title>How I Took Down a Small Botnet</title>
@@ -25,7 +25,7 @@
         <div class="content">
             <div class="blog-post">
                 <h3>Hey guys, welcome to my new blog!</h3>
-                <p>Today, I'll show you how I managed to take down a small botnet using reverse engineering, XSS exploitation, and some creative scripting.</p>
+                <p>Today, I'll show you how I managed to take down a small botnet using reverse engineering, XSS XSSation, and some creative scripting.</p>
 
                 <h3>Discovery: AnubisHTTP</h3>
                 <p>A few days ago, I noticed someone selling a new loader called <strong>AnubisHTTP</strong>, which is based on <a href="https://github.com/zettabithf/LiteHTTP" target="_blank">LiteHTTP</a>.</p>
@@ -52,15 +52,15 @@
                 <p>The bot sent data to <code>http://87.120.126.5/VmCetSC7/page.php</code>, including hardware ID, IP address, and other information.</p>
                 <p>LiteHTTP's GitHub repository provided details about <code>page.php</code>:</p>
                 <img src="../img/lite/inpat.png" alt="LiteHTTP PHP Code">
-                <p>The PHP code sanitized most inputs but left <code>$inpat</code> vulnerable to injection. This was my entry point for an XSS exploit.</p>
+                <p>The PHP code sanitized most inputs but left <code>$inpat</code> vulnerable to injection. This was my entry point for an XSS XSS.</p>
               
 
-                <h3>Testing the Exploit</h3>
-                <p>I set up LiteHTTP locally on VMware for testing. To exploit <code>installation_path</code>, I injected the payload:</p>
+                <h3>Testing the XSS</h3>
+                <p>I set up LiteHTTP locally on VMware for testing. To XSS <code>installation_path</code>, I injected the payload:</p>
                 <pre><code class="language-javascript">C:\\Windows\\32.exe&lt;script&gt;alert('1')&lt;/script&gt;</code></pre>
                 <p>The XSS triggered successfully when the IP address was clicked in the panel's UI.</p>
 
-                <h3>Triggering the Exploit</h3>
+                <h3>Triggering the XSS</h3>
                 <p>The next challenge was ensuring the threat actor clicked my malicious "bot." I flooded the botnet with 100 fake connections, which guaranteed their curiosity would lead them to click.</p>
                 <img src="../img/lite/xss3.png" alt="XSS Triggered">
                  <p>Now, I just needed to wait and hope that the XSS would work on the most likely identical Anubis Panel. And voila, six hours later, we got some results!</p>
