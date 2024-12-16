@@ -29,12 +29,12 @@
 
                 <h3>Discovery: AnubisHTTP</h3>
                 <p>A few days ago, I noticed someone selling a new loader called <strong>AnubisHTTP</strong>, which is based on <a href="https://github.com/zettabithf/LiteHTTP" target="_blank">LiteHTTP</a>.</p>
-                <img src="../img/lite/anubis1.png" alt="AnubisHTTP Screenshot">
-                <img src="../img/lite/anubis2.png" alt="AnubisHTTP Screenshot">
+                <img src="../img/lite/anubis1.png" alt="AnubisHTTP Screenshot" class="blog-image">
+                <img src="../img/lite/anubis2.png" alt="AnubisHTTP Screenshot" class="blog-image">
 
                 <h4>What is LiteHTTP?</h4>
                 <p>LiteHTTP is an HTTP bot written in C# for .NET 2.0, originally developed 7-9 years ago. The developer of AnubisHTTP used it as the base for their loader, with minimal improvements.</p>
-                <img src="../img/lite/gif.gif" alt="MEOW GIF">
+                <img src="../img/lite/gif.gif" alt="MEOW GIF" class="blog-image">
 
                 <h3>Finding the Binary</h3>
                 <p>To find a binary for this new loader, I turned to <a href="https://any.run" target="_blank">any.run</a>. Searching for "anubis" yielded no results, but "litehttp" gave me a hit:</p>
@@ -45,13 +45,13 @@
 
                 <h3>Reversing the Binary</h3>
                 <p>Using the binary from any.run, I deobfuscated it with <strong>ConfuserEx2_Deobfuscate_Tools</strong> in about 5 minutes. Examining the code revealed it was almost identical to LiteHTTP, including the config file:</p>
-                <img src="../img/lite/dnspy.png" alt="Decompiled Code">
+                <img src="../img/lite/dnspy.png" alt="Decompiled Code" class="blog-image">
                 <p>The configuration revealed the key (<code>string_2</code>) and host (<code>string_0</code>), matching the panel URL.</p>
 
                 <h4>Data Flow</h4>
                 <p>The bot sent data to <code>http://87.120.126.5/VmCetSC7/page.php</code>, including hardware ID, IP address, and other information.</p>
                 <p>LiteHTTP's GitHub repository provided details about <code>page.php</code>:</p>
-                <img src="../img/lite/inpat.png" alt="LiteHTTP PHP Code">
+                <img src="../img/lite/inpat.png" alt="LiteHTTP PHP Code" class="blog-image">
                 <p>The PHP code sanitized most inputs but left <code>$inpat</code> vulnerable to injection. This was my entry point for an XSS XSS.</p>
               
 
@@ -62,12 +62,12 @@
 
                 <h3>Triggering the XSS</h3>
                 <p>The next challenge was ensuring the threat actor clicked my malicious "bot." I flooded the botnet with 100 fake connections, which guaranteed their curiosity would lead them to click.</p>
-                <img src="../img/lite/xss3.png" alt="XSS Triggered">
+                <img src="../img/lite/xss3.png" alt="XSS Triggered" class="blog-image">
                  <p>Now, I just needed to wait and hope that the XSS would work on the most likely identical Anubis Panel. And voila, six hours later, we got some results!</p>
             
                 <h3>Gaining Control</h3>
                 <p>Using the stolen <code>PHPSESSID</code> from the XSS, I logged into the admin panel. Then, I wrote this Python script to create a new admin account directly:</p>
-                 <img src="../img/lite/xss2.png" alt="XSS Triggered">
+                 <img src="../img/lite/xss2.png" alt="XSS Triggered" class="blog-image">
               
                 <pre><code class="language-python">import requests
 import argparse
@@ -119,8 +119,8 @@ if __name__ == "__main__":
 
                 <h3>Botnet Cleanup</h3>
                 <p>Finally, I used my new admin account to push an uninstall task across all infected machines. Here are the results:</p>
-                <img src="../img/lite/before.png" alt="Before Cleanup">
-                <img src="../img/lite/after.png" alt="After Cleanup">
+                <img src="../img/lite/before.png" alt="Before Cleanup" class="blog-image">
+                <img src="../img/lite/after.png" alt="After Cleanup" class="blog-image">
                 <p>Another botnet down!</p>
               
             </div>
