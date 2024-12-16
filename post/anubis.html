@@ -25,7 +25,7 @@
         <div class="content">
             <div class="blog-post">
                 <h3>Hey guys, welcome to my new blog!</h3>
-                <p>Today, I'll show you how I managed to take down a small botnet using reverse engineering, XSS XSSation, and some creative scripting.</p>
+                <p>Today, I'll show you how I managed to take down a small botnet using reverse engineering, XSS, and some creative scripting.</p>
 
                 <h3>Discovery: AnubisHTTP</h3>
                 <p>A few days ago, I noticed someone selling a new loader called <strong>AnubisHTTP</strong>, which is based on <a href="https://github.com/zettabithf/LiteHTTP" target="_blank">LiteHTTP</a>.</p>
@@ -52,11 +52,11 @@
                 <p>The bot sent data to <code>http://87.120.126.5/VmCetSC7/page.php</code>, including hardware ID, IP address, and other information.</p>
                 <p>LiteHTTP's GitHub repository provided details about <code>page.php</code>:</p>
                 <img src="../img/lite/inpat.png" alt="LiteHTTP PHP Code" class="blog-image">
-                <p>The PHP code sanitized most inputs but left <code>$inpat</code> vulnerable to injection. This was my entry point for an XSS XSS.</p>
+                <p>The PHP code sanitized most inputs but left <code>$inpat</code> vulnerable to injection. This was my entry point for the XSS.</p>
               
 
                 <h3>Testing the XSS</h3>
-                <p>I set up LiteHTTP locally on VMware for testing. To XSS <code>installation_path</code>, I injected the payload:</p>
+                <p>I set up LiteHTTP locally on VMware for testing. To Exploit <code>installation_path</code>, I injected the payload:</p>
                 <pre><code class="language-javascript">C:\\Windows\\32.exe&lt;script&gt;alert('1')&lt;/script&gt;</code></pre>
                 <p>The XSS triggered successfully when the IP address was clicked in the panel's UI.</p>
 
