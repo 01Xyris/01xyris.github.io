@@ -1,0 +1,336 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>[01Xyris]</title>
+    <style>
+        @font-face {
+            font-family: 'IBM VGA';
+            src: url('https://raw.githubusercontent.com/farsil/ibmfonts/master/ibm/web/vga8x16.woff2') format('woff2');
+        }
+
+        body {
+            background: #000;
+            color: #888;
+            font-family: 'IBM VGA', monospace;
+            margin: 0;
+            min-height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .container {
+            display: grid;
+            grid-template-columns: 1fr 2fr;
+            max-width: 1200px;
+            width: 100%;
+            gap: 20px;
+            padding: 20px;
+        }
+
+        #ascii {
+            filter: drop-shadow(0 0 2px #888);
+            text-align: left;
+            white-space: pre;
+        }
+
+        .content {
+            text-align: left;
+        }
+
+        .section {
+            margin-bottom: 20px;
+        }
+
+        .section-title {
+            font-weight: bold;
+            color: #fff;
+            margin-bottom: 5px;
+            text-decoration: underline;
+        }
+
+        .section-content {
+            border: 1px solid #555;
+            padding: 10px;
+            margin-top: 5px;
+            white-space: pre-line;
+        }
+
+        a {
+            color: #888;
+            text-decoration: none;
+        }
+
+        a:hover {
+            color: #fff;
+        }
+
+        .controls {
+            margin: 10px 0;
+            text-align: center;
+        }
+
+        .controls button {
+            display: block;
+            background: #111;
+            color: #fff;
+            border: 2px solid #888;
+            padding: 10px;
+            cursor: pointer;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            font-size: 16px;
+            width: 100%;
+            max-width: 100%;
+            box-sizing: border-box;
+            margin-bottom: 10px;
+            transition: all 0.2s ease-in-out;
+        }
+
+        .controls button:hover {
+            background: #222;
+            color: #fff;
+        }
+
+        .footer {
+            text-align: center;
+            margin-top: 20px;
+            color: #666;
+            grid-column: 1 / -1;
+        }
+
+        @media (max-width: 768px) {
+            .container {
+                grid-template-columns: 1fr;
+            }
+
+            #ascii {
+                font-size: 10px;
+                text-align: center;
+            }
+
+            .content {
+                text-align: center;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <!-- ASCII Art Section -->
+        <pre id="ascii">                                                                                                           
+                                                                                                           
+                                                                                                           
+                                                                                                           
+                                                                                                           
+                                                                                                           
+                                                                                                           
+                                                                                                           
+                                                                                                           
+                                                                                                           
+                                                                                                           
+                                                                                                           
+                                                                                                           
+                                                            ░▓██████▓                                      
+                                                         ▓█████████████▓▒▒▒▒                               
+                                                       ▓██████▓██████████   ▒█▓                            
+                                                      ▒████████ ▒█▓▓▒████▓     ▓█░                         
+                                                   ░▓██████████  ▓  ▒█████▓     ░▓▓▒                       
+                                      ░       █▓ ░████████████▒▓░░▒▓████████▒      ░▒                      
+                                    ▓██▓     ▒██▒████████▒░▓█████████████████                              
+                                  ▒█▓ ▒██    ▒█████▒▓▒▓▒▒ ▒██▒▓████████████▓▒                              
+                               ░▓▓█░   ▓▒█░  ░▓██▒    ▓█▓████        ░█▒  ▓                 ░              
+                              ▓█████░   ▒██▓ ░▓█▓  ░▒███████▓                         ▒▓█▓▒                
+                             ███▒████▒   ▓███░██ ███████████▒          ░░░   ▒▒▒▓▓███▒                     
+                            ▓██ ░█▒███▓   ▓████▒████████████▒     ░▓▓▒██████████▓▒░                        
+                           ░██▒  ▒ ▒███▓   ▓██▓█████████████░ ░▓█████░                                     
+                           ██▓      ▓███▒   ▓█▓████████████▓███████                                        
+                           ▒▒        ████    ███████████████████▓                                          
+                           ▒░       ▒████▒▒█░████████████████▒                                             
+                            ░    ▒▓████████████████████                                                    
+                               ███▓▒▓▒▓██████████▒▓█▓███░▓▓▓█▓▓████▓▓▒  ░                                  
+                                ████░     ▓████████▒    ▓█████████████████▒                                
+                            ▒█████▒▒▓█░    ▒███░░███▒                     ▓█▒                              
+                           ▓█████      ▓█▒ ████░ ░██▒█░                    ░██░                            
+                         ▓█▓░▒▒           ████▓   ▒█▓▓░                      ▒█▓                           
+                          ███▓           ░████░     ░█░                        ▒▒                          
+                            ░░         ▒█▓███▓       ▓▓                          ▒                         
+                         ░         ▒▒▒████▓██        ▒█░                          ░                        
+                        ░        ███▓███▓▒█▓         ░█▒                           ▒                       
+                        ███     ░▓▒████▒█░            ██                                                   
+                        ███████████▓▓██▒              ▓█                                                   
+                        ▒█████▓▒▒▒▒▓▓                 ▒█                                                   
+                         ▓████████                    ░█▒                                                  
+                           ▒▒▒                         █▓                                                  
+                                                       ▒▓                                                  
+                                                                                                           
+                                                                                                           
+                                                                                                           
+                                                        ▒                                                  
+                                                        ▒                                                  
+                                                        ▒                                                  
+                                                                                                           
+                                                                                                           
+                                                                                                           
+                                                                                                           
+                                                                                                           
+                                                                                                           
+                                                                                                            </pre>
+
+        <!-- Content Section -->
+        <div class="content">
+            <!-- Profile Section -->
+            <div class="section">
+                <div class="section-title">║[ PROFiLE ]║</div>
+                <div class="section-content">
+Exploring the digital abyss...
+> INTERESTS
+└─ Malware Analysis
+└─ Reverse Engineering
+└─ Blue & Red Team Techniques
+
+> CURRENT FOCUS
+└─ C/MASM
+└─ Studying for University
+└─ Finding Vulns in bad Malware
+
+> SOCIALS
+└─ <a href="https://x.com/01Xyris">@01Xyris</a>
+└─ <a href="https://github.com/01Xyris">github.com/01Xyris</a>
+                </div>
+            </div>
+    
+
+            <!-- Projects Section -->
+            <div class="section">
+                <div class="section-title">║[ SiCK PROJECTS ]║</div>
+                <div class="section-content">
+└─ <b>XyrisPack</b> 
+x86 packer in MASM
+
+└─ <b>Shellcode</b>
+Shellcode to Download and Execute
+
+└─ <b>LummaC2-Extractor</b>
+Extracts domains from LummaStealer
+
+└─ <b>Vulns</b> 
+Vulnerabilities found in malware
+                </div>
+            </div>
+
+            <!-- Greetz Section -->
+            <div class="section">
+                <div class="section-title">║[ GREETZ ]║</div>
+                <div class="section-content">
+└─ DeLuks, 1336, Oira and the Malcore Forum
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <script>
+        let audioCtx;
+        let audioElement;
+    
+        function initAudio() {
+            audioCtx = new (window.AudioContext || window.webkitAudioContext)();
+            audioElement = document.getElementById('audio-player');
+            const source = audioCtx.createMediaElementSource(audioElement);
+            const analyser = audioCtx.createAnalyser();
+            source.connect(analyser);
+            analyser.connect(audioCtx.destination);
+        }
+    
+        async function startAudio() {
+            if (!audioCtx) initAudio();
+            try {
+                await audioElement.play();
+            } catch (err) {
+                console.error("Audio playback error:", err);
+            }
+        }
+    
+        function showAudioConsentWindow() {
+            const consentWindow = document.createElement("div");
+            consentWindow.id = "audio-consent-window";
+            consentWindow.style.position = "fixed";
+            consentWindow.style.top = "0";
+            consentWindow.style.left = "0";
+            consentWindow.style.width = "100%";
+            consentWindow.style.height = "100%";
+            consentWindow.style.background = "#000";
+            consentWindow.style.color = "#888";
+            consentWindow.style.fontFamily = "'IBM VGA', monospace";
+            consentWindow.style.display = "flex";
+            consentWindow.style.flexDirection = "column";
+            consentWindow.style.justifyContent = "center";
+            consentWindow.style.alignItems = "center";
+            consentWindow.style.zIndex = "1000";
+    
+            const pre = document.createElement("pre");
+            pre.style.textAlign = "center";
+            pre.style.marginBottom = "20px";
+            pre.style.lineHeight = "1.5";
+            pre.textContent = `
+    ░▒▓█ Welcome to the Abyss █▓▒░
+    
+    ║ [ PLAY AUDIO? ] ║
+      └─ Press "YES" to Begin
+      └─ Press "NO" to Skip
+            `;
+    
+            const buttonContainer = document.createElement("div");
+            buttonContainer.style.display = "flex";
+            buttonContainer.style.gap = "20px";
+    
+            const yesButton = document.createElement("button");
+            yesButton.style.background = "#111";
+            yesButton.style.color = "#fff";
+            yesButton.style.border = "2px solid #888";
+            yesButton.style.padding = "10px 20px";
+            yesButton.style.cursor = "pointer";
+            yesButton.style.fontFamily = "inherit";
+            yesButton.textContent = "YES";
+    
+            const noButton = document.createElement("button");
+            noButton.style.background = "#111";
+            noButton.style.color = "#fff";
+            noButton.style.border = "2px solid #888";
+            noButton.style.padding = "10px 20px";
+            noButton.style.cursor = "pointer";
+            noButton.style.fontFamily = "inherit";
+            noButton.textContent = "NO";
+    
+            buttonContainer.appendChild(yesButton);
+            buttonContainer.appendChild(noButton);
+    
+            consentWindow.appendChild(pre);
+            consentWindow.appendChild(buttonContainer);
+    
+            document.body.appendChild(consentWindow);
+    
+            yesButton.addEventListener("click", () => {
+                startAudio();
+                document.body.removeChild(consentWindow);
+            });
+    
+            noButton.addEventListener("click", () => {
+                document.body.removeChild(consentWindow);
+            });
+        }
+    
+        window.addEventListener("DOMContentLoaded", () => {
+            showAudioConsentWindow();
+        });
+    </script>
+    
+    
+    
+    <audio id="audio-player" preload="auto" crossorigin="anonymous" loop>
+        <source src="song.mp3" type="audio/mpeg">
+    </audio>
+</body>
+</html>
