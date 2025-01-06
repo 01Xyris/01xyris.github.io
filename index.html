@@ -2,6 +2,7 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>[01Xyris]</title>
     <style>
         @font-face {
@@ -18,9 +19,11 @@
             display: flex;
             justify-content: center;
             align-items: center;
+            font-size: clamp(12px, 2vw, 14px);
+            line-height: 1.4;
         }
 
-        .container {
+     .container {
             display: grid;
             grid-template-columns: 1fr 2fr;
             max-width: 1200px;
@@ -29,10 +32,14 @@
             padding: 20px;
         }
 
+
         #ascii {
             filter: drop-shadow(0 0 2px #888);
             text-align: left;
             white-space: pre;
+            font-size: 9px; /* Fixed font size for consistent ASCII spacing */
+            overflow-wrap: normal;
+            word-break: keep-all;
         }
 
         .content {
@@ -66,47 +73,46 @@
             color: #fff;
         }
 
-        .controls {
-            margin: 10px 0;
+        #audio-controls {
+            margin-top: 20px;
             text-align: center;
         }
 
-        .controls button {
-            display: block;
+        #volume-bar {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 5px;
+            margin-top: 10px;
+        }
+
+        #volume-bar span {
+            color: #fff;
+        }
+
+        #volume-bar button {
             background: #111;
             color: #fff;
             border: 2px solid #888;
-            padding: 10px;
+            padding: 5px 10px;
             cursor: pointer;
-            text-transform: uppercase;
-            letter-spacing: 2px;
-            font-size: 16px;
-            width: 100%;
-            max-width: 100%;
-            box-sizing: border-box;
-            margin-bottom: 10px;
-            transition: all 0.2s ease-in-out;
+            font-family: inherit;
+            font-size: 14px;
         }
 
-        .controls button:hover {
+        #volume-bar button:hover {
             background: #222;
-            color: #fff;
-        }
-
-        .footer {
-            text-align: center;
-            margin-top: 20px;
-            color: #666;
-            grid-column: 1 / -1;
         }
 
         @media (max-width: 768px) {
             .container {
                 grid-template-columns: 1fr;
+                text-align: center;
             }
 
             #ascii {
-                font-size: 10px;
+               
+        font-size: 5px; 
                 text-align: center;
             }
 
@@ -114,75 +120,115 @@
                 text-align: center;
             }
         }
+
+        #audio-consent-window {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: #000;
+            color: #888;
+            font-family: 'IBM VGA', monospace;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            z-index: 1000;
+            padding: 20px;
+            box-sizing: border-box;
+        }
+
+        pre {
+            text-align: center;
+            margin-bottom: 20px;
+            line-height: 1.5;
+            font-size: clamp(10px, 3vw, 14px);
+        }
+
+        button {
+            background: #111;
+            color: #fff;
+            border: 2px solid #888;
+            padding: 8px 16px;
+            cursor: pointer;
+            font-family: inherit;
+            font-size: clamp(10px, 2.5vw, 16px);
+            margin: 5px;
+        }
+
+        button:hover {
+            background: #222;
+        }
     </style>
 </head>
 <body>
     <div class="container">
-        <!-- ASCII Art Section -->
-        <pre id="ascii">                                                                                                           
-                                                                                                           
-                                                                                                           
-                                                                                                           
-                                                                                                           
-                                                                                                           
-                                                                                                           
-                                                                                                           
-                                                                                                           
-                                                                                                           
-                                                                                                           
-                                                                                                           
-                                                                                                           
-                                                            ░▓██████▓                                      
-                                                         ▓█████████████▓▒▒▒▒                               
-                                                       ▓██████▓██████████   ▒█▓                            
-                                                      ▒████████ ▒█▓▓▒████▓     ▓█░                         
-                                                   ░▓██████████  ▓  ▒█████▓     ░▓▓▒                       
-                                      ░       █▓ ░████████████▒▓░░▒▓████████▒      ░▒                      
-                                    ▓██▓     ▒██▒████████▒░▓█████████████████                              
-                                  ▒█▓ ▒██    ▒█████▒▓▒▓▒▒ ▒██▒▓████████████▓▒                              
-                               ░▓▓█░   ▓▒█░  ░▓██▒    ▓█▓████        ░█▒  ▓                 ░              
-                              ▓█████░   ▒██▓ ░▓█▓  ░▒███████▓                         ▒▓█▓▒                
-                             ███▒████▒   ▓███░██ ███████████▒          ░░░   ▒▒▒▓▓███▒                     
-                            ▓██ ░█▒███▓   ▓████▒████████████▒     ░▓▓▒██████████▓▒░                        
-                           ░██▒  ▒ ▒███▓   ▓██▓█████████████░ ░▓█████░                                     
-                           ██▓      ▓███▒   ▓█▓████████████▓███████                                        
-                           ▒▒        ████    ███████████████████▓                                          
-                           ▒░       ▒████▒▒█░████████████████▒                                             
-                            ░    ▒▓████████████████████                                                    
-                               ███▓▒▓▒▓██████████▒▓█▓███░▓▓▓█▓▓████▓▓▒  ░                                  
-                                ████░     ▓████████▒    ▓█████████████████▒                                
-                            ▒█████▒▒▓█░    ▒███░░███▒                     ▓█▒                              
-                           ▓█████      ▓█▒ ████░ ░██▒█░                    ░██░                            
-                         ▓█▓░▒▒           ████▓   ▒█▓▓░                      ▒█▓                           
-                          ███▓           ░████░     ░█░                        ▒▒                          
-                            ░░         ▒█▓███▓       ▓▓                          ▒                         
-                         ░         ▒▒▒████▓██        ▒█░                          ░                        
-                        ░        ███▓███▓▒█▓         ░█▒                           ▒                       
-                        ███     ░▓▒████▒█░            ██                                                   
-                        ███████████▓▓██▒              ▓█                                                   
-                        ▒█████▓▒▒▒▒▓▓                 ▒█                                                   
-                         ▓████████                    ░█▒                                                  
-                           ▒▒▒                         █▓                                                  
-                                                       ▒▓                                                  
-                                                                                                           
-                                                                                                           
-                                                                                                           
-                                                        ▒                                                  
-                                                        ▒                                                  
-                                                        ▒                                                  
-                                                                                                           
-                                                                                                           
-                                                                                                           
-                                                                                                           
-                                                                                                           
-                                                                                                           
-                                                                                                            </pre>
 
-        <!-- Content Section -->
+        <pre id="ascii">                                                                                                                                           
+                                             
+                                                                               ▒█████████                                                  
+                                                                           █████████████████                                               
+                                                                         ████████████████████████████                                      
+                                                                       ████████████████████████     ███                                    
+                                                                       ███████████  ████████████      ███▓                                 
+                                                                    ██████████████  ██  █████████       ████                               
+                                                                  ████████████████      ██████████▒       ████                             
+                                                ██▓        ████ █████████████████ ██ ███████████████                                       
+                                               █████       ████████████████ ████████████████████████                                       
+                                             ████▒███      █████████████░█   ███████████████████████░                                      
+                                            ███   ████     ██████      ▓  ██████   ██████████████                                          
+                                         █████     █░███   █████      █████████            ██   ▒                      █                   
+                                       ████████     ▓████  ████    ████████████                                 ██████                     
+                                      ███████████    █████  ██  ███████████████                         █████████                          
+                                     ████ ████████    ███████▓ ████████████████         ██ ██████████████████                              
+                                    ████  ███▒█████    ████████████████████████      ░██████         ░░                                    
+                                    ████      ██████    ██████████████████████   █████████                                                 
+                                   ████        ██████    ████████████████████░██████████                                                   
+                                   ███         ▒█████     ████████████████████████████                                                     
+                                                 █████    █████████████████████████                                                        
+                                   ░█          ███████ █████████████████████████                                                           
+                                     █     ████████████████████████████                                                                    
+                                        █████ ███████████████████████████         ████████                                                 
+                                         █████       ███████████  █   █████████████████████████                                            
+                                         ███████       ████████████      ████████████████████████                                          
+                                     █████████████       ████░ █████                            ███                                        
+                                    █████████     ██     ████▒  ██████                            ███                                      
+                                 █████████         ███ ██████    ███ ██                            ████                                    
+                                ████░                 ███████     █████                              ███                                   
+                                 ██████               ██████        ███                                ██                                  
+                                    ███             ████████         ██                                  █                                 
+                                       █          █████████          ███                                  █                                
+                                            ███▒██████████           ███                                                                   
+                               █           ██████████████             ██                                    █                              
+                               ████        ░ ██████ ██                ██                                       █                           
+                               █████████████████████                  ███                                                                  
+                               ███████████████ ████                    ██                                                                  
+                                █████████    ███                       ██                                                                  
+                                ▒████████████                          ██                                                                  
+                                  ███████                              ██▓                                                                 
+                                                                       ███                                                                 
+                                                                        ██                                                                 
+                                                                        █                                                                  
+                                                                        █                                                                  
+                                                                        █                                                                  
+                                                                        ▒                                                                  
+                                                                        █▒                                                                 
+                                                                        ▓                                                                  
+                                                                        █                                                                  
+                                                                        ██                                                                 
+                                                                                                                                           
+                                                                                                                                           
+                                                                                                                                           
+                                                                                                                                           
+                                                                                                                                           
+                                                                                                                                           
+                                                                                                                                           
+                                                                                                                                           
+                                                                                                                                            </pre>
         <div class="content">
-            <!-- Profile Section -->
             <div class="section">
-                <div class="section-title">║[ PROFiLE ]║</div>
+                <div class="section-title">║[ PROFILE ]║</div>
                 <div class="section-content">
 Exploring the digital abyss...
 > INTERESTS
@@ -200,14 +246,11 @@ Exploring the digital abyss...
 └─ <a href="https://github.com/01Xyris">github.com/01Xyris</a>
                 </div>
             </div>
-    
-
-            <!-- Projects Section -->
             <div class="section">
-                <div class="section-title">║[ SiCK PROJECTS ]║</div>
+                <div class="section-title">║[ PROJECTS ]║</div>
                 <div class="section-content">
-└─ <b>XyrisPack</b> 
-x86 packer in MASM
+└─ <b>XyrisPack</b>
+x86 packer in MASM, process hollowing, remapping ntdll
 
 └─ <b>Shellcode</b>
 Shellcode to Download and Execute
@@ -215,44 +258,47 @@ Shellcode to Download and Execute
 └─ <b>LummaC2-Extractor</b>
 Extracts domains from LummaStealer
 
-└─ <b>Vulns</b> 
+└─ <b>Vulns</b>
 Vulnerabilities found in malware
                 </div>
             </div>
-
-            <!-- Greetz Section -->
             <div class="section">
                 <div class="section-title">║[ GREETZ ]║</div>
                 <div class="section-content">
-└─ DeLuks, 1336, Oira and the Malcore Forum
+└─ DeLuks, 1336, Oira, Malcore Forum
+                </div>
+            </div>
+            <div id="audio-controls">
+                <div class="section-title">║[ AUDIO CONTROLS ]║</div>
+                <div id="volume-bar">
+                    <button id="volume-down">-</button>
+                    <span id="volume-level">Volume: 50%</span>
+                    <button id="volume-up">+</button>
                 </div>
             </div>
         </div>
     </div>
 
-
     <script>
         let audioCtx;
         let audioElement;
-    
+
         function initAudio() {
             audioCtx = new (window.AudioContext || window.webkitAudioContext)();
-            audioElement = document.getElementById('audio-player');
+            audioElement = document.getElementById('audio');
             const source = audioCtx.createMediaElementSource(audioElement);
             const analyser = audioCtx.createAnalyser();
             source.connect(analyser);
             analyser.connect(audioCtx.destination);
         }
-    
-        async function startAudio() {
-            if (!audioCtx) initAudio();
-            try {
-                await audioElement.play();
-            } catch (err) {
-                console.error("Audio playback error:", err);
+
+        function setVolume(level) {
+            if (audioElement) {
+                audioElement.volume = level / 100;
+                document.getElementById('volume-level').textContent = `Volume: ${level}%`;
             }
         }
-    
+
         function showAudioConsentWindow() {
             const consentWindow = document.createElement("div");
             consentWindow.id = "audio-consent-window";
@@ -269,67 +315,75 @@ Vulnerabilities found in malware
             consentWindow.style.justifyContent = "center";
             consentWindow.style.alignItems = "center";
             consentWindow.style.zIndex = "1000";
-    
+            consentWindow.style.padding = "20px";
+
             const pre = document.createElement("pre");
             pre.style.textAlign = "center";
             pre.style.marginBottom = "20px";
             pre.style.lineHeight = "1.5";
             pre.textContent = `
-    ░▒▓█ Welcome to the Abyss █▓▒░
-    
-    ║ [ PLAY AUDIO? ] ║
-      └─ Press "YES" to Begin
-      └─ Press "NO" to Skip
+░▒▓█ Welcome to the Abyss █▓▒░
+
+║ [ PLAY AUDIO? ] ║
+  └─ Press "YES" to Begin
+  └─ Press "NO" to Skip
             `;
-    
+
             const buttonContainer = document.createElement("div");
             buttonContainer.style.display = "flex";
             buttonContainer.style.gap = "20px";
-    
+
             const yesButton = document.createElement("button");
-            yesButton.style.background = "#111";
-            yesButton.style.color = "#fff";
-            yesButton.style.border = "2px solid #888";
-            yesButton.style.padding = "10px 20px";
-            yesButton.style.cursor = "pointer";
-            yesButton.style.fontFamily = "inherit";
             yesButton.textContent = "YES";
-    
-            const noButton = document.createElement("button");
-            noButton.style.background = "#111";
-            noButton.style.color = "#fff";
-            noButton.style.border = "2px solid #888";
-            noButton.style.padding = "10px 20px";
-            noButton.style.cursor = "pointer";
-            noButton.style.fontFamily = "inherit";
-            noButton.textContent = "NO";
-    
-            buttonContainer.appendChild(yesButton);
-            buttonContainer.appendChild(noButton);
-    
-            consentWindow.appendChild(pre);
-            consentWindow.appendChild(buttonContainer);
-    
-            document.body.appendChild(consentWindow);
-    
             yesButton.addEventListener("click", () => {
                 startAudio();
                 document.body.removeChild(consentWindow);
             });
-    
+
+            const noButton = document.createElement("button");
+            noButton.textContent = "NO";
             noButton.addEventListener("click", () => {
                 document.body.removeChild(consentWindow);
             });
+
+            buttonContainer.appendChild(yesButton);
+            buttonContainer.appendChild(noButton);
+            consentWindow.appendChild(pre);
+            consentWindow.appendChild(buttonContainer);
+            document.body.appendChild(consentWindow);
         }
-    
+
+        async function startAudio() {
+            if (!audioCtx) initAudio();
+            try {
+                await audioElement.play();
+            } catch (err) {
+                console.error("Audio playback error:", err);
+            }
+        }
+
         window.addEventListener("DOMContentLoaded", () => {
             showAudioConsentWindow();
+
+            const volumeDown = document.getElementById("volume-down");
+            const volumeUp = document.getElementById("volume-up");
+            let currentVolume = 50;
+
+            setVolume(currentVolume);
+
+            volumeDown?.addEventListener("click", () => {
+                currentVolume = Math.max(0, currentVolume - 10);
+                setVolume(currentVolume);
+            });
+
+            volumeUp?.addEventListener("click", () => {
+                currentVolume = Math.min(100, currentVolume + 10);
+                setVolume(currentVolume);
+            });
         });
     </script>
-    
-    
-    
-    <audio id="audio-player" preload="auto" crossorigin="anonymous" loop>
+
+    <audio id="audio" preload="auto" crossorigin="anonymous" loop>
         <source src="song.mp3" type="audio/mpeg">
     </audio>
 </body>
