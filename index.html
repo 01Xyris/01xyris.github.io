@@ -2,171 +2,249 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>[01Xyris]</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>xYRIS-INFO</title>
     <style>
-        @font-face {
-            font-family: 'IBM VGA';
-            src: url('https://raw.githubusercontent.com/farsil/ibmfonts/master/ibm/web/vga8x16.woff2') format('woff2');
-        }
-
         body {
             background: #000;
-            color: #888;
-            font-family: 'IBM VGA', monospace;
-            margin: 0;
-            min-height: 100vh;
             display: flex;
             justify-content: center;
             align-items: center;
-            font-size: clamp(12px, 2vw, 14px);
-            line-height: 1.4;
-        }
-
-     .container {
-            display: grid;
-            grid-template-columns: 1fr 2fr;
-            max-width: 1200px;
-            width: 100%;
-            gap: 20px;
+            min-height: 100vh;
+            margin: 0;
+            font-family: "Tahoma", sans-serif;
+            font-size: 11px;
             padding: 20px;
         }
 
-
-        #ascii {
-            filter: drop-shadow(0 0 2px #888);
-            text-align: left;
-            white-space: pre;
-            font-size: 9px; /* Fixed font size for consistent ASCII spacing */
-            overflow-wrap: normal;
-            word-break: keep-all;
+        .window {
+            background: #1a1a1a;
+            border: 1px solid #333;
+            box-shadow: 1px 1px 3px rgba(0,0,0,0.5);
+            width: 450px;
+            padding: 1px;
         }
 
-        .content {
-            text-align: left;
+        .title-bar {
+            background: linear-gradient(to right, #000066, #000088);
+            padding: 2px 3px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            color: white;
+            font-size: 12px;
         }
 
-        .section {
-            margin-bottom: 20px;
+        .window-buttons {
+            display: flex;
+            gap: 2px;
         }
 
-        .section-title {
-            font-weight: bold;
+        .window-button {
+            width: 16px;
+            height: 14px;
+            background: #333;
+            border: 1px solid #444;
+            border-radius: 1px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-family: "Tahoma", sans-serif;
+            font-size: 9px;
+            cursor: pointer;
             color: #fff;
-            margin-bottom: 5px;
-            text-decoration: underline;
         }
 
-        .section-content {
-            border: 1px solid #555;
+        .banner {
+            background: #000;
+            padding: 10px 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            overflow: hidden;
+            border-bottom: 1px solid #333;
+        }
+
+        .banner pre {
+            color: #666;
+            font-size:3px;
+            text-align: center;
+            margin: 0;
+            line-height: 1;
+            font-family: monospace;
+        }
+
+        .tab-bar {
+            display: flex;
+            margin: 8px 8px 0 8px;
+            border-bottom: 1px solid #333;
+        }
+
+        .tab {
+            padding: 3px 10px;
+            background: #1a1a1a;
+            border: 1px solid #333;
+            border-bottom: none;
+            margin-right: 2px;
+            cursor: pointer;
+            position: relative;
+            top: 1px;
+            color: #888;
+        }
+
+        .tab.active {
+            background: #222;
+            border-bottom: 1px solid #222;
+            color: #fff;
+        }
+
+        .tab-content {
+            display: none;
+        }
+
+        .tab-content.active {
+            display: block;
+        }
+
+        .group-box {
+            border: 1px solid #333;
+            margin: 8px;
             padding: 10px;
-            margin-top: 5px;
-            white-space: pre-line;
+            padding-top: 5px;
+            position: relative;
+            background: #222;
+        }
+
+        .group-box-title {
+            position: absolute;
+            top: -8px;
+            left: 7px;
+            padding: 0 3px;
+            background: #1a1a1a;
+            color: #888;
+        }
+
+        .info-field {
+            border: 1px solid #333;
+            background: #111;
+            margin: 5px 0;
+            padding: 5px;
+            color: #aaa;
+            font-family: "Lucida Console", monospace;
+            font-size: 11px;
+            white-space: pre-wrap;
+        }
+
+        .button-bar {
+            display: flex;
+            justify-content: space-between;
+            padding: 0 8px 8px 8px;
+            gap: 5px;
+        }
+
+        .button {
+            padding: 3px 15px;
+            background: #222;
+            border: 1px solid #333;
+            border-radius: 3px;
+            cursor: pointer;
+            font-size: 11px;
+            color: #aaa;
+            box-shadow: 1px 1px 0px rgba(255,255,255,0.1) inset;
+            min-width: 80px;
+            text-align: center;
+        }
+
+        .button:hover {
+            background: #2a2a2a;
+            color: #fff;
+        }
+
+        .status-bar {
+            background: #1a1a1a;
+            border-top: 1px solid #333;
+            padding: 2px 5px;
+            color: #888;
+            font-size: 10px;
+            display: flex;
+            justify-content: space-between;
+        }
+
+        .status-item {
+            border: 1px solid #333;
+            padding: 1px 4px;
+            background: #111;
         }
 
         a {
-            color: #888;
+            color: #4a9eff;
             text-decoration: none;
         }
 
         a:hover {
-            color: #fff;
+            color: #66b5ff;
         }
 
         #audio-controls {
-            margin-top: 20px;
-            text-align: center;
-        }
-
-        #volume-bar {
+            border: 1px solid #333;
+            margin: 8px;
+            padding: 8px;
+            background: #222;
             display: flex;
             align-items: center;
-            justify-content: center;
-            gap: 5px;
-            margin-top: 10px;
+            justify-content: space-between;
         }
 
-        #volume-bar span {
-            color: #fff;
-        }
-
-        #volume-bar button {
-            background: #111;
-            color: #fff;
-            border: 2px solid #888;
-            padding: 5px 10px;
+        .audio-button {
+            padding: 2px 8px;
+            background: #1a1a1a;
+            border: 1px solid #333;
+            color: #888;
             cursor: pointer;
-            font-family: inherit;
-            font-size: 14px;
-        }
-
-        #volume-bar button:hover {
-            background: #222;
-        }
-
-        @media (max-width: 768px) {
-            .container {
-                grid-template-columns: 1fr;
-                text-align: center;
-            }
-
-            #ascii {
-               
-        font-size: 5px; 
-                text-align: center;
-            }
-
-            .content {
-                text-align: center;
-            }
         }
 
         #audio-consent-window {
-            position: fixed;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            background: #000;
-            color: #888;
-            font-family: 'IBM VGA', monospace;
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-            align-items: center;
-            z-index: 1000;
-            padding: 20px;
-            box-sizing: border-box;
+            background: rgba(0,0,0,0.9) !important;
         }
 
-        pre {
-            text-align: center;
-            margin-bottom: 20px;
-            line-height: 1.5;
-            font-size: clamp(10px, 3vw, 14px);
-        }
-
-        button {
-            background: #111;
-            color: #fff;
-            border: 2px solid #888;
-            padding: 8px 16px;
-            cursor: pointer;
-            font-family: inherit;
-            font-size: clamp(10px, 2.5vw, 16px);
-            margin: 5px;
-        }
-
-        button:hover {
+        #audio-consent-window button {
             background: #222;
+            border: 1px solid #333;
+            color: #888;
+            padding: 5px 15px;
+            cursor: pointer;
+            margin: 0 5px;
+        }
+
+        #audio-consent-window button:hover {
+            background: #2a2a2a;
+            color: #fff;
+        }
+
+        @media (max-width: 768px) {
+            .window {
+                width: 95%;
+                max-width: 450px;
+            }
+            body {
+                padding: 10px;
+            }
         }
     </style>
 </head>
 <body>
-    <div class="container">
-
-        <pre id="ascii">                                                                                                                                           
-                                             
+    <div class="window">
+        <div class="title-bar">
+            <div class="title-text">xYRIS-INFO v1.0</div>
+            <div class="window-buttons">
+                <div class="window-button">_</div>
+                <div class="window-button">□</div>
+                <div class="window-button">×</div>
+            </div>
+        </div>
+        
+        <div class="banner">
+            <pre>                                             
                                                                                ▒█████████                                                  
                                                                            █████████████████                                               
                                                                          ████████████████████████████                                      
@@ -226,60 +304,92 @@
                                                                                                                                            
                                                                                                                                            
                                                                                                                                             </pre>
-        <div class="content">
-            <div class="section">
-                <div class="section-title">║[ PROFILE ]║</div>
-                <div class="section-content">
-Exploring the digital abyss...
-> INTERESTS
-└─ Malware Analysis
+        </div>
+
+        <div class="tab-bar">
+            <div class="tab active" data-tab="profile">Profile</div>
+            <div class="tab" data-tab="projects">Projects</div>
+            <div class="tab" data-tab="contact">Contact</div>
+        </div>
+
+        <div id="profile" class="tab-content active">
+            <div class="group-box">
+                <div class="group-box-title">About</div>
+                <div class="info-field">Exploring the digital abyss...</div>
+            </div>
+
+            <div class="group-box">
+                <div class="group-box-title">Interests</div>
+                <div class="info-field">└─ Malware Analysis
 └─ Reverse Engineering
-└─ Blue & Red Team Techniques
+└─ Blue & Red Team Techniques</div>
+            </div>
 
-> CURRENT FOCUS
-└─ C/MASM
+            <div class="group-box">
+                <div class="group-box-title">Current Focus</div>
+                <div class="info-field">└─ C/MASM
 └─ Studying for University
-└─ Finding Vulns in bad Malware
-
-> SOCIALS
-└─ <a href="https://x.com/01Xyris">@01Xyris</a>
-└─ <a href="https://github.com/01Xyris">github.com/01Xyris</a>
-                </div>
+└─ Finding Vulns in bad Malware</div>
             </div>
-            <div class="section">
-                <div class="section-title">║[ PROJECTS ]║</div>
-                <div class="section-content">
-└─ <b>XyrisPack</b>
-x86 packer in MASM, process hollowing, remapping ntdll
+        </div>
 
-└─ <b>Shellcode</b>
-Shellcode to Download and Execute
+        <div id="projects" class="tab-content">
+            <div class="group-box">
+                <div class="group-box-title">Active Projects</div>
+                <div class="info-field">└─ XyrisPack
+   x86 packer in MASM, process hollowing
 
-└─ <b>LummaC2-Extractor</b>
-Extracts domains from LummaStealer
+└─ Shellcode
+   Shellcode to Download and Execute
 
-└─ <b>Vulns</b>
-Vulnerabilities found in malware
-                </div>
+└─ LummaC2-Extractor
+   Extracts domains from LummaStealer
+
+└─ Vulns
+   Vulnerabilities found in malware</div>
             </div>
-            <div class="section">
-                <div class="section-title">║[ GREETZ ]║</div>
-                <div class="section-content">
-└─ DeLuks, 1336, Oira, Malcore Forum
-                </div>
+        </div>
+
+        <div id="contact" class="tab-content">
+            <div class="group-box">
+                <div class="group-box-title">Contact Info</div>
+                <div class="info-field">└─ <a href="https://x.com/01Xyris">@01Xyris</a>
+└─ <a href="https://github.com/01Xyris">github.com/01Xyris</a></div>
             </div>
-            <div id="audio-controls">
-                <div class="section-title">║[ AUDIO CONTROLS ]║</div>
-                <div id="volume-bar">
-                    <button id="volume-down">-</button>
-                    <span id="volume-level">Volume: 50%</span>
-                    <button id="volume-up">+</button>
-                </div>
+
+            <div class="group-box">
+                <div class="group-box-title">Greetz</div>
+                <div class="info-field">└─ DeLuks, 1336, Oira, Malcore Forum</div>
             </div>
+        </div>
+
+        <div id="audio-controls">
+            <button class="audio-button" id="volume-down">-</button>
+            <span id="volume-level">Volume: 50%</span>
+            <button class="audio-button" id="volume-up">+</button>
+        </div>
+
+        <div class="status-bar">
+            <div class="status-item">Ready</div>
+            <div class="status-item">v1.0</div>
         </div>
     </div>
 
+    <audio id="audio" preload="auto" crossorigin="anonymous" loop>
+        <source src="song.mp3" type="audio/mpeg">
+    </audio>
+
     <script>
+        document.querySelectorAll('.tab').forEach(tab => {
+            tab.addEventListener('click', () => {
+                document.querySelectorAll('.tab').forEach(t => t.classList.remove('active'));
+                document.querySelectorAll('.tab-content').forEach(c => c.classList.remove('active'));
+                
+                tab.classList.add('active');
+                document.getElementById(tab.dataset.tab).classList.add('active');
+            });
+        });
+
         let audioCtx;
         let audioElement;
 
@@ -382,9 +492,5 @@ Vulnerabilities found in malware
             });
         });
     </script>
-
-    <audio id="audio" preload="auto" crossorigin="anonymous" loop>
-        <source src="song.mp3" type="audio/mpeg">
-    </audio>
 </body>
 </html>
