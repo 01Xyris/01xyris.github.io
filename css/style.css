@@ -1,0 +1,519 @@
+body {
+    background-color: #008080; /* Classic Win95 teal */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    margin: 0;
+    font-family: "MS Sans Serif", "Tahoma", sans-serif;
+    font-size: 11px;
+    padding: 20px;
+}
+
+/* Desktop Shortcuts */
+.desktop-shortcuts {
+    position: fixed;
+    top: 10px;
+    left: 10px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    z-index: 1;
+}
+
+.shortcut {
+    width: 70px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    cursor: pointer;
+    padding: 5px;
+    border: 1px solid transparent;
+}
+
+.shortcut:hover {
+    background: rgba(255, 255, 255, 0.2);
+    border: 1px dotted #fff;
+}
+
+.shortcut:active {
+    background: rgba(255, 255, 255, 0.3);
+}
+
+.shortcut-icon {
+    width: 32px;
+    height: 32px;
+    background: #c0c0c0;
+    border: none;
+    margin-bottom: 4px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: "MS Sans Serif", sans-serif;
+    font-size: 14px;
+    font-weight: bold;
+    color: #000;
+    position: relative;
+}
+
+.shortcut-icon.folder {
+    background: url('https://raw.githubusercontent.com/matthewmx86/WinClassic_icons/master/Source%20Icons/w98/8-bit/48x48/w98_directory_closed.png') no-repeat center;
+    background-size: 32px;
+    border: none;
+}
+
+.shortcut-icon.github {
+    background: url('https://raw.githubusercontent.com/matthewmx86/WinClassic_icons/master/Source%20Icons/w98/8-bit/48x48/w98_world.png') no-repeat center;
+    background-size: 32px;
+    border: none;
+}
+
+.shortcut-icon.twitter {
+    background: url('https://raw.githubusercontent.com/matthewmx86/WinClassic_icons/master/Source%20Icons/w98/8-bit/48x48/w98_world_network_directories.png') no-repeat center;
+    background-size: 32px;
+    border: none;
+}
+
+.shortcut-icon.exe {
+    background: url('https://raw.githubusercontent.com/matthewmx86/WinClassic_icons/master/Source%20Icons/w98/8-bit/48x48/w98_computer.png') no-repeat center;
+    background-size: 32px;
+    border: none;
+}
+
+.shortcut-label {
+    color: #fff;
+    font-family: "MS Sans Serif", "Tahoma", sans-serif;
+    font-size: 11px;
+    text-shadow: 1px 1px 1px rgba(0,0,0,0.5);
+    max-width: 64px;
+    word-wrap: break-word;
+    line-height: 1.2;
+}
+
+.window {
+    background: #c0c0c0;
+    border: 2px solid;
+    border-color: #dfdfdf #000 #000 #dfdfdf;
+    box-shadow: 1px 1px 0 #808080 inset, -1px -1px 0 #808080 inset;
+    width: 450px;
+    padding: 2px;
+    position: fixed;
+    display: none;
+    z-index: 999;
+}
+
+.title-bar {
+    background: #000080;
+    padding: 2px 3px 3px 3px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    color: #fff;
+    font-weight: bold;
+    font-size: 11px;
+}
+
+.window-buttons {
+    display: flex;
+    gap: 2px;
+}
+
+.window-button {
+    width: 16px;
+    height: 14px;
+    background: #c0c0c0;
+    border: 2px solid;
+    border-color: #dfdfdf #808080 #808080 #dfdfdf;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 9px;
+    cursor: pointer;
+    color: #000;
+    font-weight: bold;
+}
+
+.window-button:active {
+    border-color: #808080 #dfdfdf #dfdfdf #808080;
+    padding: 1px 0 0 1px;
+}
+
+.banner {
+    background: #000000;  /* Keep this black for ASCII art */
+    padding: 10px 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+    border-bottom: 1px solid #808080;
+}
+
+.banner pre {
+    color: #444;  /* Keep original color for ASCII art */
+    font-size: 3px;
+    text-align: center;
+    margin: 0;
+    line-height: 1;
+    font-family: monospace;
+}
+
+.tab-bar {
+    display: flex;
+    margin: 4px 4px 0 4px;
+    border-bottom: 1px solid #808080;
+    background: #c0c0c0;
+}
+
+.tab {
+    padding: 3px 10px;
+    background: #c0c0c0;
+    border: 2px solid;
+    border-color: #dfdfdf #808080 #808080 #dfdfdf;
+    margin-right: 2px;
+    cursor: pointer;
+    position: relative;
+    top: 1px;
+    color: #000;
+}
+
+.tab.active {
+    background: #c0c0c0;
+    border-bottom-color: #c0c0c0;
+    font-weight: bold;
+}
+
+.tab:hover {
+    background: #dfdfdf;
+}
+
+.tab-content {
+    display: none;
+}
+
+.tab-content.active {
+    display: block;
+}
+
+.group-box {
+    border: 2px solid;
+    border-color: #808080 #dfdfdf #dfdfdf #808080;
+    margin: 8px;
+    padding: 8px;
+    position: relative;
+    background: #c0c0c0;
+}
+
+.group-box-title {
+    position: absolute;
+    top: -8px;
+    left: 7px;
+    padding: 0 5px;
+    background: #c0c0c0;
+    color: #000;
+    font-size: 11px;
+    font-weight: bold;
+}
+
+.info-field {
+    border: 2px solid;
+    border-color: #808080 #dfdfdf #dfdfdf #808080;
+    background: #fff;
+    margin: 5px 0;
+    padding: 6px;
+    color: #000;
+    font-family: "Lucida Console", monospace;
+    font-size: 11px;
+    white-space: pre-wrap;
+}
+
+/* File Explorer Window */
+.folder-window {
+    position: fixed;
+    width: 450px;
+    background: #c0c0c0;
+    border: 2px solid;
+    border-color: #dfdfdf #000 #000 #dfdfdf;
+    box-shadow: 1px 1px 0 #808080 inset, -1px -1px 0 #808080 inset;
+    display: none;
+    z-index: 1000;
+}
+
+.folder-toolbar {
+    background: #c0c0c0;
+    padding: 6px;
+    border-bottom: 1px solid #808080;
+    display: flex;
+    gap: 4px;
+}
+
+.toolbar-button {
+    background: #c0c0c0;
+    border: 2px solid;
+    border-color: #dfdfdf #808080 #808080 #dfdfdf;
+    color: #000;
+    padding: 2px 6px;
+    display: flex;
+    align-items: center;
+    gap: 4px;
+    cursor: pointer;
+}
+
+.toolbar-button:hover {
+    background: #dfdfdf;
+}
+
+.address-bar {
+    background: #c0c0c0;
+    padding: 4px 6px;
+    border-bottom: 1px solid #808080;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    color: #000;
+}
+
+.address-bar input {
+    background: #fff;
+    border: 2px solid;
+    border-color: #808080 #dfdfdf #dfdfdf #808080;
+    color: #000;
+    padding: 2px 4px;
+    width: 100%;
+}
+
+.content {
+    display: grid;
+    grid-template-columns: auto;
+    background: #fff;
+}
+
+.file-list {
+    padding: 0;
+    background: #fff;
+}
+
+.column-headers {
+    padding: 4px 8px;
+    color: #000;
+    font-size: 11px;
+    border-bottom: 1px solid #808080;
+    background: #c0c0c0;
+    display: grid;
+    grid-template-columns: 200px 100px 100px;
+    gap: 8px;
+}
+
+.files {
+    padding: 4px;
+    background: #fff;
+}
+
+.file-item {
+    display: grid;
+    grid-template-columns: 200px 100px 100px;
+    gap: 8px;
+    padding: 2px 8px;
+    color: #000;
+    text-decoration: none;
+}
+
+.file-item:hover {
+    background: #000080;
+    color: #fff;
+}
+
+.file-name {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+}
+
+.file-icon {
+    width: 16px;
+    height: 16px;
+    background: url('https://raw.githubusercontent.com/matthewmx86/WinClassic_icons/master/Source%20Icons/w98/8-bit/48x48/w98_directory_zipper.png') no-repeat center;
+    background-size: contain;
+}
+
+/* Audio Controls */
+#audio-controls {
+    border: 2px solid;
+    border-color: #808080 #dfdfdf #dfdfdf #808080;
+    margin: 8px;
+    padding: 8px;
+    background: #c0c0c0;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+#volume-level {
+    color: #000;
+}
+
+.audio-button {
+    padding: 3px 10px;
+    background: #c0c0c0;
+    border: 2px solid;
+    border-color: #dfdfdf #808080 #808080 #dfdfdf;
+    color: #000;
+    cursor: pointer;
+}
+
+.audio-button:active {
+    border-color: #808080 #dfdfdf #dfdfdf #808080;
+    padding: 4px 9px 2px 11px;
+}
+
+/* Status Bar */
+.status-bar {
+    background: #c0c0c0;
+    border-top: 1px solid #808080;
+    padding: 4px 6px;
+    color: #000;
+    font-size: 10px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.status-item {
+    border: 2px solid;
+    border-color: #808080 #dfdfdf #dfdfdf #808080;
+    padding: 1px 4px;
+    background: #c0c0c0;
+}
+
+/* Audio Consent Window */
+#audio-consent-window {
+    background: #c0c0c0 !important;
+    border: 2px solid;
+    border-color: #dfdfdf #000 #000 #dfdfdf;
+}
+
+#audio-consent-window button {
+    padding: 4px 15px;
+    background: #c0c0c0;
+    border: 2px solid;
+    border-color: #dfdfdf #808080 #808080 #dfdfdf;
+    color: #000;
+    cursor: pointer;
+    margin: 0 5px;
+}
+
+#audio-consent-window button:hover {
+    background: #dfdfdf;
+}
+
+#audio-consent-window button:active {
+    border-color: #808080 #dfdfdf #dfdfdf #808080;
+    padding: 5px 14px 3px 16px;
+}
+
+@media (max-width: 768px) {
+    .window {
+        width: 95%;
+        max-width: 450px;
+    }
+    body {
+        padding: 10px;
+    }
+}
+.shortcut-icon.media {
+    background: url('https://raw.githubusercontent.com/matthewmx86/WinClassic_icons/master/Source%20Icons/w98/8-bit/48x48/w98_wm_file.png') no-repeat center;
+    background-size: 32px;
+    border: none;
+}
+
+/* Media Player Window */
+.media-window {
+    background: #c0c0c0;
+    border: 2px solid;
+    border-color: #dfdfdf #000 #000 #dfdfdf;
+    box-shadow: 1px 1px 0 #808080 inset, -1px -1px 0 #808080 inset;
+    width: 350px;
+    padding: 2px;
+    position: fixed;
+    display: none;
+    z-index: 999;
+}
+
+.media-content {
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+    background: #c0c0c0;
+}
+
+.media-icon {
+    width: 128px;
+    height: 128px;
+    background: url('https://raw.githubusercontent.com/matthewmx86/WinClassic_icons/master/Source%20Icons/w98/8-bit/48x48/w98_wm_file.png') no-repeat center;
+    background-size: contain;
+}
+
+.media-controls {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.progress-bar {
+    width: 100%;
+    height: 16px;
+    background: #fff;
+    border: 2px solid;
+    border-color: #808080 #dfdfdf #dfdfdf #808080;
+    position: relative;
+}
+
+.progress {
+    height: 100%;
+    width: 0;
+    background: #000080;
+}
+
+.control-buttons {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.media-button {
+    padding: 5px 10px;
+    background: #c0c0c0;
+    border: 2px solid;
+    border-color: #dfdfdf #808080 #808080 #dfdfdf;
+    color: #000;
+    cursor: pointer;
+    min-width: 30px;
+    font-family: monospace;
+}
+
+.media-button:active {
+    border-color: #808080 #dfdfdf #dfdfdf #808080;
+    padding: 6px 9px 4px 11px;
+}
+
+.volume-control {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    margin-left: 10px;
+}
+
+.volume-slider {
+    width: 100px;
+    height: 20px;
+}
+
+.time-display {
+    text-align: center;
+    font-family: "MS Sans Serif", "Tahoma", sans-serif;
+    font-size: 11px;
+    color: #000;
+    margin-top: 5px;
+}

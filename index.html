@@ -3,236 +3,34 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>xYRIS-INFO</title>
-    <style>
-        body {
-            background: #000;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            min-height: 100vh;
-            margin: 0;
-            font-family: "Tahoma", sans-serif;
-            font-size: 11px;
-            padding: 20px;
-        }
-
-        .window {
-            background: #1a1a1a;
-            border: 1px solid #333;
-            box-shadow: 1px 1px 3px rgba(0,0,0,0.5);
-            width: 450px;
-            padding: 1px;
-        }
-
-        .title-bar {
-            background: linear-gradient(to right, #000066, #000088);
-            padding: 2px 3px;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            color: white;
-            font-size: 12px;
-        }
-
-        .window-buttons {
-            display: flex;
-            gap: 2px;
-        }
-
-        .window-button {
-            width: 16px;
-            height: 14px;
-            background: #333;
-            border: 1px solid #444;
-            border-radius: 1px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            font-family: "Tahoma", sans-serif;
-            font-size: 9px;
-            cursor: pointer;
-            color: #fff;
-        }
-
-        .banner {
-            background: #000;
-            padding: 10px 0;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            overflow: hidden;
-            border-bottom: 1px solid #333;
-        }
-
-        .banner pre {
-            color: #666;
-            font-size:3px;
-            text-align: center;
-            margin: 0;
-            line-height: 1;
-            font-family: monospace;
-        }
-
-        .tab-bar {
-            display: flex;
-            margin: 8px 8px 0 8px;
-            border-bottom: 1px solid #333;
-        }
-
-        .tab {
-            padding: 3px 10px;
-            background: #1a1a1a;
-            border: 1px solid #333;
-            border-bottom: none;
-            margin-right: 2px;
-            cursor: pointer;
-            position: relative;
-            top: 1px;
-            color: #888;
-        }
-
-        .tab.active {
-            background: #222;
-            border-bottom: 1px solid #222;
-            color: #fff;
-        }
-
-        .tab-content {
-            display: none;
-        }
-
-        .tab-content.active {
-            display: block;
-        }
-
-        .group-box {
-            border: 1px solid #333;
-            margin: 8px;
-            padding: 10px;
-            padding-top: 5px;
-            position: relative;
-            background: #222;
-        }
-
-        .group-box-title {
-            position: absolute;
-            top: -8px;
-            left: 7px;
-            padding: 0 3px;
-            background: #1a1a1a;
-            color: #888;
-        }
-
-        .info-field {
-            border: 1px solid #333;
-            background: #111;
-            margin: 5px 0;
-            padding: 5px;
-            color: #aaa;
-            font-family: "Lucida Console", monospace;
-            font-size: 11px;
-            white-space: pre-wrap;
-        }
-
-        .button-bar {
-            display: flex;
-            justify-content: space-between;
-            padding: 0 8px 8px 8px;
-            gap: 5px;
-        }
-
-        .button {
-            padding: 3px 15px;
-            background: #222;
-            border: 1px solid #333;
-            border-radius: 3px;
-            cursor: pointer;
-            font-size: 11px;
-            color: #aaa;
-            box-shadow: 1px 1px 0px rgba(255,255,255,0.1) inset;
-            min-width: 80px;
-            text-align: center;
-        }
-
-        .button:hover {
-            background: #2a2a2a;
-            color: #fff;
-        }
-
-        .status-bar {
-            background: #1a1a1a;
-            border-top: 1px solid #333;
-            padding: 2px 5px;
-            color: #888;
-            font-size: 10px;
-            display: flex;
-            justify-content: space-between;
-        }
-
-        .status-item {
-            border: 1px solid #333;
-            padding: 1px 4px;
-            background: #111;
-        }
-
-        a {
-            color: #4a9eff;
-            text-decoration: none;
-        }
-
-        a:hover {
-            color: #66b5ff;
-        }
-
-        #audio-controls {
-            border: 1px solid #333;
-            margin: 8px;
-            padding: 8px;
-            background: #222;
-            display: flex;
-            align-items: center;
-            justify-content: space-between;
-        }
-
-        .audio-button {
-            padding: 2px 8px;
-            background: #1a1a1a;
-            border: 1px solid #333;
-            color: #888;
-            cursor: pointer;
-        }
-
-        #audio-consent-window {
-            background: rgba(0,0,0,0.9) !important;
-        }
-
-        #audio-consent-window button {
-            background: #222;
-            border: 1px solid #333;
-            color: #888;
-            padding: 5px 15px;
-            cursor: pointer;
-            margin: 0 5px;
-        }
-
-        #audio-consent-window button:hover {
-            background: #2a2a2a;
-            color: #fff;
-        }
-
-        @media (max-width: 768px) {
-            .window {
-                width: 95%;
-                max-width: 450px;
-            }
-            body {
-                padding: 10px;
-            }
-        }
-    </style>
+    <title>xYRIS iNFO</title>
+    <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
+    <div class="desktop-shortcuts">
+        <div class="shortcut" id="projects-folder">
+            <div class="shortcut-icon folder"></div>
+            <div class="shortcut-label">Projects</div>
+        </div>
+        <a href="https://github.com/01Xyris" class="shortcut" target="_blank">
+            <div class="shortcut-icon github">GH</div>
+            <div class="shortcut-label">GitHub</div>
+        </a>
+        <a href="https://x.com/01Xyris" class="shortcut" target="_blank">
+            <div class="shortcut-icon twitter">X</div>
+            <div class="shortcut-label">Twitter</div>
+        </a>
+        <div class="shortcut" id="xyris-exe">
+            <div class="shortcut-icon exe"></div>
+            <div class="shortcut-label">Xyris.exe</div>
+        </div>
+        <div class="shortcut" id="vibing-player">
+            <div class="shortcut-icon media"></div>
+            <div class="shortcut-label">CODEX_Installer_2018-06.m4a</div>
+        </div>
+        
+    </div>
+
     <div class="window">
         <div class="title-bar">
             <div class="title-text">xYRIS-INFO v1.0</div>
@@ -315,7 +113,7 @@
         <div id="profile" class="tab-content active">
             <div class="group-box">
                 <div class="group-box-title">About</div>
-                <div class="info-field">Exploring the digital abyss...</div>
+                <div class="info-field">Exploring the digital world...</div>
             </div>
 
             <div class="group-box">
@@ -365,7 +163,7 @@
 
         <div id="audio-controls">
             <button class="audio-button" id="volume-down">-</button>
-            <span id="volume-level">Volume: 50%</span>
+            <span id="volume-level">Volume: 35%</span>
             <button class="audio-button" id="volume-up">+</button>
         </div>
 
@@ -375,122 +173,107 @@
         </div>
     </div>
 
+    <div class="folder-window" id="projects-window">
+        <div class="title-bar">
+            <div class="title-bar-text">
+                <div class="window-icon"></div>
+                Projects Explorer
+            </div>
+            <div class="window-buttons">
+                <div class="window-button">_</div>
+                <div class="window-button">□</div>
+                <div class="window-button close-folder">×</div>
+            </div>
+        </div>
+
+        <div class="address-bar">
+            <span>Address:</span>
+            <input type="text" value="C:\Projects" readonly>
+        </div>
+
+        <div class="content">
+            <div class="file-list">
+                <div class="column-headers">
+                    <div>Name</div>
+                    <div>Size</div>
+                    <div>Type</div>
+                </div>
+                <div class="files">
+                    <a href="https://github.com/01Xyris/XyrisPack" class="file-item" target="_blank">
+                        <div class="file-name">
+                            <div class="file-icon zip"></div>
+                            XyrisPack.zip
+                        </div>
+                        <div>2.1 MB</div>
+                        <div>Application</div>
+                    </a>
+                    <a href="https://github.com/01Xyris/Shellcode" class="file-item" target="_blank">
+                        <div class="file-name">
+                            <div class="file-icon zip"></div>
+                            Shellcode.zip
+                        </div>
+                        <div>1.5 MB</div>
+                        <div>Application</div>
+                    </a>
+                    <a href="https://github.com/01Xyris/LummaC2-Extractor" class="file-item" target="_blank">
+                        <div class="file-name">
+                            <div class="file-icon zip"></div>
+                            LummaC2-Extractor.zip
+                        </div>
+                        <div>3.2 MB</div>
+                        <div>Application</div>
+                    </a>
+                    <a href="https://github.com/01Xyris/Vulns" class="file-item" target="_blank">
+                        <div class="file-name">
+                            <div class="file-icon zip"></div>
+                            Vulns.zip
+                        </div>
+                        <div>1.8 MB</div>
+                        <div>Application</div>
+                    </a>
+                </div>
+            </div>
+        </div>
+
+        <div class="status-bar">
+            <div class="status-item">4 object(s)</div>
+            <div class="status-item">8.6 MB total</div>
+        </div>
+    </div>
+
+    <div class="media-window">
+        <div class="title-bar">
+            <div class="title-text">Windows Media Player - CODEX_Installer_2018-06.m4a</div>
+            <div class="window-buttons">
+                <div class="window-button">_</div>
+                <div class="window-button">□</div>
+                <div class="window-button close-media">×</div>
+            </div>
+        </div>
+        
+        <div class="media-content">
+            <div class="media-icon"></div>
+            <div class="media-controls">
+                <div class="progress-bar">
+                    <div class="progress"></div>
+                </div>
+                <div class="control-buttons">
+                    <button class="media-button play-pause">►</button>
+                    <button class="media-button stop">■</button>
+                    <div class="volume-control">
+                        <span>Volume:</span>
+                        <input type="range" min="0" max="100" value="50" class="volume-slider">
+                    </div>
+                </div>
+                <div class="time-display">00:00 / 00:00</div>
+            </div>
+        </div>
+    </div>
+
     <audio id="audio" preload="auto" crossorigin="anonymous" loop>
-        <source src="song.mp3" type="audio/mpeg">
+        <source src="CODEX_Installer_2018-06.m4a" type="audio/mpeg">
     </audio>
 
-    <script>
-        document.querySelectorAll('.tab').forEach(tab => {
-            tab.addEventListener('click', () => {
-                document.querySelectorAll('.tab').forEach(t => t.classList.remove('active'));
-                document.querySelectorAll('.tab-content').forEach(c => c.classList.remove('active'));
-                
-                tab.classList.add('active');
-                document.getElementById(tab.dataset.tab).classList.add('active');
-            });
-        });
-
-        let audioCtx;
-        let audioElement;
-
-        function initAudio() {
-            audioCtx = new (window.AudioContext || window.webkitAudioContext)();
-            audioElement = document.getElementById('audio');
-            const source = audioCtx.createMediaElementSource(audioElement);
-            const analyser = audioCtx.createAnalyser();
-            source.connect(analyser);
-            analyser.connect(audioCtx.destination);
-        }
-
-        function setVolume(level) {
-            if (audioElement) {
-                audioElement.volume = level / 100;
-                document.getElementById('volume-level').textContent = `Volume: ${level}%`;
-            }
-        }
-
-        function showAudioConsentWindow() {
-            const consentWindow = document.createElement("div");
-            consentWindow.id = "audio-consent-window";
-            consentWindow.style.position = "fixed";
-            consentWindow.style.top = "0";
-            consentWindow.style.left = "0";
-            consentWindow.style.width = "100%";
-            consentWindow.style.height = "100%";
-            consentWindow.style.background = "#000";
-            consentWindow.style.color = "#888";
-            consentWindow.style.fontFamily = "'IBM VGA', monospace";
-            consentWindow.style.display = "flex";
-            consentWindow.style.flexDirection = "column";
-            consentWindow.style.justifyContent = "center";
-            consentWindow.style.alignItems = "center";
-            consentWindow.style.zIndex = "1000";
-            consentWindow.style.padding = "20px";
-
-            const pre = document.createElement("pre");
-            pre.style.textAlign = "center";
-            pre.style.marginBottom = "20px";
-            pre.style.lineHeight = "1.5";
-            pre.textContent = `
-░▒▓█ Welcome to the Abyss █▓▒░
-
-║ [ PLAY AUDIO? ] ║
-  └─ Press "YES" to Begin
-  └─ Press "NO" to Skip
-            `;
-
-            const buttonContainer = document.createElement("div");
-            buttonContainer.style.display = "flex";
-            buttonContainer.style.gap = "20px";
-
-            const yesButton = document.createElement("button");
-            yesButton.textContent = "YES";
-            yesButton.addEventListener("click", () => {
-                startAudio();
-                document.body.removeChild(consentWindow);
-            });
-
-            const noButton = document.createElement("button");
-            noButton.textContent = "NO";
-            noButton.addEventListener("click", () => {
-                document.body.removeChild(consentWindow);
-            });
-
-            buttonContainer.appendChild(yesButton);
-            buttonContainer.appendChild(noButton);
-            consentWindow.appendChild(pre);
-            consentWindow.appendChild(buttonContainer);
-            document.body.appendChild(consentWindow);
-        }
-
-        async function startAudio() {
-            if (!audioCtx) initAudio();
-            try {
-                await audioElement.play();
-            } catch (err) {
-                console.error("Audio playback error:", err);
-            }
-        }
-
-        window.addEventListener("DOMContentLoaded", () => {
-            showAudioConsentWindow();
-
-            const volumeDown = document.getElementById("volume-down");
-            const volumeUp = document.getElementById("volume-up");
-            let currentVolume = 25;
-
-            setVolume(currentVolume);
-
-            volumeDown?.addEventListener("click", () => {
-                currentVolume = Math.max(0, currentVolume - 10);
-                setVolume(currentVolume);
-            });
-
-            volumeUp?.addEventListener("click", () => {
-                currentVolume = Math.min(100, currentVolume + 10);
-                setVolume(currentVolume);
-            });
-        });
-    </script>
+    <script src="js/script.js"></script>
 </body>
 </html>
